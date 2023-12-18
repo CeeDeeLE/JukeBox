@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <title>Notenspur</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Progammieren mit JS" />
+    <meta name="keywords" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <link href="css/notenspur.css" rel="stylesheet" />
+    <link href="leaflet/leaflet.css" rel="stylesheet" />
+    <link href="controlFullScreen/Control.FullScreen.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- https://notenspur-leipzig.de/ -->
+    <!-- https://issuu.com/notenspur/docs/leipziger_notenspur_hauptflyer -->
+    <div id="notenwrap">
+      <h1>
+        Leipziger&nbsp;
+        <span class="f1">N</span>
+        <span class="f2">o</span>
+        <span class="f3">t</span>
+        <span class="f4">e</span>
+        <span class="f6">n</span>
+        <span class="f7">s</span>
+        <span class="f8">p</span>
+        <span class="f9">u</span>
+        <span class="f10">r</span>
+      </h1>
+      <p>
+        Sie interessieren sich für Musik und bewegen sich gern an frischer Luft?
+        <br />
+        Dann sind Notenspur, Notenbogen, Notenrad oder Notenweg Angebote der
+        Leipziger Kulturszene, die Ihnen gefallen werden.
+        <br />Viel Vergnügen... beim Stöbern und beim Stadtbummeln!
+      </p>
+      <div id="wrapper-linkundtouren">
+        <div id="jukebox-link">
+          <a href="index.html"
+            ><img
+              id="abspielen"
+              src="img/label_back-to-jukebox.jpg"
+              width="auto"
+              height="auto"
+              alt=""
+          /></a>
+        </div>
+        <div id="wrapper-notenrtouren">
+          <p>
+            Die
+            <span id="notenspur">Notenspur</span> ist 5,3 km lang und führt
+            hauptsächlich durch das Leipziger Stadtzentrum.
+          </p>
+          <p>
+            Der <span id="notenweg">Notenweg</span> ist ca. 8 km lang und führt
+            als Spaziergang durch Leipzigs Grünanlagen im Westen.
+          </p>
+          <p>
+            Der <span id="notenbogen">Notenbogen</span> ist ca. 5 km lang und
+            führt als Spaziergang zu Orten westlich des Stadtzentrums.
+          </p>
+          <p>
+            Das <span id="notenrad">Notenrad</span> ist ca. 40 km lang und kann
+            nicht zu Fuß absolviert werden.
+          </p>
+        </div>
+      </div>
+      <div id="map"></div>
+    </div>
+
+    <script src="leaflet/leaflet.min.js"></script>
+    <script src="controlFullScreen/Control.FullScreen.js"></script>
+    <script src="js/notenspur.js"></script>
+  </body>
+</html>

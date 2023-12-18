@@ -1,0 +1,95 @@
+/************************* DESIGNED BY *************************/
+/*                       Constanze Deten                       */
+/* Umsetzung: Stefan Tilinski, Constanze Deten, Vivian Mann    */
+/*                        c 2021 & 2023                        */
+/***************************************************************/
+
+/* Style.css-Formate übernehmen */
+@import url(style.css);
+
+/* Page-Wrapper */
+#notenwrap {
+  width: 90%;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 0;
+  font-size: 2.5vh;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 4vh;
+  padding: 0;
+  margin: 1vh 0 2vh 0;
+}
+
+#wrapper-linkundtouren {
+  width: 100%;
+  /* mehr zu Grids: http://maddesigns.de/css-grid-layout-2764.html */
+  display: grid;
+
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0.5vw;
+  grid-row-gap: 0.5vw;
+}
+
+#jukebox-link a {
+  cursor: pointer;
+  /* background: rgb(206, 206, 164);
+  width: 17vw;
+  height: 3vh; */
+  text-decoration: none;
+  color: black;
+
+  float: left;
+}
+
+#jukebox-link,
+#wrapper-notenrtouren p {
+  text-align: left;
+  margin: 1.2vh 0;
+}
+
+#notenspur {
+  color: #4c96c7;
+  font-weight: bold;
+}
+#notenweg {
+  color: #a3ae04;
+  font-weight: bold;
+}
+#notenrad {
+  color: #e05246;
+  font-weight: bold;
+}
+#notenbogen {
+  color: #e7b85e;
+  font-weight: bold;
+}
+
+/* https://leafletjs.com/download.html */
+/* https://leafletjs.com/reference.html */
+#map {
+  width: 100%;
+  height: 100vh;
+  border: 0.15vh 0.1vw solid black;
+}
+
+.popup {
+  position: absolute;
+  color: crimson;
+  z-index: 3;
+}
+
+.popupimage {
+  width: 100%;
+}
+
+.audio {
+  width: 50%;
+  height: 3vh;
+}

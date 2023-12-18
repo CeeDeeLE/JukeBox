@@ -1,0 +1,425 @@
+[
+  {
+    "Genre": "Schlager",
+    "Künstlername": "Andrea Berg",
+    "Titel": "1000 mal belogen",
+    "Album": "Wo liegt das Paradies",
+    "Veröffentlichungsjahr": "2001",
+    "Spieldauer": "03:52",
+    "Src": "../audio/1000-mal-belogen_Andrea-Berg.mp3"
+  },
+  {
+    "Genre": "Schlager",
+    "Künstlername": "Cora",
+    "Titel": "Amsterdam",
+    "Album": "Komm, wir fahren nach Amsterdam",
+    "Veröffentlichungsjahr": "2004",
+    "Spieldauer": "04:48",
+    "Src": "../audio/Amsterdam_Komm,-wir-fahren-nach-Amsterdam_Cora.mp3"
+  },
+  {
+    "Genre": "Schlager",
+    "Künstlername": "Felix de Luxe",
+    "Titel": "Taxi nach Paris",
+    "Album": "Taxi nach Paris",
+    "Veröffentlichungsjahr": "1984",
+    "Spieldauer": "03:54",
+    "Src": "../audio/Taxi-nach-Paris_Felix-de-Luxe.mp3"
+  },
+  {
+    "Genre": "Schlager",
+    "Künstlername": "Wolfgang Petry",
+    "Titel": "Verlieben, verloren, vergessen, verzeih'n",
+    "Album": "Verlieben Verloren",
+    "Veröffentlichungsjahr": "1992",
+    "Spieldauer": "06:16",
+    "Src": "../audio/Verlieben-verloren-vergessen-verzeihn_Wolfgang-Petry.mp3"
+  },
+  {
+    "Genre": "Schlager",
+    "Künstlername": "Spider Murphy Gang",
+    "Titel": "Skandal im Speerbezirk",
+    "Album": "Dolce vita",
+    "Veröffentlichungsjahr": "1981",
+    "Spieldauer": "03:37",
+    "Src": "../audio/Skandal-im-Speerbezirk_Spider-Murphy-Gang.mp3"
+  },
+  {
+    "Genre": "Techno",
+    "Künstlername": "Aqua",
+    "Titel": "Barbie Girl",
+    "Album": "Aquarium",
+    "Veröffentlichungsjahr": "1997",
+    "Spieldauer": "03:23",
+    "Src": "../audio/Barbie-Girl_Aqua.mp3"
+  },
+  {
+    "Genre": "Techno",
+    "Künstlername": "Dune",
+    "Titel": "Can't Stop Raving",
+    "Album": "Dune",
+    "Veröffentlichungsjahr": "1995",
+    "Spieldauer": "03:34",
+    "Src": "../audio/Cant-Stop-Raving_Dune.mp3"
+  },
+  {
+    "Genre": "Techno",
+    "Künstlername": "Brooklyn Bounce",
+    "Titel": "Get Ready to Bounce",
+    "Album": "The Beginning",
+    "Veröffentlichungsjahr": "1997",
+    "Spieldauer": "03:41",
+    "Src": "../audio/Get-Ready-to-Bounce_Brooklyn-Bounce.mp3"
+  },
+  {
+    "Genre": "Techno",
+    "Künstlername": "Culture Beat",
+    "Titel": "Mr. Vain",
+    "Album": "Serenity",
+    "Veröffentlichungsjahr": "1993",
+    "Spieldauer": "03:52",
+    "Src": "../audio/Mr.-Vain_Culture-Beat.mp3"
+  },
+  {
+    "Genre": "Techno",
+    "Künstlername": "Blümchen",
+    "Titel": "Herz an Herz",
+    "Album": "Herz an Herz",
+    "Veröffentlichungsjahr": "1996",
+    "Spieldauer": "03:44",
+    "Src": "../audio/Herz-an-Herz_Bluemchen.mp3"
+  },
+  {
+    "Genre": "Pop",
+    "Künstlername": "Lady Gaga & Elton John",
+    "Titel": "Artpop",
+    "Album": "Artpop",
+    "Veröffentlichungsjahr": "2013",
+    "Spieldauer": "04:30",
+    "Src": "../audio/Artpop_Lady-Gaga-und-Elton-John.mp3"
+  },
+  {
+    "Genre": "Pop",
+    "Künstlername": "Lady Gaga",
+    "Titel": "Your Song",
+    "Album": "Your Song",
+    "Veröffentlichungsjahr": "2018",
+    "Spieldauer": "04:35",
+    "Src": "../audio/Your-Song_Lady-Gaga.mp3"
+  },
+  {
+    "Genre": "Pop",
+    "Künstlername": "The Boomtown Rats",
+    "Titel": "I Don't Like Like Mondays",
+    "Album": "Loudmouth",
+    "Veröffentlichungsjahr": "1979",
+    "Spieldauer": "04:19",
+    "Src": "../audio/I-Dont-Like-Mondays_The-Boomtown-Rats.mp3"
+  },
+  {
+    "Genre": "Pop",
+    "Künstlername": "Take That",
+    "Titel": "Rule The World",
+    "Album": "Beautiful World",
+    "Veröffentlichungsjahr": "2006",
+    "Spieldauer": "03:57",
+    "Src": "../audio/Rule-the-World_Take-That.mp3"
+  },
+  {
+    "Genre": "Rock",
+    "Künstlername": "Die Ärzte",
+    "Titel": "Die Klügsten Männer Der Welt",
+    "Album": "Geräusch",
+    "Veröffentlichungsjahr": "2003",
+    "Spieldauer": "03:57",
+    "Src": "../audio/Die-kluegsten-Maenner-der-Welt_Die-Aerzte.mp3"
+  },
+  {
+    "Genre": "Metal",
+    "Künstlername": "Apocalyptica",
+    "Titel": "I Don't Care feat. Adam Gontier",
+    "Album": "Worlds Collide",
+    "Veröffentlichungsjahr": "2007",
+    "Spieldauer": "03:58",
+    "Src": "../audio/I-Dont-Care_feat-Adam-Gontier_Apocalyptica.mp3"
+  },
+  {
+    "Genre": "Pop",
+    "Künstlername": "Porcupine Tree",
+    "Titel": "Lazarus",
+    "Album": "Deadwing",
+    "Veröffentlichungsjahr": "2005",
+    "Spieldauer": "04:18",
+    "Src": "../audio/Lazarus_Porcupine-Tree.mp3"
+  },
+  {
+    "Genre": "Metal",
+    "Künstlername": "Apocalyptica",
+    "Titel": "Seemann feat. Nina Hagen",
+    "Album": "Reflections",
+    "Veröffentlichungsjahr": "2003",
+    "Spieldauer": "04:02",
+    "Src": "../audio/Seemann_feat-Nina-Hagen_Apocalyptica.mp3"
+  },
+  {
+    "Genre": "Rock",
+    "Künstlername": "Kings of Leon",
+    "Titel": "Sex On Fire",
+    "Album": "Only By The Night",
+    "Veröffentlichungsjahr": "2008",
+    "Spieldauer": "03:26",
+    "Src": "../audio/Sex-On-Fire_Kings-Of-Leon.mp3"
+  },
+  {
+    "Genre": "Pop",
+    "Künstlername": "The Cranberries",
+    "Titel": "Linger",
+    "Album": "Everybody Else Is Doing It, So Why Can’t We?",
+    "Veröffentlichungsjahr": "1993",
+    "Spieldauer": "04:34",
+    "Src": "../audio/Linger_The-Cranberries.mp3"
+  },
+  {
+    "Genre": "Rock",
+    "Künstlername": "Muse",
+    "Titel": "Supermassive Black Hole",
+    "Album": " Black Holes and Revelations",
+    "Veröffentlichungsjahr": "2006",
+    "Spieldauer": "03:31",
+    "Src": "../audio/Supermassive-Black-Hole_Muse.mp3"
+  },
+  {
+    "Genre": "Metal",
+    "Künstlername": "System of a Down",
+    "Titel": "Toxicity",
+    "Album": "Toxicity",
+    "Veröffentlichungsjahr": "2001",
+    "Spieldauer": "03:38",
+    "Src": "../audio/Toxicity_System-of-a-Down.mp3"
+  },
+  {
+    "Genre": "A capella",
+    "Künstlername": "Comedian Harmonists",
+    "Titel": "Veronika, der Lenz ist da",
+    "Album": "Veronika, der Lenz ist da/ Wochenend und Sonnenschein",
+    "Veröffentlichungsjahr": "1930",
+    "Spieldauer": "02:39",
+    "Src": "../audio/Veronika,-der-Lenz-ist-da_Comedian-Harmonists.mp3"
+  },
+  {
+    "Genre": "A capella",
+    "Künstlername": "Basta",
+    "Titel": "Rechtsradikaler-Veganer",
+    "Album": "Wir kommen in Frieden",
+    "Veröffentlichungsjahr": "2006",
+    "Spieldauer": "02:37",
+    "Src": "../audio/Rechtsradikaler-Veganer_Basta.mp3"
+  },
+  {
+    "Genre": "A capella",
+    "Künstlername": "Die Prinzen",
+    "Titel": "Küssen verboten",
+    "Album": "Küssen verboten",
+    "Veröffentlichungsjahr": "1992",
+    "Spieldauer": "02:36",
+    "Src": "../audio/Küssen-verboten_Die-Prinzen.mp3"
+  },
+  {
+    "Genre": "Chanson",
+    "Künstlername": "AnnenMayKantereit",
+    "Titel": "Barfuß am Klavier",
+    "Album": "Alles nix Konkretes",
+    "Veröffentlichungsjahr": "2016",
+    "Spieldauer": "03:15",
+    "Src": "../audio/Barfusz-am-Klavier_AnnenMayKantereit.mp3"
+  },
+  {
+    "Genre": "Chanson",
+    "Künstlername": "Funny van Dannen",
+    "Titel": "Okapiposter",
+    "Album": "Meine vielleicht besten Lieder",
+    "Veröffentlichungsjahr": "2010",
+    "Spieldauer": "02:54",
+    "Src": "../audio/Okapiposter_Funny-van-Dannen.mp3"
+  },
+  {
+    "Genre": "Chanson",
+    "Künstlername": "Thomas Pigor und Benedikt Eichhorn",
+    "Titel": "Gastgeber",
+    "Album": "Volume 8",
+    "Veröffentlichungsjahr": "2014",
+    "Spieldauer": "04:06",
+    "Src": "../audio/Gastgeber_Thomas-Pigor-und-Benedikt-Eichhorn.mp3"
+  },
+  {
+    "Genre": "Chanson",
+    "Künstlername": "Duo Sonnenschirm",
+    "Titel": "Zugroulette",
+    "Album": "Beschattung",
+    "Veröffentlichungsjahr": "1989",
+    "Spieldauer": "05:29",
+    "Src": "../audio/Zugroulette_Duo-Sonnenschirm.mp3"
+  },
+  {
+    "Genre": "Filmmusik",
+    "Künstlername": "Cat Stevens",
+    "Titel": "If you want to sing out, sing out",
+    "Album": "Soundtrack zu Harold und Maude",
+    "Veröffentlichungsjahr": "1971",
+    "Spieldauer": "02:52",
+    "Src": "../audio/If-you-want-to-sing-out,-sing-out_Cat-Stevens.mp3"
+  },
+  {
+    "Genre": "Filmmusik",
+    "Künstlername": "Ennio Morricone",
+    "Titel": "Once upon a time in the West",
+    "Album": "Soundtrack zu Spiel mir das Lied vom Tod",
+    "Veröffentlichungsjahr": "1968",
+    "Spieldauer": "03:49",
+    "Src": "../audio/Once-upon-a-time-in-the-West_Ennio-Morricone.mp3"
+  },
+  {
+    "Genre": "Filmmusik",
+    "Künstlername": "Klaus Doldinger",
+    "Titel": "Das Boot, 1. Satz",
+    "Album": "Soundtrack zu Das Boot",
+    "Veröffentlichungsjahr": "1981",
+    "Spieldauer": "02:50",
+    "Src": "../audio/Das-Boot_Original-Soundtrack_Klaus-Doldinger.mp3"
+  },
+  {
+    "Genre": "Instrumental",
+    "Künstlername": "SaFri Duo",
+    "Titel": "Played a live (Bongo-Song)",
+    "Album": "Episode II",
+    "Veröffentlichungsjahr": "2001",
+    "Spieldauer": "03:16",
+    "Src": "../audio/Played-A-Live-(Bongo-Song)_SaFri-Duo.mp3"
+  },
+  {
+    "Genre": "Instrumental",
+    "Künstlername": "Jean Michelle Jarre",
+    "Titel": "Oxygène IV",
+    "Album": "Oxygène",
+    "Veröffentlichungsjahr": "1976",
+    "Spieldauer": "03:33",
+    "Src": "../audio/Oxygène-IV_Jean-Michelle-Jarre.mp3"
+  },
+  {
+    "Genre": "Instrumental",
+    "Künstlername": "David Garrett",
+    "Titel": "Viva la vida",
+    "Album": "Music",
+    "Veröffentlichungsjahr": "2013",
+    "Spieldauer": "04:15",
+    "Src": "../audio/Viva-la-vida_David-Garrett.mp3"
+  },
+  {
+    "Genre": "Weltmusik",
+    "Künstlername": "Caro Emerald",
+    "Titel": "A Night Like This",
+    "Album": "Deleted Scenes from the cutting Room Floor",
+    "Veröffentlichungsjahr": "2010",
+    "Spieldauer": "03:45",
+    "Src": "../audio/A-night-like-this_Caro-Emerald.mp3"
+  },
+  {
+    "Genre": "Weltmusik",
+    "Künstlername": "Dead can dance",
+    "Titel": "Children of the sun",
+    "Album": "Dead can dance in Concert",
+    "Veröffentlichungsjahr": "2013",
+    "Spieldauer": "07:35",
+    "Src": "../audio/Children-of-the-sun_Dead-can-dance.mp3"
+  },
+  {
+    "Genre": "Weltmusik",
+    "Künstlername": "Master KG Ft. Nomcebo",
+    "Titel": "Jerusalema",
+    "Album": "Jerusalema",
+    "Veröffentlichungsjahr": "2019",
+    "Spieldauer": "05:41",
+    "Src": "../audio/Jerusalema_Master-KG-ft-Nomcebo.mp3"
+  },
+  {
+    "Genre": "Weltmusik",
+    "Künstlername": "Mercedes Sosa",
+    "Titel": "Todo cambia",
+    "Album": "¿Será Posible El Sur?",
+    "Veröffentlichungsjahr": "1984",
+    "Spieldauer": "04:51",
+    "Src": "../audio/Todo-cambia_Mercedes-Sosa.mp3"
+  },
+  {
+    "Genre": "Weltmusik",
+    "Künstlername": "Zaz",
+    "Titel": "Comme si comme ca",
+    "Album": "Sur La Route",
+    "Veröffentlichungsjahr": "2015",
+    "Spieldauer": "02:45",
+    "Src": "../audio/Comme-si-comme-ca_Zaz.mp3"
+  },
+  {
+    "Genre": "Notenspur",
+    "Künstlername": "Leoš Janáček",
+    "Titel": "Zdenka Variations",
+    "Album": "Zdenka Variations (8)",
+    "Veröffentlichungsjahr": "1880",
+    "Spieldauer": "02:09",
+    "Src": "../audio/Musikbeispiel_Altes-Konservatorium.mp3"
+  },
+  {
+    "Genre": "Notenspur",
+    "Künstlername": "Max Reger",
+    "Titel": "Variationen und Fuge in A-Moll über ein Thema von Mozart",
+    "Album": "Variationen und Fuge in A-Moll über ein Thema von Mozart, Op 132",
+    "Veröffentlichungsjahr": "1914",
+    "Spieldauer": "02:39",
+    "Src": "../audio/Musikbeispiel_Musikbibliothek-Peters.mp3"
+  },
+  {
+    "Genre": "Notenspur",
+    "Künstlername": "Johann Schelle",
+    "Titel": "Ach, mein herzliebes Jesulein",
+    "Album": "Ach, mein herzliebes Jesulein für Hammerklavier",
+    "Veröffentlichungsjahr": "1682",
+    "Spieldauer": "02:36",
+    "Src": "../audio/Musikbeispiel_Hammerorgel-im-Musikinstrumentenmuseum.mp3"
+  },
+  {
+    "Genre": "Swing",
+    "Künstlername": "Club Royal Orchestra",
+    "Titel": "Fox Trot Two Little Wooden Shoes",
+    "Album": "aus Film Two Little Wooden Shoes",
+    "Veröffentlichungsjahr": "1920",
+    "Spieldauer": "02:38",
+    "Src": "../audio/Two-Little-Wooden-Shoes-Fox-Trot_Club-Royal-Orchestra.mp3"
+  },
+  {
+    "Genre": "Swing",
+    "Künstlername": "Albert von Tilzer.mp3",
+    "Titel": "Oh By Jingo",
+    "Album": "aus der Broadway-Show 'Linger Longer Letty'",
+    "Veröffentlichungsjahr": "1919",
+    "Spieldauer": "04:00",
+    "Src": "../audio/Oh-by-jingo_Albert-von-Tilzer.mp3"
+  },
+  {
+    "Genre": "Swing",
+    "Künstlername": "Paul Biese and his Novelty Orchestra",
+    "Titel": "Fox Trot Mystery",
+    "Album": "Mystery!",
+    "Veröffentlichungsjahr": "1919",
+    "Spieldauer": "03:03",
+    "Src": "../audio/Mystery_Paul-Biese-and-his-Novelty-Orchestra.mp3"
+  },
+  {
+    "Genre": "Techno",
+    "Künstlername": "Caramell",
+    "Titel": "Caramelldansen",
+    "Album": "Supergott",
+    "Veröffentlichungsjahr": "2001",
+    "Spieldauer": "02:55",
+    "Src": "../audio/Caramelldansen_Caramell.mp3"
+  }
+]

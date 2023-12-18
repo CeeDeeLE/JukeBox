@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- 
+/***************** DESIGNED BY ******************/
+/*               Constanze Deten                */
+/* Idee und Inhalt: Hans-Peter Herrmann         */
+/*                   c 2023                     */
+/************************************************/ 
+-->
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="title" content="JukiGaga-JukeBox - JuGagaJuBo mit Notenspur"/>
+        <meta name="description" content="Projekt Training Progammieren mit JavaScript"/>
+        <meta name="abstract" content="Playlisten erstellen und abspielen mit IndexedDB und Drag & Drop"/>
+        <meta name="keywords" lang="de" content="JavaScript, Musik, music, Jukebox, Programmieren"/>
+        <meta name="author" content="Stephan Tilinski & Constanze Deten"/>
+        <meta name="date" content="2023-11-20"/>
+
+        <meta name="googlebot" content="noindex, nofollow"/>
+        <meta name="revisit-after" content="7 days"/>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <!-- Ansicht auf mobilen Geräten NICHT skalierbar -->
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /> -->
+        <!-- Ansicht auf mobilen Geräten skalierbar -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+        <!-- Ergänzung -->
+        <!-- Suchmaschinen-Optimierung -->
+        <meta
+            name="robots"
+            content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+        />
+            <meta property="og:locale" content="de_DE" />
+            <meta property="og:type" content="article" />
+            <meta
+            property="og:title"
+            content="JuGagaJuBo"
+        />
+        <meta
+            property="og:description"
+            content="Projekt Training Progammieren mit JavaScript"
+        />
+        <meta property="og:url" content="#" />
+        <meta property="og:site_name" content="JuGagaJuBo" />
+        <!-- <meta property="article:publisher" content="https://www.facebook.com/..."> -->
+        <meta property="article:section" content="Link" />
+        <meta property="og:updated_time" content="2023-11-23T23:00:00-08:00" />
+
+        <title>JuGagaJuBo</title>
+    
+        <link rel="canonical" href="#" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <!-- Link zur Vorlage für Symbole und Icons -->
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css" />
+
+        <!-- Schriften auf dem Server -> auch eingebettet von externer Plattform font.googleapis.com nutzbar -->
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet" type="text/css"/>
+        <!-- Ende eingebettete Schrift -->
+
+        <!-- ############# für Keks-Popup ########### -->
+        <!-- Boxicons CSS - Keks-Icon -->
+        <!-- <link
+            href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" type="text/css" href="css/pop-kekse.css" />
+        <script type="text/javascript" src="js/pop-kekse.js" defer></script> -->
+        <!-- ######## Ende Keks-Popup ############# -->
+    
+        <!-- Icon im Reiter ausgeben -->
+        <link rel="shortcut icon" type="image/vnd.icon" href="/favicon.ico" size="any"/>
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <!-- player icons von flaticon:  ->  https://www.flaticon.com/ -->
+
+        <script type="module" src="js/main.js"></script>
+
+        <!-- für Charts -->
+        <link type="text/javascript" href="js/charts.js"/>
+        <link type="text/javascript" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css" />
+
+        <!-- Service-Worker für Web-Darstellung -->
+        <link rel="manifest" href="manifest.json"/>
+    </head>
+
+    <body>
+        <div id="wrapper">
+
+            <!-- oberste Zeile: Logo mit 2 Lautsprechern re und li -->
+            <div id="logo">
+                <img id="speaker left" src="img/icons/icon_li.png" width="150" height="auto" alt="">
+                <h1 id="header">JuGagaJuBo</h1>
+                <img id="speaker left" src="img/icons/icon_re.png" width="150" height="auto" alt="">
+            </div>
+            <!-- ENDE oberste Zeile: Logo mit 2 Lautsprechern re und li -->
+
+            <!-- ausgeblendeter Visualisierungsbereich ( Canvas und Regler ) -->
+            <canvas id="canvas" width="1000" height="300"></canvas>
+
+            <div id="canvas-vis-regler" class="hide">
+                <!-- Anzahl der Balken -->
+                <label id="visualsliderlabel" for="visualslider">Balken-Anzahl</label>
+                <input type="range" max="5" min="0" value="2" class="slider" id="visualslider">
+
+                <!-- Fade bei den Balken -->
+                <label id="fadesliderlabel" for="fadeslider">Fade</label>
+                <input type="range" max="10" min="0" value="5" class="slider" id="fadeslider">
+
+                <!-- Abstand zwischen den Balken -->
+                <label id="abstandsliderlabel" for="abstandslider">Balken-Abstand</label>
+                <input type="range" max="30" min="1" value="15" class="slider" id="abstandslider">
+            </div>
+            <!-- ENDE ausgeblendeter Visualisierungsbereich ( Canvas und Regler ) -->
+
+
+            <!-- Info zu laufendem Titel -> Teil 1 -->
+            <div id="visualizer-wrapper" class="show">
+                <div id="laeuft"><h2>Now Playing:</h2>
+                <div id="interpret-titel">
+                    <div id="titel">Titel:
+                        <input id="titel-anzeige" readonly/>
+                    </div>
+                    <div id="kuenstler">Künstler:
+                        <input id="interpret-anzeige" readonly/>
+                    </div>
+                </div>
+                <div id="sonst-titelinfo">
+                    <div id="jahr">veröffentlicht (Jahr):
+                        <input id="veroeff-anzeige" readonly/>
+                    </div>
+                    <div id="gesamtdauer">gesamte Dauer / verbleibende Dauer:
+                        <input id="laenge-anzeige" value="Laufzeit des Titels" readonly/>
+                    </div>
+                </div>
+            </div>
+
+                
+                <!-- Restlaufzeit wird jetzt mit Gesamtzeit in einem Feld angezeigt !!! -->
+                <!-- <div id="progressbar-text"><span id="verbleibenddauer">verbleibende Dauer:</span></div> -->
+
+                <div id="fortschrittsbalken">
+                    <!-- <label id="fortschrittsbalkenlabel" for="fortschrittsbalken">Testbalken</label> -->
+                    <input type="range" max="100" min="0" value="1" class="slider" id="fortschrittsbalken-inner">
+                </div>
+            <!-- Teil 1: ENDE Info zu laufendem Titel -->
+
+            <!-- Teil 2: Regler zum Abspielen/ Stoppen etc des laufenden Titels -->
+                <!-- Hier sind die Steuerungselemente
+                WICHTIG: Label wurde deaktiviert, da jetzt der Inhalt des Buttons umgeschrieben wird. -->
+                <div id="wrapper-steuerung">
+
+                    <div id="playpause">
+                        <img src="img/icons/pause.jpg" width="auto" height="auto" alt="Abspielen und Anhalten" title="Abspielen und Anhalten">
+                    </div>
+
+                    <div id="lautstaerke">
+                        <label id="volume" for="volumeslider">
+                            <img src="img/icons/volume.jpg" width="auto" height="auto" alt="Lautstärke ein/aus" title="Lautstärke ein/aus"> 50%
+                        </label>
+                        <input type="range" id="volumeslider" max="100" min="0" value="50" class="slider">
+                    </div>
+
+                    <div id="skip-back">
+                        <img src="img/icons/skip-to-startagain.jpg" width="auto" height="auto" alt="zurückspringen" title="zurückspringen"></button>
+                    </div>
+
+                    <div id="zurueckspulen">
+                        <button id="zurueck">
+                            <img src="img/icons/left-arrow.png" width="auto" height="auto" alt="zurückspulen" title="zurückspulen">&nbsp;30s</button>
+                        <input type="range" id="zurueckslider" max="120" min="10" value="30" class="slider">
+                    </div>
+
+                    <div id="vorspulen">
+                        <button id="vor">30s&nbsp;
+                            <img src="img/icons/right-arrow.png" width="auto" height="auto" alt="vorspulen" title="vorspulen"></button>
+                        <input type="range" id="vorslider" max="120" min="10" value="30" class="slider">
+                    </div>
+
+                    <div id="skip-to-next">
+                        <img src="img/icons/skip-to-next.jpg" width="auto" height="auto" alt="vorspringen" title="vorspringen"></button>
+                    </div>
+
+                    <div id="schleifen">
+                        <button id="loop">5s
+                            <img src="img/icons/loop.png" width="auto" height="auto" alt="loop" title="loop"> ein</button>
+                        <input type="range" id="loopslider" max="10" min="1" value="5" class="slider">
+                    </div>
+
+                    <div id="geschwindigkeit">
+                        <label id="geschwindigkeitsliderlabel" for="geschwindigkeitslider">
+                            <img src="img/icons/speed-o-meter.jpg" width="auto" height="auto" alt="Geschwindigkeit" title="Geschwindigkeit"> 1.0
+                        </label>
+                        <input type="range" max="20" min="1" value="10" class="slider" id="geschwindigkeitslider">
+                    </div>
+
+                    <div id="titel-wiederholen">
+                        <img src="img/icons/repeat-pl.jpg" width="auto" height="auto" alt="Titel wiederholen" title="Titel wiederholen">
+                    </div>
+                </div>
+                <!-- ENDE Steuerung -->
+            </div>
+            <!-- Visualizer-Wrap zu Ende -->
+
+            <!-- 3 Spalten Hauptbereich: Genre, Songs, Play-List -->
+            <div id="wrapper-auswahl" class="show">
+                <!-- linke Spalte: Genre -->
+                <div id="genre">
+                    <h1 id="genre-kopf">
+                        <span class="f2">G</span>
+                        <span class="f4">e</span>
+                        <span class="f7">n</span>
+                        <span class="f8">r</span>
+                        <span class="f10">e</span>
+                    </h1>
+                    <div id="genre-img">
+                        <img src="img/label_pop.jpg" width="auto" height="auto" alt="" id="pop">
+                        <img src="img/label_rock.jpg" width="auto" height="auto" alt="" id="rock">
+                        <img src="img/label_party-hits.jpg" width="auto" height="auto" alt="" id="schlager">
+                        <img src="img/label_techno.jpg" width="auto" height="auto" alt="" id="techno">
+                        <img src="img/label_chanson.jpg" width="auto" height="auto" alt="" id="chanson">
+                        <img src="img/label-acapella.jpg" width="auto" height="auto" alt="" id="acapella">
+                        <img src="img/label_filmmusik.jpg" width="auto" height="auto" alt="" id="filmmusik">
+                        <img src="img/label_instrumental.jpg" width="auto" height="auto" alt="" id="instrumental">
+                        <img src="img/label_metal.jpg" width="auto" height="auto" alt="" id="metal">
+                        <img src="img/label_swing.jpg" width="auto" height="auto" alt="" id="swing">
+                        <img src="img/label_weltmusik.jpg" width="auto" height="auto" alt="" id="weltmusik">
+                        <img src="img/label_notenspur.jpg" width="auto" height="auto" alt="" id="notenspur">
+                    </div>
+                </div>
+
+                <!-- mittlere Spalte: drag & drop oder Songs je Genre -->
+                <div id="genre-songs">
+                    <h1 id="songs-kopf">
+                        <span class="f0">S</span>
+                        <span class="f1">o</span>
+                        <span class="f2">n</span>
+                        <span class="f3">g</span>
+                        <span class="f4">w</span>
+                        <span class="f7">a</span>
+                        <span class="f8">h</span>
+                        <span class="f9">l</span>
+                    </h1>
+                    <div id="drag-drop">
+                        <span><br>Hier können eigene Songs platziert werden <br>zum Befüllen der Playlist.
+                        <!-- <br><br>&uuml;ber "Genre" (links) vorhandene Songs ausgew&auml;hlen -->
+                        </span>
+                    </div>
+
+                    <div id="auswahl-liste">
+                        <h2 id="songs-head">Songs aus der Datenbank über Genre-Wahl (links)
+                        </h2
+                        ><br>
+                        <!-- https://www.prigge-recht.de/15-sekunden-urheberrecht/#:~:text=Die%20vielfach%20angef%C3%BChrten%2015%20Sekunden,zur%20Erzielung%20unerheblicher%20Einnahmen%20dienen. -->
+                        <!-- https://www.musikrecht-rechtsanwalt.de/2021/06/21/die-15-sekunden-enteignung/ -->
+                        <!-- https://www.gearnews.de/urheberrechtsreform-ab-sofort-koennt-ihr-15-sekunden-legal-samplen/ -->
+                        <!-- https://ronaldkah.de/15-sekunden-regel-musik/ -->
+                        Jeder hier verfügbare Titel ist max. 15s lang zum Schutz der Urheber 
+                        (s. dazu § 9 Absatz 2 Satz 1 Nummer 3 und § 10 UrhDaG).
+                    </div>
+                </div>
+
+                <!-- rechte Spalte: Play-List-Anzeigen -->
+                <div id="playlist-anzeige">
+                    <h1 id="playlist-kopf">
+                        <span class="f1">P</span>
+                        <span class="f2">l</span>
+                        <span class="f3">a</span>
+                        <span class="f4">y</span>
+                        <span class="f5">-</span>
+                        <span class="f7">L</span>
+                        <span class="f8">i</span>
+                        <span class="f9">s</span>
+                        <span class="f10">t</span>
+                    </h1>
+                    <div id="playlist">
+                        <output id="list">
+                            <!-- <div class="song-pl">Hier erscheinen die ausgewählten Songs.</div> -->
+                        </output>
+                    </div>
+
+                    <div id="pl-steuerung">
+                        <img id="abspielen" src="img/label_pl-play.jpg" width="auto" height="auto" alt="">
+                        <img id="abbrechen" src="img/label_pl-new.jpg" width="auto" height="auto" alt="">
+                        <img id="pl-fertig" src="img/label_pl-upload.jpg" width="auto" height="auto" alt="">
+                        <img id="lade-pl" src="img/label_pl-download.jpg" width="auto" height="auto" alt="">
+                        <a href="notenspur.html" target="_blank">
+                            <img src="img/label_lpz-noten.jpg" width="auto" height="auto" alt="">
+                        </a>
+                        <img id="kuchen" src="img/label_musik-mix.jpg" width="auto" height="auto" alt="">
+                        <!-- ENDE 3 Spalten Hauptbereich: Genre, Songs, Play-List -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="chart">
+                <canvas id="canvas-chart" width="auto" height="auto" alt="Tortendiagramm Musik-Mix"></canvas>
+                <p>&nbsp;</p>
+                <button id="juke-box" class="highlight-pl">Juke-Box</button>
+            </div>
+
+            <div id="vorhandene-pl" class="hide">
+                <!-- Play-List-Archiv aufrufen -->	
+                <div id="pl-archiv" class="hide">
+                    <h1>Gespeicherte Play-Listen</h1>
+                    <p id="info-lesen"></p>
+                    <div id="show-pl"></div>
+                    <button id="archiv-hide">Abbrechen</button>
+                </div>
+                <!--ENDE  Play-List-Archiv laden -->
+
+                <!-- neue/ fertige Play-List speichern -->
+                <div id="neue-pl" class="hide">
+                        <div id="innerwrap">
+                            <h1>Tragen Sie hier einen Titel für ihren Mix ein:</h1>
+                            <div>
+                                <input id="pl-titel" type="text">
+                            </div>
+                        <div>
+                            <button id="save-pl">OK</button>
+                            <button id="abbrechen">Abbrechen</button>
+                        </div>
+                        <p id="speicher-info">&nbsp;</p>                    
+                        <p>Ihr Titel wird in den Local Storage Ihres Browsers gespeichert</p>
+                        <p>Stellen Sie sicher, das dieser Speicherbereich verfügbar ist.</p> 
+                        <p>Falls nicht kann der Titel nicht gespeichert werden.<br> 
+                        Die Gründe dafür können in den Einstellungen Ihres Browsers, <br> 
+                        oder an Erweiterungen / PlugIns liegen
+                        </p>
+                    </div>
+                </div>
+                <!-- ENDE neue/ fertige Play-List speichern -->
+            </div>
+
+            <footer id="footer-jukebox">
+                <i class="fa fa-copyright" aria-hidden="true"></i> 2021/2023 |
+                <!-- <a href="templates/impressum-dasch.html">Impressum</a> -->
+                <a href="#">Impressum</a>
+                <br />Constanze Deten & Stephan Tilinski
+            </footer>
+            </div>
+
+        <!-- für Charts -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script> -->
+    </body>
+</html>

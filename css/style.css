@@ -1,0 +1,711 @@
+/************************* DESIGNED BY *************************/
+/*                       Constanze Deten                       */
+/* Umsetzung: Stefan Tilinski, Constanze Deten, Vivian Mann    */
+/*                        c 2021 & 2023                        */
+/***************************************************************/
+@import url(notenspur.css);
+@import url(pop-kekse.css);
+
+/* Fonts sind lokal verfügbar */
+@font-face {
+  font-family: "Trebuchet MS", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  src: local("TrebuchetMS"), url("/webfonts/TrebuchetMS.woff") format("woff"),
+    url("/webfonts/TrebuchetMS.woff2") format("woff2");
+  src: url("/webfonts/TrebuchetMS.woff") format("woff"),
+    url("/webfonts/TrebuchetMS.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Audiowide", cursive;
+  font-style: normal;
+  font-weight: normal;
+  src: local("Audiowide"), url("/webfonts/AudiowideRegular.woff") format("woff");
+}
+
+/* über gesamte Seiten gültige Festlegungen */
+
+:root {
+  /* Cremefarbe für Texte und Buttons */
+  --creme100: rgba(206, 206, 164, 1);
+  /* Grün für Hover, Abgrenzung und Effekte */
+  --gruen100: rgba(76, 175, 80, 1);
+  /* Anthrazit für Seiten-Hintergrund und Schatten */
+  --anthrazit100: rgba(19, 19, 19, 1);
+
+  --h1-shadow-1: 0.2vw 0.2vw 0.5vw var(--water30);
+  --h2-shadow-1: 0.1vw 0.1vw 0.5vw var(--sand100);
+
+  --link-shadow: 0.07vw 0.07vw 0.5vw rgb(69, 69, 69); /* anthrazit */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+html {
+  width: 100%;
+
+  background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(
+      #1d1d1d 25%,
+      #1a1a1a 25%,
+      #1a1a1a 50%,
+      transparent 50%,
+      transparent 75%,
+      #242424 75%,
+      #242424
+    );
+  background-color: var(--anthrazit100);
+  background-size: 1.5vw 1.5vw;
+
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode",
+    "Lucida Sans", "Tahoma", "Arial", sans-serif;
+  font-size: 2.5vh;
+  font-weight: normal;
+  color: var(--creme100);
+  text-align: center;
+}
+
+body {
+  width: 100%;
+  margin: 2vh auto;
+}
+
+/* für Rainbow-Texte */
+.f0 {
+  color: magenta;
+}
+.f1 {
+  color: blueviolet;
+}
+.f2 {
+  color: royalblue;
+}
+.f3 {
+  color: teal;
+}
+.f4 {
+  color: green;
+}
+.f5 {
+  color: greenyellow;
+}
+.f6 {
+  color: gold;
+}
+.f7 {
+  color: orange;
+}
+.f8 {
+  color: red;
+}
+.f9 {
+  color: mediumvioletred;
+}
+.f10 {
+  color: purple;
+}
+
+/* Überschriften - werden auch auf Popups genutzt */
+h1,
+h2,
+h3 {
+  font-family: "Audiowide", cursive;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+/* Hover-Effekte für alle Seiten
+-> Links, Button, Images, Einhabefelder ... */
+a,
+input,
+button,
+a:hover,
+input:hover,
+button:hover,
+a:active,
+input:active,
+button:active {
+  outline: none;
+  text-decoration: none;
+}
+
+a {
+  color: var(--creme100);
+}
+a:hover {
+  color: var(--gruen100);
+}
+/* asusgeblendete Bereiche */
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+
+/* ganze Seite */
+#wrapper {
+  width: 95%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+}
+
+/* Head-Bereich - Logo rechts und links, Titel */
+#logo {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 3vh 0;
+}
+#logo img {
+  width: 5%;
+  height: 5%;
+}
+
+#header {
+  font-size: 9vh;
+  text-align: center;
+}
+
+/* ANFANG visualizer-wrapper mit Canvas Titel-Infos und Spieldauer-Angaben/-Anzeigen */
+#canvas {
+  max-width: 50vw;
+  max-height: 50vh;
+  border: solid 1vw rgb(214, 102, 149);
+  margin-top: 1.5vh;
+  display: none;
+}
+
+#canvas-vis-regler {
+  margin-top: 1.2vh;
+  _font-size: 2.5vh;
+}
+
+#visualizer-wrapper {
+  width: 90%;
+  display: none;
+  font-size: 2.5vh;
+  padding: 2vh 2vw;
+  border: solid 1px var(--creme100);
+  margin: 1.2vh 0;
+}
+
+#laeuft {
+  text-align: left;
+}
+
+#interpret-titel,
+#sonst-titelinfo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0.5vw;
+  grid-row-gap: 0.5vw;
+}
+
+#titel,
+#kuenstler,
+#jahr,
+#gesamtdauer {
+  font-size: 2.5vh;
+  line-height: 120%;
+  text-align: left;
+  margin-top: 1.2vh;
+}
+
+#titel-anzeige,
+#interpret-anzeige,
+#veroeff-anzeige,
+#laenge-anzeige {
+  cursor: inherit;
+  background: var(--creme100);
+  line-height: 120%;
+  font-size: 2.5vh;
+  font-weight: bold;
+}
+
+#titel-anzeige {
+  width: 95%;
+}
+#interpret-anzeige {
+  width: 99%;
+}
+#veroeff-anzeige {
+  width: 95%;
+}
+#laenge-anzeige {
+  width: 99%;
+}
+
+#fortschrittsbalken {
+  width: 100%;
+  margin: 2.5vh 0;
+}
+
+#fortschrittsbalken-inner {
+  width: 100%;
+  height: 2vh;
+  direction: rtl;
+  -webkit-appearance: none;
+  background: var(--creme100);
+  background: -webkit-linear-gradient(
+    left,
+    violet,
+    blue,
+    cyan,
+    green,
+    yellow,
+    orange,
+    red
+  ); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(
+    right,
+    violet,
+    blue,
+    cyan,
+    green,
+    yellow,
+    orange,
+    red
+  ); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(
+    right,
+    violet,
+    blue,
+    cyan,
+    green,
+    yellow,
+    orange,
+    red
+  ); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(
+    to right,
+    violet,
+    blue,
+    cyan,
+    green,
+    yellow,
+    orange,
+    red
+  ); /* Standard syntax (must be last) */
+
+  border-radius: 100px;
+  box-shadow: 0 1px 5px #444 inset, 1px 1px 1px grey;
+  border: none;
+}
+
+/* Schreibweise für Range-Slider -> input[type=range]::-webkit... */
+#fortschrittsbalken-inner::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 2vh;
+  width: 1vw;
+  border-radius: 30rem;
+  border: solid 1px var(--creme100);
+  background: dodgerblue;
+}
+
+#fortschrittsbalken-inner:focus {
+  outline: none;
+}
+
+/* ##### ENDE Fortschrittsbalken ##### */
+
+/* ##### ENDE visualizer-wrapper ##### */
+
+/* ##### ANFANG alle Regler und Buttons unterhalb des Sliders ##### */
+#wrapper-steuerung {
+  width: 100%;
+  _height: 20vh;
+  font-size: 2.5vh;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1.2vh;
+}
+
+#wrapper-steuerung div input[type="range"] {
+  width: 5vw;
+}
+
+#playpause img {
+  width: 5vw;
+  cursor: pointer;
+}
+
+#playpause,
+#playpause img,
+#geschwindigkeitsliderlabel img {
+  width: 5vw;
+}
+
+#lautstaerke,
+#vorspulen,
+#zurueckspulen,
+#schleifen,
+#geschwindigkeit {
+  width: 5vw;
+}
+
+/* in main.js anpassen:
+   el('#geschwindigkeitsliderlabel').innerHTML = `<img src="img/icons/speed-o-meter.jpg" alt="Geschwindigkeit" title="Geschwindigkeit"> ${(geschwindigkeitDB/10).toFixed(1)}`;
+*/
+#volume img,
+#volumeslider,
+#skip-back img,
+#vor,
+#zurueck,
+#skip-to-next img,
+#loop,
+#geschwindigkeitsliderlabel img,
+#geschwindigkeitslider {
+  height: 3vw;
+
+  cursor: pointer;
+  background: var(--creme100);
+  line-height: 120%;
+  font-size: 2vh;
+  font-weight: bold;
+}
+
+#vor,
+#zurueck {
+  width: 4vw;
+}
+#loop {
+  width: 3vw;
+}
+#titel-wiederholen {
+  cursor: pointer;
+}
+#titel-wiederholen img {
+  width: 3vw;
+  height: 3vw;
+  margin: 0px 0px 10px 0px;
+}
+
+/* ##### ENDE Regler und Buttons ##### */
+
+/* ##### ANFANG Genre, Songs und Playlist ##### */
+#wrapper-auswahl {
+  width: 95%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 1.5vw;
+  grid-row-gap: 1.5vh;
+}
+
+#genre {
+  width: 100%;
+}
+
+#genre-kopf,
+#songs-kopf,
+#playlist-kopf {
+  width: 100%;
+
+  background: var(--creme100);
+  color: var(--anthrazit100);
+  text-shadow: 0.1vw 0.1vh gray;
+  font-size: 4vh;
+  text-align: center;
+  line-height: 170%;
+  margin-bottom: 1.5vh;
+}
+
+#auswahl-liste,
+#playlist {
+  width: 100%;
+  text-align: left;
+}
+
+#auswahl-liste {
+  margin-top: 1.5vh;
+}
+
+#genre-img {
+  width: 100%;
+  justify-items: auto;
+  border: solid 0.1vw var(--creme100);
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0vw;
+  grid-row-gap: 0vw;
+}
+
+#pl-steuerung {
+  width: 100%;
+  justify-items: center;
+  border: solid 0.1vw var(--creme100);
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0vw;
+  grid-row-gap: 0vw;
+  margin-top: 0vh;
+}
+
+/* Bilder abdunkeln bis schwarz-weiß runterskalieren 
+-> geht mit Filter:grayscale(%); 
+-> weitere Filter sind blur:();, brightness(); contrast();, drop-shadow(); custom(); */
+#genre-img img,
+#pl-steuerung img,
+#pl-steuerung a img {
+  /* vorhanden */
+  width: 10vw;
+  cursor: pointer;
+
+  /* neu für Hover-Effekt */
+  filter: grayscale(100%);
+  transition: 0.3s;
+  border: solid 0.7vw transparent;
+}
+#genre-img img:hover,
+#pl-steuerung img:hover,
+#pl-steuerung a img:hover {
+  filter: grayscale(0%);
+}
+#pl-steuerung button {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+/* Text im drag&drop-Feld wird ausgeblendet beim Hovern */
+/* #genre-songs span:hover {
+    display: none;
+    transition: 0.2s;
+} */
+
+#drag-drop {
+  width: 100%;
+  height: 25vh;
+
+  cursor: pointer;
+  /* ursprünglich: background: var(--creme100); */
+  background: rgb(222, 222, 222);
+  color: var(--anthrazit100);
+  font-family: "Trebuchet MS", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5vh;
+  border: solid 1vw var(--gruen100);
+  padding: 1vw;
+}
+
+#drag-drop:hover {
+  background: var(--gruen100);
+  color: white;
+  border: solid 1vw var(--creme100);
+}
+
+#geladen-song,
+#pl-song,
+#archiv-song {
+  width: 100%;
+  display: flex;
+}
+.song-s,
+.song-pl {
+  width: 100%;
+  _line-height: 120%;
+  font-size: 2.5vh;
+  padding: 0 0.5rem;
+  border: solid 0.1rem var(--creme100);
+  margin: 0.3vh 0;
+}
+.song-s {
+  cursor: pointer;
+}
+
+.select-s,
+.select-pl {
+  _width: 2rem;
+
+  cursor: pointer;
+  background: var(--creme100);
+  color: var(--anthrazit100);
+  font-size: 2.5vh;
+  text-align: center;
+  border: solid 0.1rem var(--creme100);
+  margin: 0.3vh 0;
+}
+
+.highlight-s {
+  cursor: pointer;
+  background: transparent;
+  color: var(--creme100);
+  font-weight: bold;
+  padding: 0.5rem;
+  border: solid 1px var(--creme100);
+  margin-top: 1.2vh;
+}
+
+.highlight-pl,
+.highlight-b {
+  cursor: pointer;
+  background: var(--creme100);
+  _height: 50px;
+  color: var(--anthrazit100);
+  font-size: 2.5vh;
+  font-weight: bold;
+  border: solid 0.5rem var(--creme100);
+  margin-bottom: 1.2vh;
+}
+
+.highlight-pl {
+  width: 100%;
+}
+
+#abspielen {
+  width: 49%;
+  float: left;
+}
+#abbrechen {
+  width: 49%;
+  float: right;
+}
+
+#reload {
+  width: 50%;
+  padding: 0;
+}
+
+.select-s:hover,
+.select-pl:hover,
+.highlight-s:hover,
+.highlight-pl:hover,
+.highlight-b:hover,
+.song-s:hover,
+#genre-img img:hover,
+#pl-steuerung img:hover,
+#pl-steuerung button:hover {
+  border: solid 0.5rem orange;
+}
+
+/* ##### ENDE Genre, Songs und Playlist */
+
+/* Chart - https://www.mediaevent.de/css/aspect-ratio.html 
++ https://www.mediaevent.de/css/calc.html */
+#chart {
+  width: 50%;
+  display: none;
+}
+
+#canvas-chart {
+  max-width: 50vw;
+  max-height: 50vh;
+}
+
+/* ##### ANFANG NUR Playlists ##### */
+
+#vorhandene-pl {
+  width: 100%;
+  margin: 1.2vh auto;
+}
+
+#pl-archiv,
+#neue-pl {
+  width: 100%;
+  text-align: left;
+}
+
+#neue-pl #innerwrap {
+  width: 100%;
+  margin: auto;
+}
+
+#show-pl {
+  width: 100%;
+}
+
+#speicher-list {
+  width: 100%;
+  display: flex;
+  color: var(--anthrazit100);
+  _line-height: 50px;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+#speicher-eintrag {
+  background: var(--creme100);
+  width: 80rem;
+  height: 50px;
+  font-size: 2.5vh;
+  margin-bottom: 10px;
+}
+
+#neue-pl h1 {
+  width: 100%;
+  margin: 0 auto 1.2vh auto;
+  text-align: left;
+}
+
+#pl-titel {
+  width: 100%;
+  height: 5vh;
+  background: var(--creme100);
+  font-size: 2.5vh;
+  color: var(--anthrazit100);
+}
+
+#speicher-info {
+  font-size: 2.5vh;
+  text-align: left;
+  margin: 1.2vh auto;
+}
+
+#save-buttons {
+  width: 100%;
+  height: 2.5vh;
+}
+
+#save-pl,
+#nein-danke {
+  background: none;
+  cursor: pointer;
+  height: 2.5vh;
+  font-size: 2.5vh;
+  font-weight: bold;
+  color: var(--anthrazit100);
+  border: none;
+  _margin-right: 10px;
+}
+#save-pl img {
+  width: 30px;
+}
+
+#nein-danke {
+  background: var(--creme100);
+  width: 220px;
+  line-height: 30px;
+}
+#nein-danke img {
+  height: 50px;
+}
+/* ##### ENDE NUR Playlists ##### */
+
+#footer-jukebox {
+  width: 100%;
+  background: rgba(var(--creme100), 06);
+  margin: 4vh 0 2vh 0;
+}

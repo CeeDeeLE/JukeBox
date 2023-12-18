@@ -1,0 +1,278 @@
+/* ************************* für Cookie-Popup *********************** */
+
+@import url(style.css);
+
+/* Conset-Popup mit Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--weisz80);
+}
+
+/* position right muss soweit neg. rücken, dass sie aus dem Bild weg ist, entspr. max-width */
+.consent-wrapper {
+  width: 100%;
+  max-width: 45vw;
+  min-width: 30vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-items: left;
+
+  position: fixed;
+  bottom: 15vh;
+  right: -45vw;
+
+  background: var(--anthrazit100);
+  border-radius: 2vw;
+  padding: 2vh 1.5vw;
+
+  box-shadow: 0 0.1vw 0.3vw rgba(250, 250, 250, 0.1);
+
+  transition: right 0.3s ease;
+  z-index: 4;
+}
+
+.consent-wrapper.show {
+  right: 7vw;
+}
+
+.consent-wrapper header {
+  display: flex;
+  flex-direction: row;
+  justify-items: left;
+  column-gap: 1vw;
+}
+
+header i {
+  color: var(--water30);
+  font-size: 5vh;
+  text-shadow: var(--h1-shadow-2);
+}
+
+header h2 {
+  color: var(--water30);
+  font-weight: 500;
+  text-shadow: var(--h1-shadow-2);
+}
+
+.consent-wrapper .data {
+  margin-top: 1.1vh;
+}
+
+.consent-wrapper .data p {
+  color: var(--weisz80);
+  font-size: 2.5vh;
+}
+
+/* falls Links integriert sind im Text - nicht genutzt */
+.data p a {
+  color: var(--water100);
+  text-decoration: none;
+}
+.data p a:hover {
+  color: var(--sienna100);
+  text-decoration: underline;
+}
+
+/* Buttons "accept" und "decline" */
+.consent-wrapper .buttons {
+  margin-top: 1.1em;
+  width: 100%;
+}
+
+.buttons .button {
+  width: calc(100% / 2 - 1vw);
+
+  background: var(--sand100);
+  border-radius: 0.3vw;
+  font-weight: 700;
+  color: var(--water100);
+  cursor: pointer;
+
+  padding: 0.8vw;
+  border: 0.05vw solid var(--sand100);
+  transition: all 0.2s ease;
+}
+
+#declineBtn {
+  border: 0.1vw solid var(--sienna100);
+  background-color: var(--weisz80);
+}
+
+.buttons #acceptBtn:hover,
+#declineBtn:hover {
+  background-color: var(--sand100);
+}
+
+/* ##### Ende DESKTOP ##### */
+
+/* ################################################################ */
+/* ############## 1. Schritt 2-spaltig, Landscape ################ */
+@media only screen and (min-width: 400px) and (max-width: 820px) and (orientation: landscape) {
+  /* flexible Größen durch %, em, vh/ vw (viewport with) */
+
+  /* ##### Body - PC-Ansicht, Tablets und hochauflösende Smartphones, queer ##### */
+  /* *************** Conset-Popup mit Google Fonts - Poppins ************* */
+  * {
+    font-size: 2vh;
+  }
+
+  /* Body des Popup */
+  body {
+    min-height: 100vh;
+  }
+  /* position right muss soweit neg. rücken, dass sie aus dem Bild weg ist, entspr. max-width */
+  .consent-wrapper {
+    border-radius: 2vw;
+    padding: 2vh 1.5vw;
+
+    box-shadow: 0 0.1vw 0.3vw rgba(250, 250, 250, 0.1);
+  }
+  .consent-wrapper.show {
+    right: 5vw;
+  }
+  header i {
+    font-size: 3vh;
+    _text-shadow: var(--h1-shadow-2);
+  }
+  header h2 {
+    _text-shadow: var(--h1-shadow-2);
+  }
+}
+
+/* ##### Ende 2-spaltig, Landscape ##### */
+
+/* ################################################################ */
+/* ##### 2. Schritt 2-spaltig, PC-Ansicht und hochauflösende Smartphones, hochkant ##### */
+@media only screen and (max-width: 1080px) and (orientation: portrait) {
+  /* flexible Größen durch %, em, vh/ vw (viewport with) */
+
+  /* ##### Body - PC-Ansicht, Tablets und hochauflösende Smartphones, hochkant ##### */
+  /* ************ Conset-Popup mit Google Fonts - Poppins ************** */
+
+  * {
+    font-size: 2vh;
+  }
+
+  /* Body des Popup */
+  body {
+    min-height: 100vh;
+  }
+  /* position right muss soweit neg. rücken, dass sie aus dem Bild weg ist, entspr. max-width */
+  .consent-wrapper {
+    border-radius: 2vw;
+    padding: 2vh 1.5vw;
+
+    box-shadow: 0 0.1vw 0.3vw rgba(250, 250, 250, 0.1);
+  }
+  .consent-wrapper.show {
+    right: 5vw;
+  }
+  header i {
+    font-size: 3vh;
+    _text-shadow: var(--h1-shadow-2);
+  }
+  header h2 {
+    _text-shadow: var(--h1-shadow-2);
+  }
+}
+
+/* ##### Ende 2-spaltig, Portrait ##### */
+
+/* ################################################################ */
+/* ################# 3. Schritt: 1-spaltig, Portrait ##############*/
+/* Smartphone hochkant mit 1-spaltiger Darstellung der Inhalte  */
+@media only screen and (max-width: 430px) and (orientation: portrait) {
+  /* flexible Größen durch %, em, vh/ vw (viewport with) */
+
+  /* ##### Body - zusammengeschobener PC-Screen und Smartphones, hochkant ##### */
+  /* **************** Conset-Popup mit Google Fonts - Poppins *********** */
+  * {
+    font-size: 1.8vh;
+  }
+
+  /* Body des Popup */
+  body {
+    min-height: 100vh;
+  }
+  /* position right muss soweit neg. rücken, dass sie aus dem Bild weg ist, entspr. max-width */
+  .consent-wrapper {
+    max-width: 60vw;
+    min-width: 45vw;
+
+    position: fixed;
+    bottom: 20vh;
+    right: -60vw;
+
+    border-radius: 2vw;
+    padding: 2vh 1.5vw;
+
+    box-shadow: 0 0.1vw 0.3vw rgba(250, 250, 250, 0.1);
+  }
+  .consent-wrapper.show {
+    right: 5vw;
+  }
+  header i {
+    font-size: 3vh;
+    _text-shadow: var(--h1-shadow-2);
+  }
+  header h2 {
+    _text-shadow: var(--h1-shadow-2);
+  }
+}
+
+/* ##### Ende 1-spaltig, Portrait ##### */
+
+/* ################################################################ */
+/* ################# 4. Schritt: 1-spaltig, Landscape ##############*/
+/* Smartphone hochkant mit 1-spaltiger Darstellung der Inhalte  */
+@media only screen and (max-width: 400px) and (orientation: landscape) {
+  /* flexible Größen durch %, em, vh/ vw (viewport with) */
+
+  /* ##### Body - zusammengeschobener PC-Screen und Smartphones, queer ##### */
+  /* **************** Conset-Popup mit Google Fonts - Poppins *********** */
+
+  * {
+    font-size: 1.8vh;
+  }
+
+  /* Body des Popup */
+  body {
+    min-height: 100vh;
+  }
+  /* position right muss soweit neg. rücken, dass sie aus dem Bild weg ist, entspr. max-width */
+  .consent-wrapper {
+    max-width: 60vw;
+    min-width: 45vw;
+
+    position: fixed;
+    bottom: 20vh;
+    right: -60vw;
+
+    border-radius: 2vw;
+    padding: 2vh 1.5vw;
+
+    box-shadow: 0 0.1vw 0.3vw rgba(250, 250, 250, 0.1);
+  }
+  .consent-wrapper.show {
+    right: 5vw;
+  }
+  header i {
+    font-size: 3vh;
+    _text-shadow: var(--h1-shadow-2);
+  }
+  header h2 {
+    _text-shadow: var(--h1-shadow-2);
+  }
+}
+/* ##### Ende 1-spaltig, Landscape ##### */
