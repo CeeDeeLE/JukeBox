@@ -198,7 +198,7 @@ a:hover {
 }
 
 #visualizer-wrapper {
-  width: 95%;
+  width: 92%;
   display: none;
   font-size: 2.5vh;
   padding: 2vh 2vw;
@@ -213,7 +213,7 @@ a:hover {
 #interpret-titel,
 #sonst-titelinfo {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 0.5vw;
   grid-row-gap: 0.5vw;
@@ -787,6 +787,15 @@ a:hover {
     padding: 2vh 2vw;
     border: solid 1px var(--creme100);
     margin: 1.2vh 0;
+  }
+
+  #interpret-titel,
+  #sonst-titelinfo {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 0.5vw;
+    grid-row-gap: 0.5vw;
   }
 
   #titel,

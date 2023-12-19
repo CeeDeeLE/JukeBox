@@ -274,8 +274,7 @@ import {
   // Funktion für das Filtern der Ergebnisse
   function ergebnisseFiltern(array, genre) {
     // Genre in der Überschrift anzeigen
-    el("#auswahl-liste").innerHTML = `<h2 id="songs-head">${genre}</h2><br>
-    <button id="close-sl">Liste ausblenden</button>
+    el("#auswahl-liste").innerHTML = `<h2 id="songs-head">${genre}</h2><br>    
     <div id="song-liste"></div>`;
     // Nach Genre Filtern und in neues Array speichern
     let arrayGenre = array.filter((val) => val["Genre"] === genre);
@@ -565,6 +564,14 @@ import {
     // Überprüfung ob Songs vorhanden sind
     if (songAnzahl >= 0) {
       loadSongsFunktionen();
+
+      // mittlere Song-Liste mit Abspielstart ausblenden, wenn vorhanden
+      if (el("#song-liste")) {
+        el("#song-liste").setAttribute("class", "hide");
+        el("#auswahl-liste h2").setAttribute("class", "hide");
+        el("#drag-drop").setAttribute("class", "show");
+      } // kein else
+      // wenn nur ein Song in der Playlist, dann Fehlermeldung
     } else {
       el("#drag-drop").innerHTML =
         "Eine Liste besteht aus mindestens 2 Inhalten<br>Finde den Fehler!";
@@ -623,11 +630,6 @@ import {
   el("#notenspur").addEventListener("click", function () {
     songsJsonLaden("Notenspur");
   });
-
-  // // Button zum Lösxhen der angezeigten Auswahl-Songs
-  // el("#close-sl").addEventListener("click", function () {
-  //   el("song-liste").setAttribute("class", "hide");
-  // });
 
   // inaktiver Teil:
   el("#lade-pl").addEventListener("click", showArchiv);
