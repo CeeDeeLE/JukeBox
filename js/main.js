@@ -274,7 +274,9 @@ import {
   // Funktion für das Filtern der Ergebnisse
   function ergebnisseFiltern(array, genre) {
     // Genre in der Überschrift anzeigen
-    el("#auswahl-liste").innerHTML = `<h2 id="songs-head">${genre}</h2><br>`;
+    el("#auswahl-liste").innerHTML = `<h2 id="songs-head">${genre}</h2><br>
+    <button id="close-sl">Liste ausblenden</button>
+    <div id="song-liste"></div>`;
     // Nach Genre Filtern und in neues Array speichern
     let arrayGenre = array.filter((val) => val["Genre"] === genre);
 
@@ -323,7 +325,7 @@ import {
     playlistButton.innerHTML = ` + `;
 
     // Div und Button anfügen
-    el("#auswahl-liste").appendChild(genreDiv);
+    el("#song-liste").appendChild(genreDiv);
     genreDiv.appendChild(genreButton);
     genreDiv.appendChild(playlistButton);
 
@@ -621,6 +623,11 @@ import {
   el("#notenspur").addEventListener("click", function () {
     songsJsonLaden("Notenspur");
   });
+
+  // // Button zum Lösxhen der angezeigten Auswahl-Songs
+  // el("#close-sl").addEventListener("click", function () {
+  //   el("song-liste").setAttribute("class", "hide");
+  // });
 
   // inaktiver Teil:
   el("#lade-pl").addEventListener("click", showArchiv);

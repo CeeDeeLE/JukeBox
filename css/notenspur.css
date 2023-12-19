@@ -10,6 +10,7 @@
 /* Page-Wrapper */
 #notenwrap {
   width: 90%;
+  box-sizing: unset;
   margin: auto;
 
   display: flex;

@@ -43,11 +43,12 @@
 *:before,
 *:after {
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: auto;
 }
 
 html {
   width: 100%;
+  scroll-behavior: smooth;
 
   background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -77,6 +78,16 @@ html {
 body {
   width: 100%;
   margin: 2vh auto;
+}
+
+/* Überschriften - werden auch auf Popups genutzt */
+h1,
+h2,
+h3 {
+  font-family: "Audiowide", cursive;
+  padding: 0;
+  border: 0;
+  margin: 0;
 }
 
 /* für Rainbow-Texte */
@@ -114,16 +125,6 @@ body {
   color: purple;
 }
 
-/* Überschriften - werden auch auf Popups genutzt */
-h1,
-h2,
-h3 {
-  font-family: "Audiowide", cursive;
-  padding: 0;
-  border: 0;
-  margin: 0;
-}
-
 /* Hover-Effekte für alle Seiten
 -> Links, Button, Images, Einhabefelder ... */
 a,
@@ -145,6 +146,7 @@ a {
 a:hover {
   color: var(--gruen100);
 }
+
 /* asusgeblendete Bereiche */
 .show {
   display: block;
@@ -169,7 +171,7 @@ a:hover {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  margin: 3vh 0;
+  margin: 2.5vh 0;
 }
 #logo img {
   width: 5%;
@@ -177,14 +179,14 @@ a:hover {
 }
 
 #header {
-  font-size: 9vh;
+  font-size: 6vw;
   text-align: center;
 }
 
 /* ANFANG visualizer-wrapper mit Canvas Titel-Infos und Spieldauer-Angaben/-Anzeigen */
 #canvas {
-  max-width: 50vw;
-  max-height: 50vh;
+  max-width: 90%;
+  max-height: 60vh;
   border: solid 1vw rgb(214, 102, 149);
   margin-top: 1.5vh;
   display: none;
@@ -196,7 +198,7 @@ a:hover {
 }
 
 #visualizer-wrapper {
-  width: 90%;
+  width: 95%;
   display: none;
   font-size: 2.5vh;
   padding: 2vh 2vw;
@@ -211,7 +213,7 @@ a:hover {
 #interpret-titel,
 #sonst-titelinfo {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 0.5vw;
   grid-row-gap: 0.5vw;
@@ -330,7 +332,6 @@ a:hover {
 /* ##### ANFANG alle Regler und Buttons unterhalb des Sliders ##### */
 #wrapper-steuerung {
   width: 100%;
-  _height: 20vh;
   font-size: 2.5vh;
   display: flex;
   justify-content: space-evenly;
@@ -361,7 +362,9 @@ a:hover {
 }
 
 /* in main.js anpassen:
-   el('#geschwindigkeitsliderlabel').innerHTML = `<img src="img/icons/speed-o-meter.jpg" alt="Geschwindigkeit" title="Geschwindigkeit"> ${(geschwindigkeitDB/10).toFixed(1)}`;
+   el('#geschwindigkeitsliderlabel').innerHTML = 
+   `<img src="img/icons/speed-o-meter.jpg" alt="Geschwindigkeit" title="Geschwindigkeit"> 
+   ${(geschwindigkeitDB/10).toFixed(1)}`;
 */
 #volume img,
 #volumeslider,
@@ -403,15 +406,16 @@ a:hover {
 #wrapper-auswahl {
   width: 95%;
 
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  grid-column-gap: 1.5vw;
-  grid-row-gap: 1.5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: auto;
 }
 
-#genre {
-  width: 100%;
+#genre,
+#genre-songs,
+#playlist-anzeige {
+  width: 31%;
 }
 
 #genre-kopf,
@@ -444,10 +448,13 @@ a:hover {
   border: solid 0.1vw var(--creme100);
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(1, 4fr);
   grid-column-gap: 0vw;
   grid-row-gap: 0vw;
+}
+#genre-img img {
+  width: 9vw;
 }
 
 #pl-steuerung {
@@ -456,11 +463,15 @@ a:hover {
   border: solid 0.1vw var(--creme100);
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1.5fr);
+  grid-template-rows: repeat(1, 4fr);
   grid-column-gap: 0vw;
   grid-row-gap: 0vw;
   margin-top: 0vh;
+}
+#pl-steuerung img,
+#pl-steuerung a img {
+  width: 13.5vw;
 }
 
 /* Bilder abdunkeln bis schwarz-weiß runterskalieren 
@@ -469,8 +480,6 @@ a:hover {
 #genre-img img,
 #pl-steuerung img,
 #pl-steuerung a img {
-  /* vorhanden */
-  width: 10vw;
   cursor: pointer;
 
   /* neu für Hover-Effekt */
@@ -606,14 +615,16 @@ a:hover {
 /* Chart - https://www.mediaevent.de/css/aspect-ratio.html 
 + https://www.mediaevent.de/css/calc.html */
 #chart {
-  width: 50%;
+  width: 70%;
   display: none;
 }
 
 #canvas-chart {
-  max-width: 50vw;
-  max-height: 50vh;
+  max-width: 70vw;
+  max-height: 70vh;
 }
+
+/* ######## ENDE Chart ####### */
 
 /* ##### ANFANG NUR Playlists ##### */
 
@@ -704,8 +715,492 @@ a:hover {
 }
 /* ##### ENDE NUR Playlists ##### */
 
+/* ########## Lesflet-Map ########## */
+#map {
+  _all: unset;
+  box-sizing: unset;
+}
+
+/* ########## ENDE Inhalt ########## */
+
 #footer-jukebox {
+  display: block;
   width: 100%;
   background: rgba(var(--creme100), 06);
   margin: 4vh 0 2vh 0;
+}
+
+/* ################################################################ */
+/* ############## 1. Schritt 2-spaltig, Landscape ################ */
+@media only screen and (min-width: 400px) and (max-width: 820px) and (orientation: landscape) {
+  /* flexible Größen durch %, em, vh/ vw (viewport with) */
+}
+
+/* ################################################################ */
+/* ##### 2. Schritt 2-spaltig, PC-Ansicht und hochauflösende Smartphones, hochkant ##### */
+@media only screen and (max-width: 1080px) and (orientation: portrait) {
+  /* flexible Größen durch %, em, vh/ vw (viewport with) */
+
+  html {
+    font-size: 2vh;
+  }
+
+  body {
+    width: 100%;
+    margin: 1.5vh auto;
+  }
+  /* Head-Bereich - Logo rechts und links, Titel */
+  #logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1.5vh 0;
+  }
+  #logo img {
+    width: 5%;
+    height: 5%;
+  }
+
+  #header {
+    font-size: 4vw;
+    text-align: center;
+  }
+
+  /* ANFANG visualizer-wrapper mit Canvas Titel-Infos und Spieldauer-Angaben/-Anzeigen */
+  #canvas {
+    max-width: 90%;
+    max-height: 60vh;
+    border: solid 1vw rgb(214, 102, 149);
+    margin-top: 1.5vh;
+    display: none;
+  }
+
+  #canvas-vis-regler {
+    margin-top: 1.2vh;
+    _font-size: 2.5vh;
+  }
+
+  #visualizer-wrapper {
+    width: 95%;
+    display: none;
+    font-size: 2.5vh;
+    padding: 2vh 2vw;
+    border: solid 1px var(--creme100);
+    margin: 1.2vh 0;
+  }
+
+  #titel,
+  #kuenstler,
+  #jahr,
+  #gesamtdauer {
+    font-size: 2.5vh;
+    line-height: 120%;
+    text-align: left;
+    margin-top: 1.2vh;
+  }
+
+  #titel-anzeige,
+  #interpret-anzeige,
+  #veroeff-anzeige,
+  #laenge-anzeige {
+    cursor: inherit;
+    background: var(--creme100);
+    line-height: 120%;
+    font-size: 2.5vh;
+    font-weight: bold;
+  }
+
+  #titel-anzeige {
+    width: 95%;
+  }
+  #interpret-anzeige {
+    width: 99%;
+  }
+  #veroeff-anzeige {
+    width: 95%;
+  }
+  #laenge-anzeige {
+    width: 99%;
+  }
+
+  #fortschrittsbalken {
+    width: 100%;
+    margin: 2.5vh 0;
+  }
+
+  #fortschrittsbalken-inner {
+    width: 100%;
+    height: 2vh;
+    direction: rtl;
+    -webkit-appearance: none;
+    background: var(--creme100);
+    background: -webkit-linear-gradient(
+      left,
+      violet,
+      blue,
+      cyan,
+      green,
+      yellow,
+      orange,
+      red
+    ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(
+      right,
+      violet,
+      blue,
+      cyan,
+      green,
+      yellow,
+      orange,
+      red
+    ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(
+      right,
+      violet,
+      blue,
+      cyan,
+      green,
+      yellow,
+      orange,
+      red
+    ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(
+      to right,
+      violet,
+      blue,
+      cyan,
+      green,
+      yellow,
+      orange,
+      red
+    ); /* Standard syntax (must be last) */
+
+    border-radius: 100px;
+    box-shadow: 0 1px 5px #444 inset, 1px 1px 1px grey;
+    border: none;
+  }
+
+  /* Schreibweise für Range-Slider -> input[type=range]::-webkit... */
+  #fortschrittsbalken-inner::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 2vh;
+    width: 1vw;
+    border-radius: 30rem;
+    border: solid 1px var(--creme100);
+    background: dodgerblue;
+  }
+
+  /* ##### ANFANG alle Regler und Buttons unterhalb des Sliders ##### */
+  #wrapper-steuerung {
+    width: 100%;
+    font-size: 2.5vh;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1.2vh;
+  }
+
+  #wrapper-steuerung div input[type="range"] {
+    width: 5vw;
+  }
+
+  #playpause img {
+    width: 5vw;
+    cursor: pointer;
+  }
+
+  #playpause,
+  #playpause img,
+  #geschwindigkeitsliderlabel img {
+    width: 5vw;
+  }
+
+  #lautstaerke,
+  #vorspulen,
+  #zurueckspulen,
+  #schleifen,
+  #geschwindigkeit {
+    width: 5vw;
+  }
+
+  /* in main.js anpassen:
+   el('#geschwindigkeitsliderlabel').innerHTML = 
+   `<img src="img/icons/speed-o-meter.jpg" alt="Geschwindigkeit" title="Geschwindigkeit"> 
+   ${(geschwindigkeitDB/10).toFixed(1)}`;
+*/
+  #volume img,
+  #volumeslider,
+  #skip-back img,
+  #vor,
+  #zurueck,
+  #skip-to-next img,
+  #loop,
+  #geschwindigkeitsliderlabel img,
+  #geschwindigkeitslider {
+    height: 3vw;
+
+    cursor: pointer;
+    background: var(--creme100);
+    line-height: 120%;
+    font-size: 2vh;
+    font-weight: bold;
+  }
+
+  #vor,
+  #zurueck {
+    width: 4vw;
+  }
+  #loop {
+    width: 3vw;
+  }
+  #titel-wiederholen {
+    cursor: pointer;
+  }
+  #titel-wiederholen img {
+    width: 3vw;
+    height: 3vw;
+    margin: 0px 0px 10px 0px;
+  }
+
+  /* ##### ENDE Regler und Buttons ##### */
+
+  /* ##### ANFANG Genre, Songs und Playlist ##### */
+  #wrapper-auswahl {
+    width: 95%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: auto;
+  }
+
+  #genre,
+  #genre-songs,
+  #playlist-anzeige {
+    width: 100%;
+  }
+
+  #genre-kopf,
+  #songs-kopf,
+  #playlist-kopf {
+    font-size: 3.5vh;
+    text-align: center;
+    line-height: 130%;
+    margin-bottom: 1.5vh;
+  }
+
+  #auswahl-liste,
+  #playlist {
+    width: 100%;
+    text-align: left;
+  }
+  #auswahl-liste {
+    margin-top: 1.5vh;
+  }
+  #close-sl {
+    display: none;
+    float: right;
+  }
+  #close-sl:not(:target) #song-list {
+    display: block;
+  }
+  #close-sl:target #song-list {
+    display: none;
+  }
+
+  #genre-img {
+    width: 100%;
+    justify-items: auto;
+    border: solid 0.1vw var(--creme100);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(1, 4fr);
+    grid-column-gap: 0vw;
+    grid-row-gap: 0vw;
+  }
+  #genre-img img {
+    width: 29vw;
+  }
+
+  #pl-steuerung {
+    width: 100%;
+    justify-items: center;
+    border: solid 0.1vw var(--creme100);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1.5fr);
+    grid-template-rows: repeat(1, 4fr);
+    grid-column-gap: 0vw;
+    grid-row-gap: 0vw;
+    margin-top: 0vh;
+  }
+  #pl-steuerung img,
+  #pl-steuerung a img {
+    width: 45vw;
+  }
+
+  /* Bilder abdunkeln bis schwarz-weiß runterskalieren 
+-> geht mit Filter:grayscale(%); 
+-> weitere Filter sind blur:();, brightness(); contrast();, drop-shadow(); custom(); */
+  #genre-img img,
+  #pl-steuerung img,
+  #pl-steuerung a img {
+    cursor: pointer;
+
+    /* neu für Hover-Effekt */
+    filter: grayscale(100%);
+    transition: 0.3s;
+    border: solid 0.7vw transparent;
+  }
+  #genre-img img:hover,
+  #pl-steuerung img:hover,
+  #pl-steuerung a img:hover {
+    filter: grayscale(0%);
+  }
+  #pl-steuerung button {
+    padding: 0;
+    border: 0;
+    margin: 0;
+  }
+
+  /* Text im drag&drop-Feld wird ausgeblendet beim Hovern */
+  /* #genre-songs span:hover {
+    display: none;
+    transition: 0.2s;
+} */
+
+  #drag-drop {
+    width: 100%;
+    height: 25vh;
+
+    cursor: pointer;
+    /* ursprünglich: background: var(--creme100); */
+    background: rgb(222, 222, 222);
+    color: var(--anthrazit100);
+    font-family: "Trebuchet MS", sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5vh;
+    border: solid 1vw var(--gruen100);
+    padding: 1vw;
+  }
+
+  #drag-drop:hover {
+    background: var(--gruen100);
+    color: white;
+    border: solid 1vw var(--creme100);
+  }
+
+  #geladen-song,
+  #pl-song,
+  #archiv-song {
+    width: 100%;
+    display: flex;
+  }
+  .song-s,
+  .song-pl {
+    width: 100%;
+    _line-height: 120%;
+    font-size: 2.5vh;
+    padding: 0 0.5rem;
+    border: solid 0.1rem var(--creme100);
+    margin: 0.3vh 0;
+  }
+  .song-s {
+    cursor: pointer;
+  }
+
+  .select-s,
+  .select-pl {
+    _width: 2rem;
+
+    cursor: pointer;
+    background: var(--creme100);
+    color: var(--anthrazit100);
+    font-size: 2.5vh;
+    text-align: center;
+    border: solid 0.1rem var(--creme100);
+    margin: 0.3vh 0;
+  }
+
+  .highlight-s {
+    cursor: pointer;
+    background: transparent;
+    color: var(--creme100);
+    font-weight: bold;
+    padding: 0.5rem;
+    border: solid 1px var(--creme100);
+    margin-top: 1.2vh;
+  }
+
+  .highlight-pl,
+  .highlight-b {
+    cursor: pointer;
+    background: var(--creme100);
+    _height: 50px;
+    color: var(--anthrazit100);
+    font-size: 2.5vh;
+    font-weight: bold;
+    border: solid 0.5rem var(--creme100);
+    margin-bottom: 1.2vh;
+  }
+
+  .highlight-pl {
+    width: 100%;
+  }
+
+  #abspielen {
+    width: 49%;
+    float: left;
+  }
+  #abbrechen {
+    width: 49%;
+    float: right;
+  }
+
+  #reload {
+    width: 50%;
+    padding: 0;
+  }
+
+  .select-s:hover,
+  .select-pl:hover,
+  .highlight-s:hover,
+  .highlight-pl:hover,
+  .highlight-b:hover,
+  .song-s:hover,
+  #genre-img img:hover,
+  #pl-steuerung img:hover,
+  #pl-steuerung button:hover {
+    border: solid 0.5rem orange;
+  }
+
+  /* ##### ENDE Genre, Songs und Playlist */
+
+  /* Chart - https://www.mediaevent.de/css/aspect-ratio.html 
++ https://www.mediaevent.de/css/calc.html */
+  #chart {
+    width: 70%;
+    display: none;
+  }
+
+  #canvas-chart {
+    max-width: 70vw;
+    max-height: 70vh;
+  }
+}
+
+/* ################################################################ */
+/* ################# 3. Schritt: 1-spaltig, Portrait ##############*/
+/* Smartphone hochkant mit 1-spaltiger Darstellung der Inhalte  */
+@media only screen and (max-width: 430px) and (orientation: portrait) {
+  /* flexible Größen durch %, em, vh/ vw (viewport with) */
+}
+
+/* ################################################################ */
+/* ################# 4. Schritt: 1-spaltig, Landscape ##############*/
+/* Smartphone hochkant mit 1-spaltiger Darstellung der Inhalte  */
+@media only screen and (max-width: 400px) and (orientation: landscape) {
+  /* flexible Größen durch %, em, vh/ vw (viewport with) */
 }
