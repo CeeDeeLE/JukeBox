@@ -249,7 +249,7 @@ import {
       // Ruft in Abhängigkeit des inputs verschiedene Funktionen auf
       if (input === "pie" || input === "bar") {
         // Test Input-Content
-        console.log(input);
+        console.log("Input songsJsonLaden: ", input);
         // Funktionen für die Chart-Implementierung
         anzahlGenreFiltern(result[0], input);
       } else {
@@ -261,7 +261,7 @@ import {
 
   // loadJson funktion
   async function loadJson(quelle) {
-    return await (await fetch(quelle)).json().stringify;
+    return await (await fetch(quelle)).json();
   }
 
   // für alphabetische Sortierung der Json Ergebnisse
@@ -656,12 +656,25 @@ import {
   // Funktioniert mit einem 3-er Flag
 
   el("#kuchen").addEventListener("click", function () {
-    console.log(chartflag);
+    console.log("Chart-Flag: ", chartflag);
     // 0: Startwert - Chart noch nicht vorhanden und wird somit erstellt
     // Somit wird Chart bei jedem Click nicht neu erstellt
     if (chartflag === 0) {
+      // https://www.tutorialspoint.com/how-to-clear-cache-memory-using-javascript
+      // 1) location.reload(true);
+      // 2)
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .getRegistrations()
+          .then(function (registrations) {
+            for (let registration of registrations) {
+              registration.unregister();
+            }
+          });
+      }
       el("#canvas-chart").style.display = "block";
-      songsJsonLaden("pie");
+      // songsJsonLaden("pie");
+      songsJsonLaden("bar");
       chartflag = 1;
     }
     // 1: Chart vorhanden, Chart Canvas wird unsichtbar gemacht
@@ -677,7 +690,6 @@ import {
   });
 
   // Schreibt ein neues Objekt mit der Anzahl der Genres und dem Namen der Genres
-  // function anzahlGenreFiltern(result, type) {
   function anzahlGenreFiltern(result, type) {
     // Info zu Arbeitsschritt
     console.log("Anzahl je Genre wird abgerufen");
@@ -751,8 +763,8 @@ import {
         datasets: [
           {
             label: "Musik-Mix im Speicher",
-            // color: "rgb(206, 206, 164)",
-            // fontSize: 20,
+            color: "rgb(206, 206, 164)",
+            fontSize: 25,
             data: data.anzahl,
             backgroundColor: [
               "magenta",
@@ -791,15 +803,15 @@ import {
       // },
       options: {
         responsive: true,
-        plugins: {
-          legend: {
-            position: "right",
-          },
-          title: {
-            display: true,
-            text: "Musik-Mix im Speicher",
-          },
-        },
+        // plugins: {
+        //   legend: {
+        //     position: "right",
+        //   },
+        //   title: {
+        //     display: true,
+        //     text: "Musik-Mix im Speicher",
+        //   },
+        // },
       },
     });
   } // Ende Chart erstellen Funktion

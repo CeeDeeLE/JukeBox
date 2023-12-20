@@ -186,23 +186,32 @@ let cacheFiles = [
 //     })
 //   ); // end e.waitUntil
 // });
-// Plan B: Stackoverflow
+// Plan B: Microsoft
 self.addEventListener("install", (event) => {
   console.log("Service Worker: installed!");
 
-  event.waitUntil(
-    console.log("Service Worker: caching...")(async () => {
-      try {
-        let cache_obj = await caches.open(cache);
-        cache_obj.addAll(cacheFiles);
-        cache = cache_obj;
-      } catch {
-        console.log("Service Worker: error occured while caching...");
-      }
-      return cache;
-    })()
-  );
+  async function cachingCacheFiles() {
+    const cache = await caches.open(cacheName);
+    cache.addAll(cacheFiles);
+    console.log("CachedFiles: ", cache);
+    // if (!cache.ok) throw "Service Worker: installation failed";
+  }
+
+  event.waitUntil(cachingCacheFiles());
 });
+
+// // Plac C: https://hackernoon.com/15-best-practices-for-optimizing-service-workers-in-2023
+// addEventListener("install", (installEvent) => {
+//   installEvent.waitUntil(
+//     (async () => {
+//       const resp = await fetch("/something");
+//       // ^ Network errors will throw by themselves, so no try/catch needed
+//       if (!resp.ok) throw "Install failed";
+
+//       // ...
+//     })()
+//   );
+// });
 
 //
 self.addEventListener("activate", function (e) {
