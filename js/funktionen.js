@@ -358,7 +358,7 @@ async function loadSongsFunktionen() {
     erscheinungsDatum = "";
   } // Ende IF
 
-  // Funktion zum Abspielen des Lieds aufrufen
+  // Funktion zum Abspielen des Lieds in der Jukebox aufrufen
   playAudioFunktionen(titel, kuenstlerName, erscheinungsDatum, audioQuelle);
 
   // Index hochzählen

@@ -43,7 +43,7 @@
 *:before,
 *:after {
   box-sizing: border-box;
-  overflow: auto;
+  overflow: visible;
 }
 
 html {
@@ -333,24 +333,29 @@ a:hover {
 #wrapper-steuerung {
   width: 100%;
   font-size: 2.5vh;
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 1.2vh;
+
+  /* display: flex;
+  justify-content: space-evenly; */
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0.1vw;
+  grid-row-gap: 0.1vw;
+
+  margin-top: 1.5vh;
 }
 
 #wrapper-steuerung div input[type="range"] {
   width: 5vw;
-}
-
-#playpause img {
-  width: 5vw;
-  cursor: pointer;
+  height: 5vw;
 }
 
 #playpause,
 #playpause img,
 #geschwindigkeitsliderlabel img {
   width: 5vw;
+  height: 5vw;
+  cursor: pointer;
 }
 
 #lautstaerke,
@@ -359,6 +364,7 @@ a:hover {
 #schleifen,
 #geschwindigkeit {
   width: 5vw;
+  height: 5vw;
 }
 
 /* in main.js anpassen:
@@ -375,7 +381,8 @@ a:hover {
 #loop,
 #geschwindigkeitsliderlabel img,
 #geschwindigkeitslider {
-  height: 3vw;
+  width: 5vw;
+  height: 5vw;
 
   cursor: pointer;
   background: var(--creme100);
@@ -386,17 +393,17 @@ a:hover {
 
 #vor,
 #zurueck {
-  width: 4vw;
+  width: 5vw;
 }
 #loop {
-  width: 3vw;
+  width: 5vw;
 }
 #titel-wiederholen {
   cursor: pointer;
 }
 #titel-wiederholen img {
-  width: 3vw;
-  height: 3vw;
+  width: 5vw;
+  height: 5vw;
   margin: 0px 0px 10px 0px;
 }
 
@@ -429,7 +436,7 @@ a:hover {
   font-size: 4vh;
   text-align: center;
   line-height: 170%;
-  margin-bottom: 1.5vh;
+  margin: 5vh auto;
 }
 
 #auswahl-liste,
@@ -717,8 +724,10 @@ a:hover {
 
 /* ########## Lesflet-Map ########## */
 #map {
-  _all: unset;
-  box-sizing: unset;
+  width: 90vw;
+  height: 60vh;
+  _box-sizing: unset;
+  _display: inline-block;
 }
 
 /* ########## ENDE Inhalt ########## */

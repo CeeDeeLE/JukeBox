@@ -261,7 +261,7 @@ import {
 
   // loadJson funktion
   async function loadJson(quelle) {
-    return await (await fetch(quelle)).json();
+    return await (await fetch(quelle)).json().stringify;
   }
 
   // für alphabetische Sortierung der Json Ergebnisse
@@ -634,6 +634,7 @@ import {
   // inaktiver Teil:
   el("#lade-pl").addEventListener("click", showArchiv);
   el("#archiv-hide").addEventListener("click", function () {
+    // ergänzt 2023
     location.reload();
     // el("#visualizer-wrapper").className = "show";
     // el("#wrapper-auswahl").style.display = "flex";
@@ -661,20 +662,17 @@ import {
     if (chartflag === 0) {
       el("#canvas-chart").style.display = "block";
       songsJsonLaden("pie");
-      // chartflag = 1;
-      chartflag = 0;
+      chartflag = 1;
     }
-    // // 1: Chart vorhanden, Chart Canvas wird unsichtbar gemacht
-    // else if (chartflag === 1) {
-    //   el("#canvas-chart").style.display = "none";
-    //   // chartflag = 2;
-    //   chartflag = 0;
-    // }
+    // 1: Chart vorhanden, Chart Canvas wird unsichtbar gemacht
+    else if (chartflag === 1) {
+      el("#canvas-chart").style.display = "none";
+      chartflag = 2;
+    }
     // 2: Chart vorhanden, Chart Canvas wird sichtbar gemacht
     else {
       el("#canvas-chart").style.display = "block";
-      // chartflag = 1;
-      chartflag = 0;
+      chartflag = 1;
     }
   });
 
@@ -742,19 +740,19 @@ import {
   // Erstellt den Chart mit den Ergnissen der Filterfunktion
   // mittels verschiedenen type-Parametern kann die Art (z.b. pie) geändert werden
   function chartErstellen(data, type) {
-    console.log("chart erstellen, data; ", data, "type: ", type);
+    console.log("Chart erstellen, data; ", data, "type: ", type);
     ctx2 = document.getElementById("canvas-chart").getContext("2d");
     new Chart(ctx2, {
       // type: "pie",
-      type: "bar",
-      // type: type,
+      // type: "bar",
+      type: type,
       data: {
         labels: data.label,
         datasets: [
           {
             label: "Musik-Mix im Speicher",
-            color: "rgb(206, 206, 164)",
-            fontSize: 20,
+            // color: "rgb(206, 206, 164)",
+            // fontSize: 20,
             data: data.anzahl,
             backgroundColor: [
               "magenta",
@@ -774,17 +772,32 @@ import {
           },
         ],
       },
+      // options: {
+      //   legend: {
+      //     labels: {
+      //       fontColor: "rgb(206, 206, 164)",
+      //       fontSize: 15,
+      //     },
+      //   },
+      //   scales: {
+      //     yAxes: [
+      //       {
+      //         ticks: {
+      //           display: false,
+      //         },
+      //       },
+      //     ],
+      //   },
+      // },
       options: {
-        legend: {
-          // position: "right",
-          labels: {
-            fontColor: "rgb(206, 206, 164)",
-            fontSize: 15,
+        responsive: true,
+        plugins: {
+          legend: {
+            position: "right",
           },
-        },
-        scales: {
-          y: {
-            beginAtZero: true,
+          title: {
+            display: true,
+            text: "Musik-Mix im Speicher",
           },
         },
       },
@@ -800,7 +813,7 @@ import {
     el("#footer-jukebox").style.display = "block";
   });
   el("#juke-box").addEventListener("click", function () {
-    window.location.reload();
+    location.reload();
   });
   // ENDE Chart
 })();

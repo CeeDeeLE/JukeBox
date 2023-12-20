@@ -10,7 +10,7 @@
 /* Page-Wrapper */
 #notenwrap {
   width: 90%;
-  box-sizing: unset;
+  height: auto;
   margin: auto;
 
   display: flex;
@@ -38,17 +38,19 @@ h1 {
   grid-row-gap: 0.5vw;
 }
 
-#jukebox-link a {
+#zur-jukebox {
+  width: 9vw;
+  height: auto;
   cursor: pointer;
+  float: left;
+}
+#jukebox-link a {
   /* background: rgb(206, 206, 164);
   width: 17vw;
   height: 3vh; */
   text-decoration: none;
   color: black;
-
-  float: left;
 }
-
 #jukebox-link,
 #wrapper-notenrtouren p {
   text-align: left;
@@ -75,8 +77,9 @@ h1 {
 /* https://leafletjs.com/download.html */
 /* https://leafletjs.com/reference.html */
 #map {
+  min-width: 90vh;
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   border: 0.15vh 0.1vw solid black;
 }
 
