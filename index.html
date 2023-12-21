@@ -18,6 +18,12 @@
         <meta name="googlebot" content="noindex, nofollow"/>
         <meta name="revisit-after" content="7 days"/>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+        <!-- !!!!!!!!!!!! ##### Zum Testen! Ausblenden, wenn prod. ############!!!!!!!!!!!! -->
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0"/>
+
         <!-- Ansicht auf mobilen Geräten NICHT skalierbar -->
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /> -->
         <!-- Ansicht auf mobilen Geräten skalierbar -->
@@ -87,9 +93,9 @@
 
             <!-- oberste Zeile: Logo mit 2 Lautsprechern re und li -->
             <div id="logo">
-                <img id="speaker left" src="img/icons/icon_li.png" width="150" height="auto" alt="">
+                <img id="speaker-left" src="img/icons/icon_li.png" width="150" height="auto" alt="">
                 <h1 id="header">JuGagaJuBo</h1>
-                <img id="speaker left" src="img/icons/icon_re.png" width="150" height="auto" alt="">
+                <img id="speaker-right" src="img/icons/icon_re.png" width="150" height="auto" alt="">
             </div>
             <!-- ENDE oberste Zeile: Logo mit 2 Lautsprechern re und li -->
 
@@ -241,14 +247,11 @@
                         <span class="f10">l</span>
                     </h1>
                     <div id="drag-drop">
-                        <span><br>Hier können eigene Songs platziert werden <br>zum Befüllen der Playlist.
-                        <!-- <br><br>&uuml;ber "Genre" (links) vorhandene Songs ausgew&auml;hlen -->
+                        <span>Hier können eigene Songs platziert werden <br>zum Befüllen der Playlist.
                         </span>
                     </div>
                     <div id="auswahl-liste">
                         <h2 id="songs-head">Songs aus der Datenbank über Genre-Wahl (links)</h2>
-                        
-
                         <!-- https://www.prigge-recht.de/15-sekunden-urheberrecht/#:~:text=Die%20vielfach%20angef%C3%BChrten%2015%20Sekunden,zur%20Erzielung%20unerheblicher%20Einnahmen%20dienen. -->
                         <!-- https://www.musikrecht-rechtsanwalt.de/2021/06/21/die-15-sekunden-enteignung/ -->
                         <!-- https://www.gearnews.de/urheberrechtsreform-ab-sofort-koennt-ihr-15-sekunden-legal-samplen/ -->
@@ -293,42 +296,46 @@
 
             <div id="chart">
                 <canvas id="canvas-chart" width="auto" height="auto" alt="Tortendiagramm Musik-Mix"></canvas>
-                <p>&nbsp;</p>
-                <button id="juke-box" class="highlight-pl">Juke-Box</button>
             </div>
 
-            <div id="vorhandene-pl" class="hide">
-                <!-- Play-List-Archiv aufrufen -->	
-                <div id="pl-archiv" class="hide">
-                    <h1>Gespeicherte Play-Listen</h1>
-                    <p id="info-lesen"></p>
-                    <div id="show-pl"></div>
-                    <button id="archiv-hide">Abbrechen</button>
+            <!-- Play-List-Archiv aufrufen -->	
+            <div id="pl-archiv" class="hide">
+                <h1>Gespeicherte Play-Listen</h1>
+                <p id="info-lesen"></p>
+                <div id="show-pl"></div>
+                <div>
+                    <button id="starte-pl">Starte Playlist (inaktiv)</button>
+                    <button class="abbrechen">Abbrechen</button>
                 </div>
-                <!--ENDE  Play-List-Archiv laden -->
+            </div>
+            <!--ENDE  Play-List-Archiv laden -->
 
-                <!-- neue/ fertige Play-List speichern -->
-                <div id="neue-pl" class="hide">
-                        <div id="innerwrap">
-                            <h1>Tragen Sie hier einen Titel für ihren Mix ein:</h1>
-                            <div>
-                                <input id="pl-titel" type="text">
-                            </div>
-                        <div>
-                            <button id="save-pl">OK</button>
-                            <button id="abbrechen">Abbrechen</button>
-                        </div>
-                        <p id="speicher-info">&nbsp;</p>                    
+            <!-- neue/ fertige Play-List speichern -->
+            <div id="neue-pl" class="hide">
+                <div id="innerwrap">
+                    <h1>Tragen Sie hier einen Titel für ihren Mix ein:</h1>
+                    <div>
+                        <input id="pl-titel" type="text">
+                    </div>
+                    <div>
+                        <button id="save-pl">OK</button>
+                        <button class="abbrechen">Abbrechen</button>
+                    </div>
+                    <div id="speicher-info">
                         <p>Ihr Titel wird in den Local Storage Ihres Browsers gespeichert</p>
                         <p>Stellen Sie sicher, das dieser Speicherbereich verfügbar ist.</p> 
                         <p>Falls nicht kann der Titel nicht gespeichert werden.<br> 
                         Die Gründe dafür können in den Einstellungen Ihres Browsers, <br> 
                         oder an Erweiterungen / PlugIns liegen
                         </p>
+    
                     </div>
                 </div>
-                <!-- ENDE neue/ fertige Play-List speichern -->
             </div>
+            <!-- ENDE neue/ fertige Play-List speichern -->
+            
+            <!-- Zurück-Button für eingeblendete Seitenabschnitte -->
+            <button id="juke-box" class="highlight-pl hide">Juke-Box</button>
 
             <footer id="footer-jukebox">
                 <i class="fa fa-copyright" aria-hidden="true"></i> 2021/2023 |

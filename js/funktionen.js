@@ -1,4 +1,5 @@
 // indexed DB Import
+// Service-Worker Variablen-Importe
 import { get, set } from "./indexedDB.js";
 
 // ################################### VARIABLEN ###################################
@@ -46,6 +47,19 @@ function hotButtons(HTMLElement) {
     HTMLElement.className = "aktiv";
   }
 }
+
+// cache leeren
+const serviceWorkerUnreg = async () => {
+  if ("serviceWorker" in navigator) {
+    // zum Erzwingen einer Cache-Leerung:
+    // !!!!!!!!!!! ####### Auskommentieren ########## !!!!!!!!!!!!
+    navigator.serviceWorker.getRegistrations().then(function (registrations) {
+      for (let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }
+};
 
 // Delay Funktion mit Promise, Es wird somit immer auf das Timeout Ergebnis gewartet
 const delay = (millisekunden) =>
@@ -638,6 +652,7 @@ function schallPlattenSprung(audioData) {
 
 // Exportierte Funktionen
 export {
+  serviceWorkerUnreg,
   el,
   create,
   playAudioFunktionen,
@@ -645,4 +660,5 @@ export {
   browserBlocken,
   handleDragOver,
   loadSongsFunktionen,
+  sound,
 };

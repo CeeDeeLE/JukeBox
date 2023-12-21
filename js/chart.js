@@ -6,6 +6,8 @@
  * (c) 2023 Chart.js Contributors
  * Released under the MIT License
  */
+// evtl. vorhandene Funktionn aus .js-Datei importieren
+// import { el } from "./funktionen.js";
 
 import {
   r as requestAnimFrame,

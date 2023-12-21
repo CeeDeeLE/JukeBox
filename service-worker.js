@@ -1,8 +1,7 @@
 // Set a name for the current cache
-let cacheName = "JuGagaJuBo_v1";
+let cacheName = `JuGagaJuBo_v1`;
 
 // Default files to always cache
-
 let cacheFiles = [
   "./",
   "/index.html",
@@ -188,104 +187,164 @@ let cacheFiles = [
 // });
 // Plan B: Microsoft
 self.addEventListener("install", (event) => {
-  console.log("Service Worker: installed!");
-
+  console.log("[ServiceWorker]: installed!");
+  //
   async function cachingCacheFiles() {
     const cache = await caches.open(cacheName);
     cache.addAll(cacheFiles);
-    console.log("CachedFiles: ", cache);
     // if (!cache.ok) throw "Service Worker: installation failed";
   }
-
+  //
   event.waitUntil(cachingCacheFiles());
+  console.log("Cached files: ", cache);
 });
 
-// // Plac C: https://hackernoon.com/15-best-practices-for-optimizing-service-workers-in-2023
-// addEventListener("install", (installEvent) => {
-//   installEvent.waitUntil(
-//     (async () => {
-//       const resp = await fetch("/something");
-//       // ^ Network errors will throw by themselves, so no try/catch needed
-//       if (!resp.ok) throw "Install failed";
+// // Plan A: Klaus Domass
+// self.addEventListener("activate", function (e) {
+//   console.log("[ServiceWorker] Activated");
 
-//       // ...
-//     })()
-//   );
+//   e.waitUntil(
+//     // Get all the cache keys (cacheName)
+//     caches.keys().then(function (cacheNames) {
+//       return Promise.all(
+//         cacheNames.map(function (thisCacheName) {
+//           // If a cached item is saved under a previous cacheName
+//           if (thisCacheName !== cacheName) {
+//             // Delete that cached file
+//             console.log(
+//               "[ServiceWorker]:Removing cached files from cache - ",
+//               thisCacheName
+//             );
+//             return caches.delete(thisCacheName);
+//           }
+//         })
+//       );
+//     })
+//   ); // end e.waitUntil
+// });
+// self.addEventListener("fetch", function (e) {
+//   console.log("[ServiceWorker] Fetch", e.request.url);
+
+//   // e.respondWidth Responds to the fetch event
+//   e.respondWith(
+//     // Check in cache for the request being made
+//     caches.match(e.request).then(function (response) {
+//       // If the request is in the cache
+//       if (response) {
+//         console.log("[ServiceWorker] Found in Cache", e.request.url, response);
+//         // Return the cached version
+//         return response;
+//       }
+//       // If the request is NOT in the cache, fetch and cache
+//       var requestClone = e.request.clone();
+//       return fetch(requestClone)
+//         .then(function (response) {
+//           if (!response) {
+//             console.log("[ServiceWorker] No response from fetch ");
+//             return response;
+//           }
+//           var responseClone = response.clone();
+//           //  Open the cache
+//           caches.open(cacheName).then(function (cache) {
+//             // Put the fetched response in the cache
+//             cache.put(e.request, responseClone);
+//             console.log("[ServiceWorker] New Data Cached", e.request.url);
+//             // Return the response
+//             return response;
+//           }); // end caches.open
+//         })
+//         .catch(function (err) {
+//           console.log("[ServiceWorker] Error Fetching & Caching New Data", err);
+//         });
+//     }) // end caches.match(e.request)
+//   ); // end e.respondWith
 // });
 
-//
-self.addEventListener("activate", function (e) {
-  console.log("[ServiceWorker] Activated");
+// Plan B: https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
+const addResourcesToCache = async (resources) => {
+  const cache = await caches.open(cacheName);
+  await cache.addAll(resources);
+};
 
-  e.waitUntil(
-    // Get all the cache keys (cacheName)
-    caches.keys().then(function (cacheNames) {
-      return Promise.all(
-        cacheNames.map(function (thisCacheName) {
-          // If a cached item is saved under a previous cacheName
-          if (thisCacheName !== cacheName) {
-            // Delete that cached file
-            console.log(
-              "[ServiceWorker] Removing Cached Files from Cache - ",
-              thisCacheName
-            );
-            return caches.delete(thisCacheName);
-          }
-        })
-      );
-    })
-  ); // end e.waitUntil
+//
+const putInCache = async (request, response) => {
+  const cache = await caches.open(cacheName);
+  await cache.put(request, response);
+};
+
+//
+const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
+  // First try to get the resource from the cache
+  const responseFromCache = await caches.match(request);
+  if (responseFromCache) {
+    return responseFromCache;
+  }
+
+  // Next try to use the preloaded response, if it's there
+  const preloadResponse = await preloadResponsePromise;
+  if (preloadResponse) {
+    console.info("Vorab-Ladung: ", preloadResponse);
+    putInCache(request, preloadResponse.clone());
+    return preloadResponse;
+  }
+
+  // Next try to get the resource from the network
+  try {
+    const responseFromNetwork = await fetch(request);
+    // response may be used only once
+    // we need to save clone to put one copy in cache
+    // and serve second one
+    putInCache(request, responseFromNetwork.clone());
+    return responseFromNetwork;
+  } catch (error) {
+    const fallbackResponse = await caches.match(fallbackUrl);
+    if (fallbackResponse) {
+      return fallbackResponse;
+    }
+    // when even the fallback response is not available,
+    // there is nothing we can do, but we must always
+    // return a Response object
+    return new Response("Verbindungsfehler...", {
+      status: 408,
+      headers: { "Content-Type": "text/plain" },
+    });
+  }
+};
+
+// Enable navigation preloads!
+const enableNavigationPreload = async () => {
+  if (self.registration.navigationPreload) {
+    await self.registration.navigationPreload.enable();
+  }
+};
+
+//
+self.addEventListener("activate", (event) => {
+  event.waitUntil(enableNavigationPreload());
+  // ergänztbgem.: https://stackoverflow.com/questions/45467842/how-to-clear-cache-of-service-worker
+  // Remove old caches
+  (async () => {
+    const keys = await caches.keys();
+    return keys.map(async (cache) => {
+      if (cache !== cacheName) {
+        console.log("Service Worker: Removing old cache: " + cache);
+        return await caches.delete(cache);
+      }
+    });
+  })();
 });
 
-self.addEventListener("fetch", function (e) {
-  console.log("[ServiceWorker] Fetch", e.request.url);
+//
+self.addEventListener("install", (event) => {
+  event.waitUntil(addResourcesToCache(cacheFiles));
+});
 
-  // e.respondWidth Responds to the fetch event
-  e.respondWith(
-    // Check in cache for the request being made
-    caches
-      .match(e.request)
-
-      .then(function (response) {
-        // If the request is in the cache
-        if (response) {
-          console.log(
-            "[ServiceWorker] Found in Cache",
-            e.request.url,
-            response
-          );
-          // Return the cached version
-          return response;
-        }
-
-        // If the request is NOT in the cache, fetch and cache
-
-        var requestClone = e.request.clone();
-        return fetch(requestClone)
-          .then(function (response) {
-            if (!response) {
-              console.log("[ServiceWorker] No response from fetch ");
-              return response;
-            }
-
-            var responseClone = response.clone();
-
-            //  Open the cache
-            caches.open(cacheName).then(function (cache) {
-              // Put the fetched response in the cache
-              cache.put(e.request, responseClone);
-              console.log("[ServiceWorker] New Data Cached", e.request.url);
-
-              // Return the response
-              return response;
-            }); // end caches.open
-          })
-          .catch(function (err) {
-            console.log(
-              "[ServiceWorker] Error Fetching & Caching New Data",
-              err
-            );
-          });
-      }) // end caches.match(e.request)
-  ); // end e.respondWith
+self.addEventListener("fetch", (event) => {
+  event.respondWith(
+    cacheFirst({
+      request: event.request,
+      preloadResponsePromise: event.preloadResponse,
+      fallbackUrl: "/index.html",
+    })
+  );
 });

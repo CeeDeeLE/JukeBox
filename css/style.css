@@ -17,7 +17,7 @@
     url("/webfonts/TrebuchetMS.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Audiowide", cursive;
+  font-family: "Audiowide", sans-serif;
   font-style: normal;
   font-weight: normal;
   src: local("Audiowide"), url("/webfonts/AudiowideRegular.woff") format("woff");
@@ -69,7 +69,7 @@ html {
 
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode",
     "Lucida Sans", "Tahoma", "Arial", sans-serif;
-  font-size: 2.5vh;
+  _font-size: 2.5vh;
   font-weight: normal;
   color: var(--creme100);
   text-align: center;
@@ -147,6 +147,14 @@ a:hover {
   color: var(--gruen100);
 }
 
+button {
+  background: var(--creme100);
+}
+button:hover,
+button:active {
+  border: solid 0.5rem orange;
+}
+
 /* asusgeblendete Bereiche */
 .show {
   display: block;
@@ -173,9 +181,15 @@ a:hover {
   justify-content: space-evenly;
   margin: 2.5vh 0;
 }
-#logo img {
+#speaker-left,
+#speaker-right {
   width: 5%;
   height: 5%;
+  filter: grayscale(0%);
+  transition: 0.3s;
+}
+#speaker-left:hover {
+  filter: grayscale(100%);
 }
 
 #header {
@@ -200,7 +214,7 @@ a:hover {
 #visualizer-wrapper {
   width: 92%;
   display: none;
-  font-size: 2.5vh;
+  _font-size: 2.5vh;
   padding: 2vh 2vw;
   border: solid 1px var(--creme100);
   margin: 1.2vh 0;
@@ -223,7 +237,7 @@ a:hover {
 #kuenstler,
 #jahr,
 #gesamtdauer {
-  font-size: 2.5vh;
+  _font-size: 2.5vh;
   line-height: 120%;
   text-align: left;
   margin-top: 1.2vh;
@@ -236,7 +250,7 @@ a:hover {
   cursor: inherit;
   background: var(--creme100);
   line-height: 120%;
-  font-size: 2.5vh;
+  _font-size: 2.5vh;
   font-weight: bold;
 }
 
@@ -332,7 +346,7 @@ a:hover {
 /* ##### ANFANG alle Regler und Buttons unterhalb des Sliders ##### */
 #wrapper-steuerung {
   width: 100%;
-  font-size: 2.5vh;
+  _font-size: 2.5vh;
 
   /* display: flex;
   justify-content: space-evenly; */
@@ -522,7 +536,7 @@ a:hover {
   font-family: "Trebuchet MS", sans-serif;
   text-align: center;
   font-weight: bold;
-  font-size: 2.5vh;
+  _font-size: 2.5vh;
   border: solid 1vw var(--gruen100);
   padding: 1vw;
 }
@@ -539,7 +553,7 @@ a:hover {
   width: 100%;
   display: flex;
 }
-.song-s,
+.instant-play,
 .song-pl {
   width: 100%;
   _line-height: 120%;
@@ -547,12 +561,11 @@ a:hover {
   padding: 0 0.5rem;
   border: solid 0.1rem var(--creme100);
   margin: 0.3vh 0;
-}
-.song-s {
+
   cursor: pointer;
 }
 
-.select-s,
+.pl-plus,
 .select-pl {
   _width: 2rem;
 
@@ -605,12 +618,12 @@ a:hover {
   padding: 0;
 }
 
-.select-s:hover,
+.pl-plus:hover,
 .select-pl:hover,
 .highlight-s:hover,
 .highlight-pl:hover,
 .highlight-b:hover,
-.song-s:hover,
+.instant-play:hover,
 #genre-img img:hover,
 #pl-steuerung img:hover,
 #pl-steuerung button:hover {
@@ -633,19 +646,20 @@ a:hover {
   max-height: 100%;
 }
 
+#juke-box {
+  width: 60vw;
+  align-self: center;
+}
+
 /* ######## ENDE Chart ####### */
 
 /* ##### ANFANG NUR Playlists ##### */
-
-#vorhandene-pl {
-  width: 100%;
-  margin: 1.2vh auto;
-}
 
 #pl-archiv,
 #neue-pl {
   width: 100%;
   text-align: left;
+  margin: 1.2vh auto;
 }
 
 #neue-pl #innerwrap {
@@ -737,6 +751,7 @@ a:hover {
 #footer-jukebox {
   display: block;
   width: 100%;
+  font-size: 2.2vh;
   background: rgba(var(--creme100), 06);
   margin: 4vh 0 2vh 0;
 }
@@ -994,6 +1009,28 @@ a:hover {
     margin: auto;
   }
 
+  /* allgemeiner Hover-Effekt für Button */
+  .highlight-s {
+    cursor: pointer;
+    background: transparent;
+    color: var(--creme100);
+    font-weight: bold;
+    padding: 0.5rem;
+    border: solid 1px var(--creme100);
+    margin-top: 1.2vh;
+  }
+
+  .highlight-pl,
+  .highlight-b {
+    cursor: pointer;
+    background: var(--creme100);
+    color: var(--anthrazit100);
+    _font-size: 2.5vh;
+    font-weight: bold;
+    border: solid 0.5rem var(--creme100);
+    margin-bottom: 1.2vh;
+  }
+
   #genre,
   #genre-songs,
   #playlist-anzeige {
@@ -1090,6 +1127,7 @@ a:hover {
     transition: 0.2s;
 } */
 
+  /* drag & drop in Auswahl-Column */
   #drag-drop {
     width: 100%;
     height: 25vh;
@@ -1101,7 +1139,7 @@ a:hover {
     font-family: "Trebuchet MS", sans-serif;
     text-align: center;
     font-weight: bold;
-    font-size: 2.5vh;
+    _font-size: 2.5vh;
     border: solid 1vw var(--gruen100);
     padding: 1vw;
   }
@@ -1112,62 +1150,39 @@ a:hover {
     border: solid 1vw var(--creme100);
   }
 
+  /* Listentitel Auswahl-Songs */
+  #songs-head {
+    font-size: 3vh;
+  }
+
+  /* Liste mit Auswahl-Songs in Mitte, Play-List & Archiv-Seite */
   #geladen-song,
   #pl-song,
   #archiv-song {
     width: 100%;
     display: flex;
   }
-  .song-s,
+  .instant-play,
   .song-pl {
     width: 100%;
     _line-height: 120%;
-    font-size: 2.5vh;
+    _font-size: 2.5vh;
     padding: 0 0.5rem;
     border: solid 0.1rem var(--creme100);
     margin: 0.3vh 0;
   }
-  .song-s {
-    cursor: pointer;
-  }
 
-  .select-s,
+  .pl-plus,
   .select-pl {
     _width: 2rem;
 
     cursor: pointer;
     background: var(--creme100);
     color: var(--anthrazit100);
-    font-size: 2.5vh;
+    _font-size: 2.5vh;
     text-align: center;
     border: solid 0.1rem var(--creme100);
     margin: 0.3vh 0;
-  }
-
-  .highlight-s {
-    cursor: pointer;
-    background: transparent;
-    color: var(--creme100);
-    font-weight: bold;
-    padding: 0.5rem;
-    border: solid 1px var(--creme100);
-    margin-top: 1.2vh;
-  }
-
-  .highlight-pl,
-  .highlight-b {
-    cursor: pointer;
-    background: var(--creme100);
-    _height: 50px;
-    color: var(--anthrazit100);
-    font-size: 2.5vh;
-    font-weight: bold;
-    border: solid 0.5rem var(--creme100);
-    margin-bottom: 1.2vh;
-  }
-
-  .highlight-pl {
-    width: 100%;
   }
 
   #abspielen {
@@ -1184,12 +1199,12 @@ a:hover {
     padding: 0;
   }
 
-  .select-s:hover,
+  .pl-plus:hover,
   .select-pl:hover,
   .highlight-s:hover,
   .highlight-pl:hover,
   .highlight-b:hover,
-  .song-s:hover,
+  .instant-play:hover,
   #genre-img img:hover,
   #pl-steuerung img:hover,
   #pl-steuerung button:hover {
