@@ -692,7 +692,7 @@ el("#notenspur").addEventListener("click", function () {
 el("#drag-drop").addEventListener("dragover", handleDragOver);
 el("#drag-drop").addEventListener("drop", processFile);
 
-// Spielt die Playliste
+// Play-Button auf Player-Seite zum Abspielen der Playliste
 el("#abspielen").addEventListener("click", function () {
   // Überprüfung ob Songs vorhanden sind
   if (songAnzahl >= 0) {
@@ -710,6 +710,13 @@ el("#abspielen").addEventListener("click", function () {
       "Eine Liste besteht aus mindestens 2 Inhalten<br>Finde den Fehler!";
   }
 });
+// Abbrechen-Button auf der Player-Seite zum Stoppen des Players
+el("#abbrechen").addEventListener("click", function () {
+  // IndexedDB löschen !!!!!
+  clear();
+  // Seite neuladen
+  location.reload();
+});
 
 // inaktiver Teil - Playlisten speichern und abrufen
 el("#lade-pl").addEventListener("click", showArchiv);
@@ -717,8 +724,6 @@ el("#neue-pl").addEventListener("click", savePlayList);
 el("#pl-fertig").addEventListener("click", savePlayList);
 // Abbrechen-Button auf Archiv-Seite
 el(".abbrechen").addEventListener("click", function () {
-  // !!!!!!!!!!!! IndexedDB löschen !!!!!!!!!!!!!
-  // clear();
   // Seite neuladen
   location.reload();
 });
