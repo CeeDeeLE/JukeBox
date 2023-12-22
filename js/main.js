@@ -112,10 +112,11 @@ let songAnzahl;
 
 // !!!!! bei Bedarf Cache leeren via Click auf linken Lautsprecher
 function clearCache() {
-  // // A:
+  // // A: PlayPause auf pause + IndexDB leeren
+  clear();
   window.location.reload(true);
-  console.log("Seiten-Refresh ausgeführt");
-  // // B:
+  // console.log("Seiten-Refresh ausgeführt");
+  // // B: Service-Worker-Reg aufheben
   // if ("serviceWorker" in navigator) {
   //   navigator.serviceWorker.getRegistrations().then(function (registrations) {
   //     for (let registration of registrations) {
@@ -326,7 +327,7 @@ function songsJsonLaden(input) {
     // Ruft in Abhängigkeit des inputs verschiedene Funktionen auf
     if (input === "pie" || input === "bar") {
       // Test Input-Content
-      console.log("Input songsJsonLaden: ", input);
+      // console.log("Input songsJsonLaden: ", input);
       // Funktionen für die Chart-Implementierung
       anzahlGenreFiltern(result[0], input);
     } else {
@@ -490,10 +491,10 @@ function showArchiv() {
 
   // Speicher auslesen
   storage.read();
-  console.log(storageData);
+  // console.log(storageData);
 
   let objKeys = Object.keys(storageData);
-  console.log(objKeys);
+  // console.log(objKeys);
   if (objKeys.length === 0) {
     el("#info-lesen").innerHTML = "Es sind keine Daten vorhanden.";
     return;
@@ -740,7 +741,7 @@ let chartflag = 0;
 // Funktioniert mit einem 3-er-Flag
 
 el("#kuchen").addEventListener("click", function () {
-  console.log("Chart-Flag: ", chartflag);
+  // console.log("Chart-Flag: ", chartflag);
   // 0: Startwert - Chart noch nicht vorhanden und wird somit erstellt
   // Somit wird Chart bei jedem Click neu erstellt
   if (chartflag === 0) {
@@ -767,9 +768,9 @@ el("#kuchen").addEventListener("click", function () {
 // Schreibt ein neues Objekt mit der Anzahl der Genres und dem Namen der Genres
 function anzahlGenreFiltern(result, type) {
   // Info zu Arbeitsschritt
-  console.log("Anzahl je Genre wird abgerufen");
+  // console.log("Anzahl je Genre wird abgerufen");
   // zum Testen, was hier angekommen ist
-  console.log("result-Obj: ", result, ", type-Obj: ", type);
+  // console.log("result-Obj: ", result, ", type-Obj: ", type);
   let anzahlGenre = {
     anzahl: [
       result.filter(function (a) {
@@ -827,7 +828,7 @@ function anzahlGenreFiltern(result, type) {
 // Erstellt den Chart mit den Ergnissen der Filterfunktion
 // mittels verschiedenen type-Parametern kann die Art (z.b. pie) geändert werden
 function chartErstellen(data, type) {
-  console.log("Chart erstellen, data; ", data, "type: ", type);
+  // console.log("Chart erstellen, data; ", data, "type: ", type);
   ctx2 = document.getElementById("canvas-chart").getContext("2d");
   new Chart(ctx2, {
     // type: "pie",
