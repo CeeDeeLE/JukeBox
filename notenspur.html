@@ -1,19 +1,120 @@
-<!DOCTYPE html>
-
-<html lang="de">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- 
+/***************** DESIGNED BY ******************/
+/*               Constanze Deten                */
+/* Idee und Inhalt: Hans-Peter Herrmann         */
+/*                   c 2023                     */
+/************************************************/ 
+-->
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>Notenspur</title>
-    <meta charset="utf-8" />
-    <meta name="description" content="Progammieren mit JS" />
-    <meta name="keywords" content="" />
+    <meta name="title" content="JukiGaga-JukeBox - JuGagaJuBo mit Notenspur" />
+    <meta
+      name="description"
+      content="Projekt Training Progammieren mit JavaScript"
+    />
+    <meta
+      name="abstract"
+      content="Playlisten erstellen und abspielen mit IndexedDB und Drag & Drop"
+    />
+    <meta
+      name="keywords"
+      lang="de"
+      content="JavaScript, Musik, music, Jukebox, Programmieren"
+    />
+    <meta name="author" content="Stephan Tilinski & Constanze Deten" />
+    <meta name="date" content="2023-11-20" />
+
+    <meta name="googlebot" content="noindex, nofollow" />
+    <meta name="revisit-after" content="7 days" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <!-- !!!!!!!!!!!! ##### Zum Testen! Ausblenden, wenn prod. ############!!!!!!!!!!!! -->
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <!-- Ansicht auf mobilen Geräten NICHT skalierbar -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /> -->
+    <!-- Ansicht auf mobilen Geräten skalierbar -->
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
     />
 
+    <!-- Ergänzung -->
+    <!-- Suchmaschinen-Optimierung -->
+    <meta
+      name="robots"
+      content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="JuGagaJuBo" />
+    <meta
+      property="og:description"
+      content="Projekt Training Progammieren mit JavaScript"
+    />
+    <meta property="og:url" content="#" />
+    <meta property="og:site_name" content="JuGagaJuBo" />
+    <!-- <meta property="article:publisher" content="https://www.facebook.com/..."> -->
+    <meta property="article:section" content="Link" />
+    <meta property="og:updated_time" content="2023-11-23T23:00:00-08:00" />
+
+    <title>JuGagaJuBo</title>
+
+    <link rel="canonical" href="#" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
+    <!-- Link zur Vorlage für Symbole und Icons -->
+    <link rel="stylesheet" href="css/fonts/font-awesome.min.css" />
+    <!-- Style für Notenspur -->
     <link rel="stylesheet" href="css/notenspur.css" />
     <link rel="stylesheet" href="leaflet/leaflet.css" />
     <link rel="stylesheet" href="controlFullScreen/Control.FullScreen.css" />
+
+    <!-- Schriften auf dem Server -> auch eingebettet von externer Plattform font.googleapis.com nutzbar -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Ende eingebettete Schrift -->
+
+    <!-- ############# für Keks-Popup ########### -->
+    <!-- Boxicons CSS - Keks-Icon -->
+    <!-- <link
+            href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" type="text/css" href="css/pop-kekse.css" />
+        <script type="text/javascript" src="js/pop-kekse.js" defer></script> -->
+    <!-- ######## Ende Keks-Popup ############# -->
+
+    <!-- Icon im Reiter ausgeben -->
+    <link
+      rel="shortcut icon"
+      type="image/vnd.icon"
+      href="/favicon.ico"
+      size="any"
+    />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!-- player icons von flaticon:  ->  https://www.flaticon.com/ -->
+
+    <script type="module" src="js/main.js"></script>
+
+    <!-- für Charts -->
+    <!-- <link type="text/javascript" href="js/charts.js"/> -->
+    <!-- <link type="text/javascript" href="js/chart.js"/> -->
+    <!-- <link type="text/javascript" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css" /> -->
+    <link
+      type="text/javascript"
+      href="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"
+    />
+    <!-- Service-Worker für Web-Darstellung -->
+    <link rel="manifest" href="manifest.json" />
   </head>
 
   <body>

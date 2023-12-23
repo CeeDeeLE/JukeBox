@@ -17,15 +17,18 @@ import {
   getMany,
   clear,
   // verfügbare, aber nicht eingesetzte Funktionen
-  setMany,
-  update,
-  del,
-  createStore,
   entries,
   keys,
   promisifyRequest,
   values,
+  setMany,
+  update,
+  del,
+  createStore,
 } from "./indexedDB.js";
+
+// https://github.com/vercel/update-check
+// Update-Check Github + Vercel
 
 // Service-Worker-Registrierung
 // // Plan A: Klaus Domass
@@ -751,7 +754,9 @@ el("#kuchen").addEventListener("click", function () {
     songsJsonLaden("bar");
     chartflag = 1;
     // Abbrechen des laufenden Players
-    sound.pause();
+    if (sound) {
+      sound.pause();
+    }
   }
   // 1: Chart vorhanden, Chart Canvas wird unsichtbar gemacht
   else if (chartflag === 1) {
@@ -830,6 +835,7 @@ function anzahlGenreFiltern(result, type) {
 function chartErstellen(data, type) {
   // console.log("Chart erstellen, data; ", data, "type: ", type);
   ctx2 = document.getElementById("canvas-chart").getContext("2d");
+
   new Chart(ctx2, {
     // type: "pie",
     // type: "bar",
@@ -891,7 +897,7 @@ function chartErstellen(data, type) {
         //   },
         //   },
         title: {
-          display: true,
+          display: false,
           text: "Musik-Mix im Speicher",
           color: "#cecea4",
           padding: {

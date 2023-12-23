@@ -137,7 +137,7 @@
                         <input id="laenge-anzeige" value="Laufzeit des Titels" readonly/>
                     </div>
                 </div>
-            </div>
+                <!-- </div> -->
 
                 
                 <!-- Restlaufzeit wird jetzt mit Gesamtzeit in einem Feld angezeigt !!! -->
@@ -147,9 +147,9 @@
                     <!-- <label id="fortschrittsbalkenlabel" for="fortschrittsbalken">Testbalken</label> -->
                     <input type="range" max="100" min="0" value="1" class="slider" id="fortschrittsbalken-inner">
                 </div>
-            <!-- Teil 1: ENDE Info zu laufendem Titel -->
+                <!-- Teil 1: ENDE Info zu laufendem Titel -->
 
-            <!-- Teil 2: Regler zum Abspielen/ Stoppen etc des laufenden Titels -->
+                <!-- Teil 2: Regler zum Abspielen/ Stoppen etc des laufenden Titels -->
                 <!-- Hier sind die Steuerungselemente
                 WICHTIG: Label wurde deaktiviert, da jetzt der Inhalt des Buttons umgeschrieben wird. -->
                 <div id="wrapper-steuerung">
@@ -292,11 +292,12 @@
                         <!-- ENDE 3 Spalten Hauptbereich: Genre, Songs, Play-List -->
                     </div>
                 </div>
-            </div>
+            </div> <!-- Ende wrapper-auswahl -->
 
-            <div id="chart">
+            <div id="chart" class="hide">
+                <h2>Musik-Mix im Speicher</h2>
                 <canvas id="canvas-chart" width="auto" height="auto" alt="Tortendiagramm Musik-Mix"></canvas>
-            </div>
+            </div> <!-- Encdd Chart-Darstellung -->
 
             <!-- Play-List-Archiv aufrufen -->	
             <div id="pl-archiv" class="hide">
@@ -343,7 +344,7 @@
                 <a href="#">Impressum</a>
                 <br />Constanze Deten & Stephan Tilinski
             </footer>
-            </div>
+            <!-- </div> -->
 
         <!-- für Charts -->
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

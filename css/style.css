@@ -152,7 +152,14 @@ button {
 }
 button:hover,
 button:active {
-  border: solid 0.5rem orange;
+  border: solid 0.5vw orange;
+}
+
+input {
+  padding-left: 0.3vw;
+}
+input:hover {
+  border: solid 0.5vw orange;
 }
 
 /* asusgeblendete Bereiche */
@@ -252,6 +259,7 @@ button:active {
   line-height: 120%;
   _font-size: 2.5vh;
   font-weight: bold;
+  padding-left: 0.3vw;
 }
 
 #titel-anzeige {
@@ -330,8 +338,8 @@ button:active {
   border: none;
   height: 2vh;
   width: 1vw;
-  border-radius: 30rem;
-  border: solid 1px var(--creme100);
+  border-radius: 5vw;
+  border: solid 0.1vw var(--creme100);
   background: dodgerblue;
 }
 
@@ -558,8 +566,8 @@ button:active {
   width: 100%;
   _line-height: 120%;
   font-size: 2.5vh;
-  padding: 0 0.5rem;
-  border: solid 0.1rem var(--creme100);
+  padding: 0 0.5vw;
+  border: solid 0.1vw var(--creme100);
   margin: 0.3vh 0;
 
   cursor: pointer;
@@ -567,14 +575,14 @@ button:active {
 
 .pl-plus,
 .select-pl {
-  _width: 2rem;
+  _width: 2vw;
 
   cursor: pointer;
   background: var(--creme100);
   color: var(--anthrazit100);
   font-size: 2.5vh;
   text-align: center;
-  border: solid 0.1rem var(--creme100);
+  border: solid 0.1vw var(--creme100);
   margin: 0.3vh 0;
 }
 
@@ -596,7 +604,7 @@ button:active {
   color: var(--anthrazit100);
   font-size: 2.5vh;
   font-weight: bold;
-  border: solid 0.5rem var(--creme100);
+  border: solid 0.5vw var(--creme100);
   margin-bottom: 1.2vh;
 }
 
@@ -627,7 +635,7 @@ button:active {
 #genre-img img:hover,
 #pl-steuerung img:hover,
 #pl-steuerung button:hover {
-  border: solid 0.5rem orange;
+  border: solid 0.5vw orange;
 }
 
 /* ##### ENDE Genre, Songs und Playlist */
@@ -644,6 +652,7 @@ button:active {
   max-width: 100%;
   min-height: 70vh;
   max-height: 100%;
+  aspect-ratio: auto 3/4;
 }
 
 #juke-box {
@@ -682,10 +691,10 @@ button:active {
 }
 #speicher-eintrag {
   background: var(--creme100);
-  width: 80rem;
-  height: 50px;
-  font-size: 2.5vh;
-  margin-bottom: 10px;
+  width: 95%;
+  line-height: 130%;
+  _font-size: 2.5vh;
+  margin-bottom: 2vh;
 }
 
 #neue-pl h1 {
@@ -794,7 +803,7 @@ button:active {
 
   /* ANFANG visualizer-wrapper mit Canvas Titel-Infos und Spieldauer-Angaben/-Anzeigen */
   #canvas {
-    max-width: 90%;
+    max-width: 95%;
     max-height: 60vh;
     border: solid 1vw rgb(214, 102, 149);
     margin-top: 1.5vh;
@@ -849,22 +858,22 @@ button:active {
     width: 95%;
   }
   #interpret-anzeige {
-    width: 99%;
+    width: 95%;
   }
   #veroeff-anzeige {
     width: 95%;
   }
   #laenge-anzeige {
-    width: 99%;
+    width: 95%;
   }
 
   #fortschrittsbalken {
-    width: 100%;
+    width: 95%;
     margin: 2.5vh 0;
   }
 
   #fortschrittsbalken-inner {
-    width: 100%;
+    width: 95%;
     height: 2vh;
     direction: rtl;
     -webkit-appearance: none;
@@ -921,8 +930,8 @@ button:active {
     border: none;
     height: 2vh;
     width: 1vw;
-    border-radius: 30rem;
-    border: solid 1px var(--creme100);
+    border-radius: 5vw;
+    border: solid 0.1vw var(--creme100);
     background: dodgerblue;
   }
 
@@ -1015,8 +1024,8 @@ button:active {
     background: transparent;
     color: var(--creme100);
     font-weight: bold;
-    padding: 0.5rem;
-    border: solid 1px var(--creme100);
+    padding: 0.5vw;
+    border: solid 0.1vw var(--creme100);
     margin-top: 1.2vh;
   }
 
@@ -1027,7 +1036,7 @@ button:active {
     color: var(--anthrazit100);
     _font-size: 2.5vh;
     font-weight: bold;
-    border: solid 0.5rem var(--creme100);
+    border: solid 0.5vw var(--creme100);
     margin-bottom: 1.2vh;
   }
 
@@ -1167,21 +1176,21 @@ button:active {
     width: 100%;
     _line-height: 120%;
     _font-size: 2.5vh;
-    padding: 0 0.5rem;
-    border: solid 0.1rem var(--creme100);
+    padding: 0 0.5vw;
+    border: solid 0.1vw var(--creme100);
     margin: 0.3vh 0;
   }
 
   .pl-plus,
   .select-pl {
-    _width: 2rem;
+    _width: 2vw;
 
     cursor: pointer;
     background: var(--creme100);
     color: var(--anthrazit100);
     _font-size: 2.5vh;
     text-align: center;
-    border: solid 0.1rem var(--creme100);
+    border: solid 0.1vw var(--creme100);
     margin: 0.3vh 0;
   }
 
@@ -1208,7 +1217,7 @@ button:active {
   #genre-img img:hover,
   #pl-steuerung img:hover,
   #pl-steuerung button:hover {
-    border: solid 0.5rem orange;
+    border: solid 0.5vw orange;
   }
 
   /* ##### ENDE Genre, Songs und Playlist */
