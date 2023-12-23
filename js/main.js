@@ -166,7 +166,7 @@ async function seiteStart() {
     audioDiv.innerHTML = audioName;
 
     // Div in das div "list" einfügen
-    el(" #list").appendChild(archivDiv);
+    el("#list").appendChild(archivDiv);
     archivDiv.appendChild(audioDiv);
 
     // den neuen Divs Klassen mitgeben
@@ -485,12 +485,12 @@ let storage = {
 // gespeicherte Kompositionen laden und zeigen
 function showArchiv() {
   // Player ausblenden
-  el("#visualizer-wrapper").className = "hide";
+  el("#visualizer-wrapper").style.display = "none";
   el("#wrapper-auswahl").style.display = "none";
 
   // damit die Speicher-Liste nicht doppelt angezeigt wird, hier leeren
   // Playlist-Archiv-"Seite" anzeigen
-  el("#pl-archiv").className = "show";
+  el("#wrapper-pl-archiv").style.display = "block";
 
   // Speicher auslesen
   storage.read();
@@ -570,7 +570,7 @@ function showArchiv() {
     // Titel-Wahl-Button auf Load-Seite
     // Eventhandler hier, da Button bei Seitenaufruf nicht existiert
     wahlButton.addEventListener("click", function () {
-      el("#pl-archiv").className = "hide";
+      el("#wrapper-pl-archiv").style.display = "none";
       // Titel auslesen via Attribute `data-titel`
       let selected = this.getAttribute("data-titel");
       el("#titel-info").innerHTML = `Play-List-Titel: ${selected}`;
@@ -586,7 +586,7 @@ function showArchiv() {
 // // neue Funktion für ausgelagerten Event-Handler
 // // !!!!!!!!!!! aus Funktion oben ...
 // function playListSpeicherung() {
-//   el("#pl-archiv").className = "hide";
+//   el("#wrapper-pl-archiv").style.display = "none";
 //   // Titel auslesen via Attribute`data-titel`
 //   let selected = this.getAttribute("data-titel");
 //   el("#titel-info").innerHTML = `Play-List-Titel: ${selected}`;
@@ -596,11 +596,11 @@ function showArchiv() {
 
 // Funktion für Speicher-Button ->
 function savePlayList() {
-  el("#visualizer-wrapper").className = "hide";
+  el("#visualizer-wrapper").style.display = "none";
   el("#wrapper-auswahl").style.display = "none";
 
   // Playlisten-Archiv anzeigen
-  el("#neue-pl").className = "show";
+  el("#wrapper-neue-pl").style.display = "block";
 
   // // !!!!!!!!!!! ansehen !!!!!!!!!!!!
   // // Leerzeichen oder auch nupsi ;-)
@@ -616,7 +616,7 @@ function savePlayList() {
   // // ab hier haben wir einen Titel für die Komposition
 
   // Speicher-Eingaben und Eingabe-Masken wieder entfernen
-  el("#neue-pl").className = "hide";
+  el("#wrapper-neue-pl").style.display = "none";
 
   let sample = {};
 
@@ -637,100 +637,146 @@ function savePlayList() {
 // ############################# EVENT LISTENER #############################
 
 // Clear Cache via linker Speaker
-el("#speaker-left").addEventListener("click", clearCache);
+if (el("#speaker-left")) {
+  el("#speaker-left").addEventListener("click", clearCache);
+}
 
 // Speichern der Slider Einstellungen bei mouseleave
 // Bei Neuladen erscheinen somit die vom Benutzer eingestellten Werte
 // Wichtig z.b. bei Lautstärke
-el("#visualslider").addEventListener("mouseleave", function () {
-  set("visual", Number(this.value));
-});
+if (el("#visualslider")) {
+  el("#visualslider").addEventListener("mouseleave", function () {
+    set("visual", Number(this.value));
+  });
+}
 
-el("#fadeslider").addEventListener("mouseleave", function () {
-  set("fade", Number(this.value));
-});
+if (el("#fadeslider")) {
+  el("#fadeslider").addEventListener("mouseleave", function () {
+    set("fade", Number(this.value));
+  });
+}
 
-el("#abstandslider").addEventListener("mouseleave", function () {
-  set("abstand", Number(this.value));
-});
+if (el("#abstandslider")) {
+  el("#abstandslider").addEventListener("mouseleave", function () {
+    set("abstand", Number(this.value));
+  });
+}
 
 // Click EventListener für Genre anzeigen Funktionen
-el("#pop").addEventListener("click", function () {
-  songsJsonLaden("Pop");
-});
-el("#rock").addEventListener("click", function () {
-  songsJsonLaden("Rock");
-});
-el("#schlager").addEventListener("click", function () {
-  songsJsonLaden("Schlager");
-});
-el("#techno").addEventListener("click", function () {
-  songsJsonLaden("Techno");
-});
-el("#chanson").addEventListener("click", function () {
-  songsJsonLaden("Chanson");
-});
-el("#acapella").addEventListener("click", function () {
-  songsJsonLaden("A capella");
-});
-el("#filmmusik").addEventListener("click", function () {
-  songsJsonLaden("Filmmusik");
-});
-el("#instrumental").addEventListener("click", function () {
-  songsJsonLaden("Instrumental");
-});
-el("#metal").addEventListener("click", function () {
-  songsJsonLaden("Metal");
-});
-el("#swing").addEventListener("click", function () {
-  songsJsonLaden("Swing");
-});
-el("#weltmusik").addEventListener("click", function () {
-  songsJsonLaden("Weltmusik");
-});
-el("#notenspur").addEventListener("click", function () {
-  songsJsonLaden("Notenspur");
-});
+if (el("#pop")) {
+  el("#pop").addEventListener("click", function () {
+    songsJsonLaden("Pop");
+  });
+}
+if (el("#rock")) {
+  el("#rock").addEventListener("click", function () {
+    songsJsonLaden("Rock");
+  });
+}
+if (el("#schlager")) {
+  el("#schlager").addEventListener("click", function () {
+    songsJsonLaden("Schlager");
+  });
+}
+if (el("#techno")) {
+  el("#techno").addEventListener("click", function () {
+    songsJsonLaden("Techno");
+  });
+}
+if (el("#chanson")) {
+  el("#chanson").addEventListener("click", function () {
+    songsJsonLaden("Chanson");
+  });
+}
+if (el("#acapella")) {
+  el("#acapella").addEventListener("click", function () {
+    songsJsonLaden("A capella");
+  });
+}
+if (el("#filmmusik")) {
+  el("#filmmusik").addEventListener("click", function () {
+    songsJsonLaden("Filmmusik");
+  });
+}
+if (el("#instrumental")) {
+  el("#instrumental").addEventListener("click", function () {
+    songsJsonLaden("Instrumental");
+  });
+}
+if (el("#metal")) {
+  el("#metal").addEventListener("click", function () {
+    songsJsonLaden("Metal");
+  });
+}
+if (el("#swing")) {
+  el("#swing").addEventListener("click", function () {
+    songsJsonLaden("Swing");
+  });
+}
+if (el("#weltmusik")) {
+  el("#weltmusik").addEventListener("click", function () {
+    songsJsonLaden("Weltmusik");
+  });
+}
+if (el("#notenspur")) {
+  el("#notenspur").addEventListener("click", function () {
+    songsJsonLaden("Notenspur");
+  });
+}
 
 // Drag & Drop Events
-el("#drag-drop").addEventListener("dragover", handleDragOver);
-el("#drag-drop").addEventListener("drop", processFile);
-
+if (el("#drag-drop")) {
+  el("#drag-drop").addEventListener("dragover", handleDragOver);
+  el("#drag-drop").addEventListener("drop", processFile);
+}
 // Play-Button auf Player-Seite zum Abspielen der Playliste
-el("#abspielen").addEventListener("click", function () {
-  // Überprüfung ob Songs vorhanden sind
-  if (songAnzahl >= 0) {
-    loadSongsFunktionen();
+if (el("#abspielen")) {
+  el("#abspielen").addEventListener("click", function () {
+    // Überprüfung ob Songs vorhanden sind
+    if (songAnzahl >= 0) {
+      loadSongsFunktionen();
 
-    // mittlere Song-Liste mit Abspielstart ausblenden, wenn vorhanden
-    if (el("#song-liste")) {
-      el("#song-liste").setAttribute("class", "hide");
-      el("#auswahl-liste h2").setAttribute("class", "hide");
-      el("#drag-drop").setAttribute("class", "show");
-    } // kein else
-    // wenn nur ein Song in der Playlist, dann Fehlermeldung
-  } else {
-    el("#drag-drop").innerHTML =
-      "Eine Liste besteht aus mindestens 2 Inhalten<br>Finde den Fehler!";
-  }
-});
+      // mittlere Song-Liste mit Abspielstart ausblenden, wenn vorhanden
+      if (el("#song-liste")) {
+        el("#song-liste").style.display = "none";
+        el("#auswahl-liste h2").style.display = "none";
+        el("#drag-drop").style.display = "block";
+      } // kein else
+      // wenn nur ein Song in der Playlist, dann Fehlermeldung
+    } else {
+      el("#drag-drop").innerHTML =
+        "Eine Liste besteht aus mindestens 2 Inhalten<br>Finde den Fehler!";
+    }
+  });
+}
+
 // Abbrechen-Button auf der Player-Seite zum Stoppen des Players
-el("#abbrechen").addEventListener("click", function () {
-  // IndexedDB löschen !!!!!
-  clear();
-  // Seite neuladen
-  location.reload();
-});
+if (el("#abbrechen")) {
+  el("#abbrechen").addEventListener("click", function () {
+    // IndexedDB löschen !!!!!
+    clear();
+    // Seite neuladen
+    location.reload();
+  });
+}
 
 // inaktiver Teil - Playlisten speichern und abrufen
-el("#lade-pl").addEventListener("click", showArchiv);
-el("#neue-pl").addEventListener("click", savePlayList);
-el("#pl-fertig").addEventListener("click", savePlayList);
+if (el("#wrapper-neue-pl")) {
+  el("#wrapper-neue-pl").addEventListener("click", savePlayList);
+}
+if (el("#lade-pl")) {
+  el("#lade-pl").addEventListener("click", showArchiv);
+}
+if (el("#pl-fertig")) {
+  el("#pl-fertig").addEventListener("click", savePlayList);
+}
 // Abbrechen-Button auf Archiv-Seite
-el(".abbrechen").addEventListener("click", function () {
-  // Seite neuladen
-  location.reload();
-});
+if (el(".abbrechen")) {
+  el(".abbrechen").addEventListener("click", function () {
+    // Seite neuladen
+    location.reload();
+  });
+}
 
 // ############################# CHART JS #############################
 
@@ -743,32 +789,36 @@ let chartflag = 0;
 // Buttons mit Balken-Chart
 // Funktioniert mit einem 3-er-Flag
 
-el("#kuchen").addEventListener("click", function () {
-  // console.log("Chart-Flag: ", chartflag);
-  // 0: Startwert - Chart noch nicht vorhanden und wird somit erstellt
-  // Somit wird Chart bei jedem Click neu erstellt
-  if (chartflag === 0) {
-    el("#canvas-chart").style.display = "block";
-    el("#juke-box").setAttribute("class", "highlight-pl show");
-    // songsJsonLaden("pie");
-    songsJsonLaden("bar");
-    chartflag = 1;
-    // Abbrechen des laufenden Players
-    if (sound) {
-      sound.pause();
+if (el("#show-chart")) {
+  el("#show-chart").addEventListener("click", function () {
+    // console.log("Chart-Flag: ", chartflag);
+    // 0: Startwert - Chart noch nicht vorhanden und wird somit erstellt
+    // Somit wird Chart bei jedem Click neu erstellt
+    if (chartflag === 0) {
+      el("#canvas-chart").style.display = "block";
+      // el("#juke-box").setAttribute("class", "highlight-pl show");
+      el("#juke-box").style.display = "block";
+      // songsJsonLaden("pie");
+      songsJsonLaden("bar");
+      chartflag = 1;
+      // Abbrechen des laufenden Players
+      if (sound) {
+        sound.pause();
+      }
     }
-  }
-  // 1: Chart vorhanden, Chart Canvas wird unsichtbar gemacht
-  else if (chartflag === 1) {
-    el("#canvas-chart").style.display = "none";
-    chartflag = 2;
-  }
-  // 2: Chart vorhanden, Chart Canvas wird sichtbar gemacht
-  else {
-    el("#canvas-chart").style.display = "block";
-    chartflag = 1;
-  }
-});
+    // 1: Chart vorhanden, Chart Canvas wird unsichtbar gemacht
+    else if (chartflag === 1) {
+      el("#canvas-chart").style.display = "none";
+      chartflag = 2;
+    }
+    // 2: Chart vorhanden, Chart Canvas wird sichtbar gemacht
+    else {
+      // el("#canvas-chart").style.display = "block";
+      el("#canvas-chart").style.display = "block";
+      chartflag = 1;
+    }
+  });
+}
 
 // Schreibt ein neues Objekt mit der Anzahl der Genres und dem Namen der Genres
 function anzahlGenreFiltern(result, type) {
@@ -845,6 +895,7 @@ function chartErstellen(data, type) {
       datasets: [
         {
           label: "neu laden",
+          backgroundColor: "rgb(206, 206, 164)",
           font: {
             size: 25,
             color: "rgb(206, 206, 164)",
@@ -905,7 +956,7 @@ function chartErstellen(data, type) {
             bottom: 10,
           },
           font: {
-            size: 40,
+            size: 30,
             style: "normal",
             weight: "bold",
             family: "Audiowide",
@@ -916,17 +967,22 @@ function chartErstellen(data, type) {
   });
 } // Ende Chart erstellen Funktion
 
-el("#kuchen").addEventListener("click", function () {
-  el("#chart").style.display = "block";
-  el("#canvas").style.display = "none";
-  el("#canvas-vis-regler").style.display = "none";
-  el("#visualizer-wrapper").style.display = "none";
-  el("#wrapper-auswahl").style.display = "none";
-  el("#footer-jukebox").style.display = "block";
-});
-el("#juke-box").addEventListener("click", function () {
-  location.reload();
-});
+if (el("#show-chart")) {
+  el("#show-chart").addEventListener("click", function () {
+    el("#canvas").style.display = "none";
+    el("#canvas-vis-regler").style.display = "none";
+    el("#visualizer-wrapper").style.display = "none";
+    el("#wrapper-auswahl").style.display = "none";
+    el("#wrapper-pl-archiv").style.display = "none";
+    el("#wrapper-neue-pl").style.display = "none";
+    el("#chart").style.display = "block";
+    el("#chart").className = "show";
+    el("#footer-jukebox").style.display = "block";
+  });
+  el("#juke-box").addEventListener("click", function () {
+    location.reload();
+  });
+}
 // ENDE Chart
 // })(); // Ende ServiceWorker-Registrierung und Aufruf
 serviceWorkerReg();

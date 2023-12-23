@@ -434,9 +434,11 @@ function playAudioFunktionen(
 
 // ################################### EVENT LISTENER ###################################
 
-el("#fortschrittsbalken-inner").addEventListener("input", function () {
-  sound.currentTime = sound.duration - Number(this.value);
-});
+if (el("#fortschrittsbalken-inner")) {
+  el("#fortschrittsbalken-inner").addEventListener("input", function () {
+    sound.currentTime = sound.duration - Number(this.value);
+  });
+}
 
 // Alle Steuerungsfunktionen beinhalten jeweils den Eventlistener
 // Dazu wird jeweils die anonyme Funktion direkt aufgerufen
@@ -444,182 +446,207 @@ el("#fortschrittsbalken-inner").addEventListener("input", function () {
 // Alle Werte werden beim Mouseleave Event in die DB gespeichert, da performancemäßig besser
 
 // volumeslider
-el("#volumeslider").addEventListener("input", function () {
-  el(
-    "#volume"
-  ).innerHTML = `<img src="img/icons/volume.jpg" alt="Lautstärke" title="Lautstärke" height="15"> ${Number(
-    this.value
-  )}%`;
-  // Muteflag muss hier zurückgesetzt werden, falls nach dem Mute der Slider angefasst wird
-  muteflag = 0;
-});
-el("#volumeslider").addEventListener("mouseleave", function () {
-  set("volume", Number(this.value));
-});
+if (el("#volumeslider")) {
+  el("#volumeslider").addEventListener("input", function () {
+    el(
+      "#volume"
+    ).innerHTML = `<img src="img/icons/volume.jpg" alt="Lautstärke" title="Lautstärke" height="15"> ${Number(
+      this.value
+    )}%`;
+    // Muteflag muss hier zurückgesetzt werden, falls nach dem Mute der Slider angefasst wird
+    muteflag = 0;
+  });
+  el("#volumeslider").addEventListener("mouseleave", function () {
+    set("volume", Number(this.value));
+  });
+}
 
 //vor slider
-el("#vorslider").addEventListener("input", function () {
-  el("#vor").innerHTML = `${Number(
-    this.value
-  )}s <img src="img/icons/right-arrow.png" alt="vorspulen" title="vorspulen" height="15">`;
-});
-el("#vorslider").addEventListener("mouseleave", function () {
-  set("vor", Number(this.value));
-});
+if (el("#vorslider")) {
+  el("#vorslider").addEventListener("input", function () {
+    el("#vor").innerHTML = `${Number(
+      this.value
+    )}s <img src="img/icons/right-arrow.png" alt="vorspulen" title="vorspulen" height="15">`;
+  });
+  el("#vorslider").addEventListener("mouseleave", function () {
+    set("vor", Number(this.value));
+  });
+}
 
 // zurück slider
-el("#zurueckslider").addEventListener("input", function () {
-  el(
-    "#zurueck"
-  ).innerHTML = `<img src="img/icons/left-arrow.png" alt="zurückspulen" title="zurückspulen" height="15"> &nbsp;${Number(
-    this.value
-  )}s`;
-});
-el("#zurueckslider").addEventListener("mouseleave", function () {
-  set("zurueck", Number(this.value));
-});
+if (el("#zurueckslider")) {
+  el("#zurueckslider").addEventListener("input", function () {
+    el(
+      "#zurueck"
+    ).innerHTML = `<img src="img/icons/left-arrow.png" alt="zurückspulen" title="zurückspulen" height="15"> &nbsp;${Number(
+      this.value
+    )}s`;
+  });
+  el("#zurueckslider").addEventListener("mouseleave", function () {
+    set("zurueck", Number(this.value));
+  });
+}
 
 // Loop slider
-el("#loopslider").addEventListener("input", function () {
-  if (loopflag === 0) {
-    el(
-      "#loop"
-    ).innerHTML = `<img src="img/icons/loop.png" alt="loop" title="loop" height="15"> Aus`;
-  } else {
-    el("#loop").innerHTML = `${Number(
-      this.value
-    )}s <img src="img/icons/loop.png" alt="loop" title="loop" height="15"> ein`;
-  }
-});
-el("#loopslider").addEventListener("mouseleave", function () {
-  set("loop", Number(this.value));
-});
+if (el("#loopslide")) {
+  el("#loopslider").addEventListener("input", function () {
+    if (loopflag === 0) {
+      el(
+        "#loop"
+      ).innerHTML = `<img src="img/icons/loop.png" alt="loop" title="loop" height="15"> Aus`;
+    } else {
+      el("#loop").innerHTML = `${Number(
+        this.value
+      )}s <img src="img/icons/loop.png" alt="loop" title="loop" height="15"> ein`;
+    }
+  });
+  el("#loopslider").addEventListener("mouseleave", function () {
+    set("loop", Number(this.value));
+  });
+}
 
 // Geschwindigkeit Slider
-el("#geschwindigkeitslider").addEventListener("input", function () {
-  // Überprüfung, ob Sound vorhanden ist
-  if (sound) {
-    sound.playbackRate = Number(this.value) / 10;
-  }
-  // Zahl immer mit einer Nachkommastelle
-  el(
-    "#geschwindigkeitsliderlabel"
-  ).innerHTML = `<img src="img/icons/speed-o-meter.jpg" alt="Geschwindigkeit" title="Geschwindigkeit"> ${(
-    Number(this.value) / 10
-  ).toFixed(1)}`;
-});
-el("#geschwindigkeitslider").addEventListener("mouseleave", function () {
-  set("geschwindigkeit", Number(this.value));
-});
+if (el("#geschwindigkeitslider")) {
+  el("#geschwindigkeitslider").addEventListener("input", function () {
+    // Überprüfung, ob Sound vorhanden ist
+    if (sound) {
+      sound.playbackRate = Number(this.value) / 10;
+    }
+    // Zahl immer mit einer Nachkommastelle
+    el(
+      "#geschwindigkeitsliderlabel"
+    ).innerHTML = `<img src="img/icons/speed-o-meter.jpg" alt="Geschwindigkeit" title="Geschwindigkeit"> ${(
+      Number(this.value) / 10
+    ).toFixed(1)}`;
+  });
+  el("#geschwindigkeitslider").addEventListener("mouseleave", function () {
+    set("geschwindigkeit", Number(this.value));
+  });
+}
 
 // Play oder Pause Funktion
 // ändert Button Text, mithilfe des Flags wird pause oder play ausgeführt
-el("#playpause").addEventListener("click", function () {
-  if (pauseflag === 0) {
-    sound.pause();
-    pauseflag = 1;
-    el(
-      "#playpause"
-    ).innerHTML = `<img src="img/icons/play.jpg" alt="Abspielen und Anhalten" title="Abspielen und Anhalten">`;
-  } else {
-    sound.play();
-    pauseflag = 0;
-    el(
-      "#playpause"
-    ).innerHTML = `<img src="img/icons/pause.jpg" alt="Abspielen und Anhalten" title="Abspielen und Anhalten">`;
-  }
-});
+if (el("#playpause")) {
+  el("#playpause").addEventListener("click", function () {
+    if (pauseflag === 0) {
+      sound.pause();
+      pauseflag = 1;
+      el(
+        "#playpause"
+      ).innerHTML = `<img src="img/icons/play.jpg" alt="Abspielen und Anhalten" title="Abspielen und Anhalten">`;
+    } else {
+      sound.play();
+      pauseflag = 0;
+      el(
+        "#playpause"
+      ).innerHTML = `<img src="img/icons/pause.jpg" alt="Abspielen und Anhalten" title="Abspielen und Anhalten">`;
+    }
+  });
+}
 
 // mute / unmute Funktion
 // mithilfe des Flags wird mute oder unmute ausgeführt
-el("#volume").addEventListener("click", function () {
-  if (muteflag === 0) {
-    // derzeitige Lautstärke speichern
-    volumeTemp = sound.volume * 100;
-    // Lautstärke 0 in Slider und Button anzeigen
-    el("#volumeslider").value = 0;
-    el(
-      "#volume"
-    ).innerHTML = `<img src="img/icons/no-volume.jpg" alt="Lautstärke" title="Lautstärke"> 0%`;
-    // Flag ändern
-    muteflag = 1;
-  } else {
-    // alte Lautstärke in Slider und Button anzeigen
-    el("#volumeslider").value = volumeTemp;
-    el(
-      "#volume"
-    ).innerHTML = `<img src="img/icons/volume.jpg" alt="Lautstärke" title="Lautstärke"> ${Number(
-      volumeslider.value
-    )}%`;
-    // Flag ändern
-    muteflag = 0;
-  }
-}); // Ende EventListener mute / unmute Funktion
+if (el("#volume")) {
+  el("#volume").addEventListener("click", function () {
+    if (muteflag === 0) {
+      // derzeitige Lautstärke speichern
+      volumeTemp = sound.volume * 100;
+      // Lautstärke 0 in Slider und Button anzeigen
+      el("#volumeslider").value = 0;
+      el(
+        "#volume"
+      ).innerHTML = `<img src="img/icons/no-volume.jpg" alt="Lautstärke" title="Lautstärke"> 0%`;
+      // Flag ändern
+      muteflag = 1;
+    } else {
+      // alte Lautstärke in Slider und Button anzeigen
+      el("#volumeslider").value = volumeTemp;
+      el(
+        "#volume"
+      ).innerHTML = `<img src="img/icons/volume.jpg" alt="Lautstärke" title="Lautstärke"> ${Number(
+        volumeslider.value
+      )}%`;
+      // Flag ändern
+      muteflag = 0;
+    }
+  }); // Ende EventListener mute / unmute Funktion
+}
 
 // Titel zurück
-el("#skip-back").addEventListener("click", function () {
-  // Überprüfung ob nicht erster Song
-  if (songindex > 1) {
-    // zählt index zurück, ruft Funktion zum Laden des Songs auf
-    songindex = songindex - 2;
-    loadSongsFunktionen();
-  } else {
-    // wiederholt den aktuellen Song
-    sound.currentTime = 0;
-  }
-});
+if (el("#skip-back")) {
+  el("#skip-back").addEventListener("click", function () {
+    // Überprüfung ob nicht erster Song
+    if (songindex > 1) {
+      // zählt index zurück, ruft Funktion zum Laden des Songs auf
+      songindex = songindex - 2;
+      loadSongsFunktionen();
+    } else {
+      // wiederholt den aktuellen Song
+      sound.currentTime = 0;
+    }
+  });
+}
 
 // Vorspulen um X Sekunden, Addiert X Sekunden auf die CurrentTime
-el("#vor").addEventListener("click", function () {
-  let zeit = Number(vorslider.value);
-  sound.currentTime = sound.currentTime + zeit;
-});
+if (el("#vor")) {
+  el("#vor").addEventListener("click", function () {
+    let zeit = Number(vorslider.value);
+    sound.currentTime = sound.currentTime + zeit;
+  });
+}
 
 // Zurückspulen um X Sekunden, Subrahiert X Sekunden von der CurrentTime
-el("#zurueck").addEventListener("click", function () {
-  let zeit = Number(zurueckslider.value);
-  sound.currentTime = sound.currentTime - zeit;
-});
+if (el("#zurueck")) {
+  el("#zurueck").addEventListener("click", function () {
+    let zeit = Number(zurueckslider.value);
+    sound.currentTime = sound.currentTime - zeit;
+  });
+}
 
 // Nächster Titel
-el("#skip-to-next").addEventListener("click", async function () {
-  // Überprüfung ob mehr als 1 Song in Playlist
-  let songAnzahl = await get("songAnzahl").then((wert) => wert);
-  if (songAnzahl > 0) {
-    loadSongsFunktionen();
-  }
-  // Nichts machen, wenn nur ein Song vorhanden ist
-});
+if (el("#skip-to-next")) {
+  el("#skip-to-next").addEventListener("click", async function () {
+    // Überprüfung ob mehr als 1 Song in Playlist
+    let songAnzahl = await get("songAnzahl").then((wert) => wert);
+    if (songAnzahl > 0) {
+      loadSongsFunktionen();
+    }
+    // Nichts machen, wenn nur ein Song vorhanden ist
+  });
+}
 
 // Loopfunktion. Alle x Sekunden für der Abschnitt wiederholt
 // mit Flag, der bei nochmaligem Klicken deaktiviert wird
 // asynchrone Funktion wegen delay implementierung
-el("#loop").addEventListener("click", async function () {
-  let zeit = Number(loopslider.value);
-  if (loopflag === 0) {
-    loopflag = 1;
-    el("#loop").innerHTML = `${Number(
-      loopslider.value
-    )}s <img src="img/icons/loop.png" alt="loop" title="loop" height="15"> ein`;
-  } else {
-    loopflag = 0;
-    el(
-      "#loop"
-    ).innerHTML = `<img src="img/icons/loop.png" alt="loop" title="loop" height="15"> Aus`;
-  }
-  while (loopflag === 0) {
-    sound.currentTime = sound.currentTime - zeit;
+if (el("#loop")) {
+  el("#loop").addEventListener("click", async function () {
+    let zeit = Number(loopslider.value);
+    if (loopflag === 0) {
+      loopflag = 1;
+      el("#loop").innerHTML = `${Number(
+        loopslider.value
+      )}s <img src="img/icons/loop.png" alt="loop" title="loop" height="15"> ein`;
+    } else {
+      loopflag = 0;
+      el(
+        "#loop"
+      ).innerHTML = `<img src="img/icons/loop.png" alt="loop" title="loop" height="15"> Aus`;
+    }
+    while (loopflag === 0) {
+      sound.currentTime = sound.currentTime - zeit;
 
-    // Muss am Ende durch den Wert der eingestellten Geschwindigkeit dividiert werden
-    await delay((zeit * 1000) / Number(geschwindigkeitslider.value / 10));
-  }
-}); // Ende EventListener Loop Funktion
+      // Muss am Ende durch den Wert der eingestellten Geschwindigkeit dividiert werden
+      await delay((zeit * 1000) / Number(geschwindigkeitslider.value / 10));
+    }
+  }); // Ende EventListener Loop Funktion
+}
 
 // aktuellen Titel wiederholen, setzt die Zeit auf 0
-el("#titel-wiederholen").addEventListener("click", function () {
-  sound.currentTime = 0;
-});
-
+if (el("#titel-wiederholen")) {
+  el("#titel-wiederholen").addEventListener("click", function () {
+    sound.currentTime = 0;
+  });
+}
 // ################################### EVENT LISTENER ENDE ###################################
 
 // experimentelle geheime Top-Secret Funktionen :>

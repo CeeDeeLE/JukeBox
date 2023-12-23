@@ -102,7 +102,7 @@
             <!-- ausgeblendeter Visualisierungsbereich ( Canvas und Regler ) -->
             <canvas id="canvas" width="1000" height="300"></canvas>
 
-            <div id="canvas-vis-regler" class="hide">
+            <div id="canvas-vis-regler">
                 <!-- Anzahl der Balken -->
                 <label id="visualsliderlabel" for="visualslider">Balken-Anzahl</label>
                 <input type="range" max="5" min="0" value="2" class="slider" id="visualslider">
@@ -119,34 +119,34 @@
 
 
             <!-- Info zu laufendem Titel -> Teil 1 -->
-            <div id="visualizer-wrapper" class="show">
-                <div id="laeuft"><h2>Now Playing:</h2>
-                <div id="interpret-titel">
-                    <div id="titel">Titel:
-                        <input id="titel-anzeige" readonly/>
+            <div id="visualizer-wrapper">
+                <div id="laeuft">
+                    <h2>Now Playing:</h2>
+                    <div id="interpret-titel">
+                        <div id="titel">Titel:
+                            <input id="titel-anzeige" readonly/>
+                        </div>
+                        <div id="kuenstler">Künstler:
+                            <input id="interpret-anzeige" readonly/>
+                        </div>
                     </div>
-                    <div id="kuenstler">Künstler:
-                        <input id="interpret-anzeige" readonly/>
+                    <div id="sonst-titelinfo">
+                        <div id="jahr">veröffentlicht (Jahr):
+                            <input id="veroeff-anzeige" readonly/>
+                        </div>
+                        <div id="gesamtdauer">gesamte Dauer / verbleibende Dauer:
+                            <input id="laenge-anzeige" value="Laufzeit des Titels" readonly/>
+                        </div>
                     </div>
-                </div>
-                <div id="sonst-titelinfo">
-                    <div id="jahr">veröffentlicht (Jahr):
-                        <input id="veroeff-anzeige" readonly/>
-                    </div>
-                    <div id="gesamtdauer">gesamte Dauer / verbleibende Dauer:
-                        <input id="laenge-anzeige" value="Laufzeit des Titels" readonly/>
-                    </div>
-                </div>
-                <!-- </div> -->
 
-                
-                <!-- Restlaufzeit wird jetzt mit Gesamtzeit in einem Feld angezeigt !!! -->
-                <!-- <div id="progressbar-text"><span id="verbleibenddauer">verbleibende Dauer:</span></div> -->
+                    <!-- Restlaufzeit wird jetzt mit Gesamtzeit in einem Feld angezeigt !!! -->
+                    <!-- <div id="progressbar-text"><span id="verbleibenddauer">verbleibende Dauer:</span></div> -->
 
-                <div id="fortschrittsbalken">
-                    <!-- <label id="fortschrittsbalkenlabel" for="fortschrittsbalken">Testbalken</label> -->
-                    <input type="range" max="100" min="0" value="1" class="slider" id="fortschrittsbalken-inner">
-                </div>
+                    <div id="fortschrittsbalken">
+                        <!-- <label id="fortschrittsbalkenlabel" for="fortschrittsbalken">Testbalken</label> -->
+                        <input type="range" max="100" min="0" value="1" class="slider" id="fortschrittsbalken-inner">
+                    </div>
+                </div> <!-- Ende Wrapper "läuft" -Infos -->
                 <!-- Teil 1: ENDE Info zu laufendem Titel -->
 
                 <!-- Teil 2: Regler zum Abspielen/ Stoppen etc des laufenden Titels -->
@@ -199,12 +199,13 @@
                     </div>
 
                     <div id="titel-wiederholen">
-                        <img src="img/icons/repeat-pl.jpg" width="auto" height="auto" alt="Titel wiederholen" title="Titel wiederholen">
+                        <label id="wiederhollistlabel" for="wiederholslider">
+                            <img src="img/icons/repeat-pl.jpg" width="auto" height="auto" alt="Titel wiederholen" title="Titel wiederholen">
+                        </label>
+                        <input type="radio" value="off" class="slider" id="wiederholslider">
                     </div>
-                </div>
-                <!-- ENDE Steuerung -->
-            </div>
-            <!-- Visualizer-Wrap zu Ende -->
+                </div><!-- ENDE Steuerung -->
+            </div><!-- Visualizer-Wrap zu Ende -->
 
             <!-- 3 Spalten Hauptbereich: Genre, Songs, Play-List -->
             <div id="wrapper-auswahl" class="show">
@@ -241,7 +242,7 @@
                         <span class="f2">n</span>
                         <span class="f4">g</span>
                         <span class="f5">-</span>
-                        <span class="f7">w</span>
+                        <span class="f7">W</span>
                         <span class="f8">a</span>
                         <span class="f9">h</span>
                         <span class="f10">l</span>
@@ -281,26 +282,21 @@
                     </div>
 
                     <div id="pl-steuerung">
-                        <img id="abspielen" src="img/label_pl-play.jpg" width="50%" height="auto" alt="">
-                        <img id="abbrechen" src="img/label_pl-new.jpg" width="50%" height="auto" alt="">
-                        <img id="pl-fertig" src="img/label_pl-upload.jpg" width="auto" height="auto" alt="">
-                        <img id="lade-pl" src="img/label_pl-download.jpg" width="auto" height="auto" alt="">
+                        <img id="abspielen" src="img/label_pl-play.jpg" width="50%" height="auto" alt="Playlist abspielen">
+                        <img id="abbrechen" src="img/label_pl-new.jpg" width="50%" height="auto" alt="Playlist löschen">
+                        <img id="pl-fertig" src="img/label_pl-upload.jpg" width="auto" height="auto" alt="Playlist speichern">
+                        <img id="lade-pl" src="img/label_pl-download.jpg" width="auto" height="auto" alt="gespeicherte Playlist laden">
                         <a href="notenspur.html" target="_blank">
-                            <img src="img/label_lpz-noten.jpg" width="auto" height="auto" alt="">
+                            <img src="img/label_lpz-noten.jpg" width="auto" height="auto" alt="Kartenausschnitt mit Notenspur-Routen">
                         </a>
-                        <img id="kuchen" src="img/label_musik-mix.jpg" width="auto" height="auto" alt="">
+                        <img id="show-chart" src="img/label_musik-mix.jpg" width="auto" height="auto" alt="">
                         <!-- ENDE 3 Spalten Hauptbereich: Genre, Songs, Play-List -->
                     </div>
                 </div>
             </div> <!-- Ende wrapper-auswahl -->
 
-            <div id="chart" class="hide">
-                <h2>Musik-Mix im Speicher</h2>
-                <canvas id="canvas-chart" width="auto" height="auto" alt="Tortendiagramm Musik-Mix"></canvas>
-            </div> <!-- Encdd Chart-Darstellung -->
-
             <!-- Play-List-Archiv aufrufen -->	
-            <div id="pl-archiv" class="hide">
+            <div id="wrapper-pl-archiv">
                 <h1>Gespeicherte Play-Listen</h1>
                 <p id="info-lesen"></p>
                 <div id="show-pl"></div>
@@ -309,10 +305,10 @@
                     <button class="abbrechen">Abbrechen</button>
                 </div>
             </div>
-            <!--ENDE  Play-List-Archiv laden -->
+            <!--ENDE Wrapper Play-List-Archiv laden -->
 
             <!-- neue/ fertige Play-List speichern -->
-            <div id="neue-pl" class="hide">
+            <div id="wrapper-neue-pl">
                 <div id="innerwrap">
                     <h1>Tragen Sie hier einen Titel für ihren Mix ein:</h1>
                     <div>
@@ -333,10 +329,18 @@
                     </div>
                 </div>
             </div>
-            <!-- ENDE neue/ fertige Play-List speichern -->
+            <!-- ENDE Wrapper neue/ fertige Play-List speichern -->
+
+            <!-- Beginn Chart-Abschnitt -->
+            <div id="chart">
+                <h2>Musik-Mix im Speicher</h2>
+                <div>
+                    <canvas id="canvas-chart" width="auto" height="auto" alt="Tortendiagramm Musik-Mix"></canvas>
+                </div>
+            </div> <!-- Ende Chart-Darstellung -->
             
             <!-- Zurück-Button für eingeblendete Seitenabschnitte -->
-            <button id="juke-box" class="highlight-pl hide">Juke-Box</button>
+            <button id="juke-box">Juke-Box</button>
 
             <footer id="footer-jukebox">
                 <i class="fa fa-copyright" aria-hidden="true"></i> 2021/2023 |

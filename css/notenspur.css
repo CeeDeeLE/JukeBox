@@ -7,6 +7,17 @@
 /* Style.css-Formate übernehmen */
 @import url(style.css);
 
+:root {
+  /* blaue Farbe Notenspur */
+  --notenspur100: rgba(76, 150, 199, 1);
+  /* grüne Farbe Notenweg */
+  --notenweg100: rgba(163, 174, 4, 1);
+  /* Senffarbe Notenbogen */
+  --notenbogen100: rgba(231, 184, 94, 1);
+  /* rote Farbe Notenrad - 40 km(!) */
+  --notenrad100: rgba(224, 82, 70, 1);
+}
+
 /* Page-Wrapper */
 #notenwrap {
   width: 90%;
@@ -39,15 +50,12 @@ h1 {
 }
 
 #zur-jukebox {
-  width: 9vw;
+  width: 11vw;
   height: auto;
   cursor: pointer;
   float: left;
 }
 #jukebox-link a {
-  /* background: rgb(206, 206, 164);
-  width: 17vw;
-  height: 3vh; */
   text-decoration: none;
   color: black;
 }
@@ -58,28 +66,31 @@ h1 {
 }
 
 #notenspur {
-  color: #4c96c7;
+  color: var(--notenspur100);
   font-weight: bold;
 }
 #notenweg {
-  color: #a3ae04;
-  font-weight: bold;
-}
-#notenrad {
-  color: #e05246;
+  color: var(--notenweg100);
   font-weight: bold;
 }
 #notenbogen {
-  color: #e7b85e;
+  color: var(--notenbogen100);
+  font-weight: bold;
+}
+#notenrad {
+  color: var(--notenrad100);
   font-weight: bold;
 }
 
 /* https://leafletjs.com/download.html */
 /* https://leafletjs.com/reference.html */
 #map {
-  min-width: 90vh;
-  width: 100%;
-  height: 75vh;
+  position: relative;
+  width: 90vw;
+  min-width: 50%;
+  max-width: 100%;
+  min-height: 70vh;
+  max-height: 100%;
   border: 0.15vh 0.1vw solid black;
 }
 

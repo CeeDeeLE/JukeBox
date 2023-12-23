@@ -135,9 +135,61 @@
       .bindPopup(popContent);
   } // Ende showMarker
 
+  // #################################### Notenbogen #######################################################
+  // Funktion zum Laden der Daten für den ca. 5 km langen Notenbogen
+  // https://notenspur-leipzig.de/notenrouten/leipziger-notenbogen/karte-stationen
+
+  function loadDataNotenbogen() {
+    // Fetch-Dings-Funktion
+    fetch("data/notenbogen.geojson")
+      .then((response) => response.json())
+      .then((data) => {
+        // type: Feature in Json.
+        data.features.forEach((feature) => {
+          showMarkerNotenbogen(feature);
+        });
+      });
+  } // Ende f loadData
+
+  // Route in die Karte einzeichnen
+  // https://www.mapsdirections.info/de/zeichnen-zie-eine-route-google-maps/
+
+  // anzeigen der vorhandenen Marker auf der Karte
+  // -> bestehen aus 2 Bildern marker-icon und marker-shadow
+  function showMarkerNotenbogen(feature) {
+    // jede Koordinate (da Schleife in loadData) wird durchgegangen und gespeichert
+    let coords = feature.geometry.coordinates;
+
+    // Tausch von Longitude und Latitude
+    coords = [coords[1], coords[0]];
+
+    // extra Variable um Schreibareit zu sparen
+    let daten = feature.properties;
+
+    // Popup mit Inhalt aus dem .geojson füllen
+    let popContent = `<h2>Notenbogen - Station ${daten.nr}: </h2><h4>${daten.name}</h4>
+        <img class="popupimage" src=${daten.bild} alt=${daten.alt} title="${daten.title}">
+        <br>${daten.text} <a href="${daten.mehr}" target="_blank">Mehr...</a><br>
+        <br>Reinh&ouml;ren: <audio class="audio" src=${daten.mp3} type="audio/mp3" controls></audio><br>
+        <br><a href="${daten.route}" target="_blank">Wegvorschlag (pdf)</a>`;
+
+    // eigenes Icon festlegen als Marker für die Karte
+    let markerNotenbogen = L.icon({
+      iconUrl: `../leaflet/images/marker-notenbogen_${daten.nr}.png`,
+      iconSize: [29, 42],
+      iconAnchor: [20, 0],
+    });
+
+    // Marker mit angebundenem Popup in der Karte erscheinen lassen
+    L.marker(coords, { icon: markerNotenbogen })
+      .addTo(map)
+      .bindPopup(popContent);
+  } // Ende showMarker
+
   // ################################### Ausführen ###################################
 
   showMap();
   loadDataNotenweg();
   loadDataNotenspur();
+  loadDataNotenbogen();
 })();

@@ -148,6 +148,12 @@ a:hover {
 }
 
 button {
+  cursor: pointer;
+  color: var(--anthrazit100);
+  _font-size: 2.5vh;
+  font-weight: bold;
+  border: solid 0.5vw var(--creme100);
+  margin-bottom: 1.2vh;
   background: var(--creme100);
 }
 button:hover,
@@ -216,6 +222,7 @@ input:hover {
 #canvas-vis-regler {
   margin-top: 1.2vh;
   _font-size: 2.5vh;
+  display: none;
 }
 
 #visualizer-wrapper {
@@ -586,32 +593,6 @@ input:hover {
   margin: 0.3vh 0;
 }
 
-.highlight-s {
-  cursor: pointer;
-  background: transparent;
-  color: var(--creme100);
-  font-weight: bold;
-  padding: 0.5rem;
-  border: solid 1px var(--creme100);
-  margin-top: 1.2vh;
-}
-
-.highlight-pl,
-.highlight-b {
-  cursor: pointer;
-  background: var(--creme100);
-  _height: 50px;
-  color: var(--anthrazit100);
-  font-size: 2.5vh;
-  font-weight: bold;
-  border: solid 0.5vw var(--creme100);
-  margin-bottom: 1.2vh;
-}
-
-.highlight-pl {
-  width: 100%;
-}
-
 #abspielen {
   width: 49%;
   float: left;
@@ -628,9 +609,6 @@ input:hover {
 
 .pl-plus:hover,
 .select-pl:hover,
-.highlight-s:hover,
-.highlight-pl:hover,
-.highlight-b:hover,
 .instant-play:hover,
 #genre-img img:hover,
 #pl-steuerung img:hover,
@@ -648,30 +626,33 @@ input:hover {
 }
 
 #canvas-chart {
-  min-width: 60vw;
-  max-width: 100%;
+  width: 60vw;
+  max-width: 97%;
   min-height: 70vh;
   max-height: 100%;
   aspect-ratio: auto 3/4;
+  display: block;
 }
 
 #juke-box {
   width: 60vw;
   align-self: center;
+  display: none;
 }
 
 /* ######## ENDE Chart ####### */
 
 /* ##### ANFANG NUR Playlists ##### */
 
-#pl-archiv,
-#neue-pl {
+#wrapper-pl-archiv,
+#wrapper-neue-pl {
   width: 100%;
   text-align: left;
   margin: 1.2vh auto;
+  display: none;
 }
 
-#neue-pl #innerwrap {
+#wrapper-neue-pl #innerwrap {
   width: 100%;
   margin: auto;
 }
@@ -697,7 +678,7 @@ input:hover {
   margin-bottom: 2vh;
 }
 
-#neue-pl h1 {
+#warpper-neue-pl h1 {
   width: 100%;
   margin: 0 auto 1.2vh auto;
   text-align: left;
@@ -734,25 +715,28 @@ input:hover {
   _margin-right: 10px;
 }
 #save-pl img {
-  width: 30px;
+  width: 13.5vw;
 }
 
 #nein-danke {
   background: var(--creme100);
-  width: 220px;
-  line-height: 30px;
+  width: 15vw;
+  line-height: 130%;
 }
 #nein-danke img {
-  height: 50px;
+  height: 13.5vw;
 }
 /* ##### ENDE NUR Playlists ##### */
 
 /* ########## Lesflet-Map ########## */
 #map {
   width: 90vw;
-  height: 60vh;
+  min-width: 50%;
+  max-width: 100%;
+  min-height: 60vh;
+  max-height: 90%;
+  border: 0.15vh 0.1vw solid black;
   _box-sizing: unset;
-  _display: inline-block;
 }
 
 /* ########## ENDE Inhalt ########## */
@@ -1018,28 +1002,6 @@ input:hover {
     margin: auto;
   }
 
-  /* allgemeiner Hover-Effekt für Button */
-  .highlight-s {
-    cursor: pointer;
-    background: transparent;
-    color: var(--creme100);
-    font-weight: bold;
-    padding: 0.5vw;
-    border: solid 0.1vw var(--creme100);
-    margin-top: 1.2vh;
-  }
-
-  .highlight-pl,
-  .highlight-b {
-    cursor: pointer;
-    background: var(--creme100);
-    color: var(--anthrazit100);
-    _font-size: 2.5vh;
-    font-weight: bold;
-    border: solid 0.5vw var(--creme100);
-    margin-bottom: 1.2vh;
-  }
-
   #genre,
   #genre-songs,
   #playlist-anzeige {
@@ -1103,7 +1065,7 @@ input:hover {
   }
   #pl-steuerung img,
   #pl-steuerung a img {
-    width: 45vw;
+    width: 43vw;
   }
 
   /* Bilder abdunkeln bis schwarz-weiß runterskalieren 
@@ -1151,6 +1113,7 @@ input:hover {
     _font-size: 2.5vh;
     border: solid 1vw var(--gruen100);
     padding: 1vw;
+    display: none;
   }
 
   #drag-drop:hover {
@@ -1210,9 +1173,6 @@ input:hover {
 
   .pl-plus:hover,
   .select-pl:hover,
-  .highlight-s:hover,
-  .highlight-pl:hover,
-  .highlight-b:hover,
   .instant-play:hover,
   #genre-img img:hover,
   #pl-steuerung img:hover,

@@ -47,11 +47,11 @@
       "properties": {
         "nr": "3",
         "name": "Grieg-Begegnungsstätte",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/1/4/csm_LNS_03_Edvard_Grieg_6e5d7c1785.jpg",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/1/4/csm_LNS_03_Edvard_Grieg_2ea2fe8486.jpg",
         "alt": "03 - Grieg-Begegnungsstätte",
         "title": "03 - Grieg-Begegnungsstätte",
         "text": "Im Haus des Musikverlages C. F. Peters wohnte der norwegische Komponist und Pianist Edvard Grieg (1843-1907) während seiner Leipzig-Aufenthalte als Gast seiner Verleger M. Abraham und H. Hinrichsen. (Museum am Standort)",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht/route/notenspur/station/grieg-begegnungsstaette/",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=1&tx_notenspurkarte_stationsansicht%5Bstation%5D=4&cHash=cb6571528e9a92fa8791d7afe35dcfda",
         "mp3": "https://notenspur-leipzig.de/fileadmin/content_data/audio/Alle_Musikbeispiele/03m_grieg.mp3",
         "route": "data/Notenspur_Karte.pdf"
       }
@@ -65,11 +65,11 @@
       "properties": {
         "nr": "4",
         "name": "Ehemalige Musikbibliothek Peters",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/c/9/csm_LNS_04_MuBi_Peters_4b94a2c15a.jpg",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/7/d/csm_LNS_14_mdbk_Beethoven_Werner_Schneider_415dffff73.jpg",
         "alt": "04 - Ehemalige Musikbibliothek Peters",
         "title": "04 - Ehemalige Musikbibliothek Peters",
         "text": "Die erste öffentliche Fachbibliothek, u.a. mit wertvollen Original-Handschriften von Bach, Brahms und Haydn. Die Sammlung befindet sich heute im Bestand der Stadtbibliothek Leipzig.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht/route/notenspur/station/ehemalige-musikbibliothek-peters/",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=1&tx_notenspurkarte_stationsansicht%5Bstation%5D=15&cHash=ce6b53a5e691402ee543d6599389e4ee",
         "mp3": "https://notenspur-leipzig.de/fileadmin/content_data/audio/Alle_Musikbeispiele/04m_musikbibliothek.mp3",
         "route": "data/Notenspur_Karte.pdf"
       }
@@ -83,11 +83,11 @@
       "properties": {
         "nr": "5",
         "name": "Grassi Museum für Musikinstrumente",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/1/c/csm_LNS_05_musikinstrumentenmuseum_hendrik_schmidt_8eaa5b690a.jpg",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/1/c/csm_LNS_05_musikinstrumentenmuseum_hendrik_schmidt_074823e053.jpg",
         "alt": "05 - Grassi Museum für Musikinstrumente",
         "title": "05 - Grassi Museum für Musikinstrumente",
         "text": "Die Musikinstrumenten-Sammlung ist mit über 5000 Instrumenten die größte Deutschlands, darunter der älteste original erhaltene Hammerflügel der Welt. (Museum am Standort)",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht/route/notenspur/station/grassi-museum-fuer-musikinstrumente/",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=1&tx_notenspurkarte_stationsansicht%5Bstation%5D=6&cHash=c467fd3205634d4630dba00912cc54ed",
         "mp3": "https://notenspur-leipzig.de/fileadmin/content_data/audio/Alle_Musikbeispiele/05m_musikmuseum.mp3",
         "route": "data/Notenspur_Karte.pdf"
       }
@@ -101,7 +101,7 @@
       "properties": {
         "nr": "6",
         "name": "Alter Johannisfriedhof",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/e/f/csm_LNS_06_2_Johannisfriedhof_Werner_Schneider_03d84f8ab6.jpg",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/e/f/csm_LNS_06_2_Johannisfriedhof_Werner_Schneider_f16f90a917.jpg",
         "alt": "06 - Alter Johannisfriedhof",
         "title": "06 - Alter Johannisfriedhof",
         "text": "Letzte Ruhestätte bedeutender Leipziger Musiker, Komponisten und Verleger. (Bei geschlossenem Friedhof geänderte Routenführung beachten.) Haupteingang Johannisplatz, hinter Grassi-Museum",
@@ -119,11 +119,11 @@
       "properties": {
         "nr": "7",
         "name": "Schumann-Haus",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/3/f/csm_LNS_07_Schumann-Haus_Elke_Leinhoss_76bb9d7899.jpg",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/3/f/csm_LNS_07_Schumann-Haus_Elke_Leinhoss_b046f98965.jpg",
         "alt": "07 - Schumann-Haus",
         "title": "07 - Schumann-Haus",
         "text": "Der Komponist Robert Schumann (1810-1856) und seine Frau, die Pianistin Clara Schumann, geb. Wieck (1819-1896), verlebten hier von 1840 bis 1844 ihre ersten Ehejahre. (Museum am Standort)",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht/route/notenspur/station/schumann-haus/",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=1&tx_notenspurkarte_stationsansicht%5Bstation%5D=8&cHash=1f958a520892a1a2384e592e67927f9f",
         "mp3": "https://notenspur-leipzig.de/fileadmin/content_data/audio/Alle_Musikbeispiele/07m_schumannhaus.mp3",
         "route": "data/Notenspur_Karte.pdf"
       }
@@ -137,11 +137,11 @@
       "properties": {
         "nr": "8",
         "name": "Grafisches Viertel – Musikverlage (Notenwand)",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/8/d/csm_LNS_08_karte_grafisches_viertel_1929_b1e04ac4c8.jpg",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/8/d/csm_LNS_08_karte_grafisches_viertel_1929_b7955ee1b7.jpg",
         "alt": "08 - Grafisches Viertel – Musikverlage (Notenwand)",
         "title": "08 - Grafisches Viertel – Musikverlage (Notenwand)",
         "text": "Im 19. Jahrhundert entwickelte sich Leipzig zur europäischen Musik-und Verlagsmetropole. Zu den bedeutendsten Musikverlagen gehören der älteste Musikverlag der Welt, Breitkopf & Härtel (gegründet 1719), C. F. Peters und F. Hofmeister. An der Notenwand gibt es Informationen zur Geschichte der Notenschrift, Rätsel für Groß und Klein sowie Tonbeispiele.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht/route/notenspur/station/grafisches-viertel-musikverlage-notenwand/",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=1&tx_notenspurkarte_stationsansicht%5Bstation%5D=9&cHash=69df2ad010182c68cef5bd7927d952f9",
         "mp3": "https://notenspur-leipzig.de/fileadmin/content_data/audio/Alle_Musikbeispiele/08m_grafisches.mp3",
         "route": "data/Notenspur_Karte.pdf"
       }
@@ -155,11 +155,11 @@
       "properties": {
         "nr": "9",
         "name": "Wagner-Denkmal",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/c/6/csm_LNS_09_Wagner-Denkmal_Werner_Schneider_65175f1fdc.jpg",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/c/6/csm_LNS_09_Wagner-Denkmal_Werner_Schneider_f9196d9253.jpg",
         "alt": "09 - Wagner-Denkmal",
         "title": "09 - Wagner-Denkmal",
         "text": "Richard Wagner wurde 1813 in Leipzig geboren (gestorben 1883 in Venedig), verlebte seine Kindheit in Dresden und kehrte 1827 zurück, zunächst als Schüler, später als Studiosus der Leipziger Universität. Einige seiner ersten Kompositionen wurden in Leipzig uraufgeführt.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht/route/notenspur/station/wagner-denkmal/",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=1&tx_notenspurkarte_stationsansicht%5Bstation%5D=10&cHash=d62cbe25cc103df5cce85b267760a664",
         "mp3": "https://notenspur-leipzig.de/fileadmin/content_data/audio/Alle_Musikbeispiele/09m_wagnerdenkmal.mp3",
         "route": "data/Notenspur_Karte.pdf"
       }
@@ -173,11 +173,11 @@
       "properties": {
         "nr": "10",
         "name": "Oper Leipzig",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/4/6/csm_LNS_10_Oper_cut-andreas_schmidt_d5d229449c.jpg",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/4/6/csm_LNS_10_Oper_cut-andreas_schmidt_3992d18870.jpg",
         "alt": "10 - Oper Leipzig",
         "title": "10 - Oper Leipzig",
         "text": "Das heutige Opernhaus wurde 1960 eröffnet, nachdem der Vorgängerbau im 2. Weltkrieg zerstört wurde. Leipzigs Operntradition reicht bis ins 17.Jh. zurück.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht/route/notenspur/station/oper-leipzig/",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=1&tx_notenspurkarte_stationsansicht%5Bstation%5D=11&cHash=96f6b355371c32f598f076e2745c1d6b",
         "mp3": "https://notenspur-leipzig.de/fileadmin/content_data/audio/Alle_Musikbeispiele/10m_oper.mp3",
         "route": "data/Notenspur_Karte.pdf"
       }
@@ -191,11 +191,11 @@
       "properties": {
         "nr": "11",
         "name": "Alte Nikolaischule",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/2/5/csm_LNS_11_2_Alte_Nikolaischule_W.Schneider_c119e25b0f.jpg",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/2/5/csm_LNS_11_2_Alte_Nikolaischule_W.Schneider_068cdf2c77.jpg",
         "alt": "11 - Alte Nikolaischule",
         "title": "11 - Alte Nikolaischule",
         "text": "Die 1512 eröffnete Nikolaischule war die erste städtische Bürgerschule in Leipzig. Schüler waren u. a. Gottfried Wilhelm Leibniz, Johann Gottfried Seume und Richard Wagner. (Museum am Standort)",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht/route/notenspur/station/alte-nikolaischule/",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=1&tx_notenspurkarte_stationsansicht%5Bstation%5D=12&cHash=1a6af156c6393c0f1ad9df3059e08eaa",
         "mp3": "https://notenspur-leipzig.de/fileadmin/content_data/audio/Alle_Musikbeispiele/11m_nikolaischule.mp3",
         "route": "data/Notenspur_Karte.pdf"
       }
@@ -209,11 +209,11 @@
       "properties": {
         "nr": "12",
         "name": "Nikolaikirche",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/1/7/csm_LNS_12_Nikolaikirche_Werner_Schneider_7d49555fef.jpg",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/1/7/csm_LNS_12_Nikolaikirche_Werner_Schneider_e930c39252.jpg",
         "alt": "12 - Nikolaikirche",
         "title": "12 - Nikolaikirche",
         "text": "Neben der Thomaskirche die zweite erhaltene Kirche, für deren Musik J. S. Bach verantwortlich war. Uraufführungsort der Johannespassion und eines Teils des Weihnachtsoratoriums. Die Ladegast-Orgel von 1862 ist die größte Kirchenorgel in Sachsen.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht/route/notenspur/station/nikolaikirche/",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=1&tx_notenspurkarte_stationsansicht%5Bstation%5D=13&cHash=c6e296401b8e9805c995030527c14b7f",
         "mp3": "https://notenspur-leipzig.de/fileadmin/content_data/audio/Alle_Musikbeispiele/12m_nikolaikirche.mp3",
         "route": "data/Notenspur_Karte.pdf"
       }
@@ -227,11 +227,11 @@
       "properties": {
         "nr": "13",
         "name": "Altes Rathaus",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/c/f/csm_LNS_13_Altes_Rathaus_Christoph-Sandig_b70a8f55a4.jpg",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/c/f/csm_LNS_13_Altes_Rathaus_Christoph-Sandig_63b8f5ce32.jpg",
         "alt": "13 - Altes Rathaus",
         "title": "13 - Altes Rathaus",
         "text": "Auftrittsort der Stadtpfeifer. J. S. Bach unterschrieb hier seinen Anstellungsvertrag mit der Stadt. Zu sehen ist das berühmte Bach-Porträt von E. Haußmann im Original. (Museum am Standort)",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht/route/notenspur/station/altes-rathaus/",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=1&tx_notenspurkarte_stationsansicht%5Bstation%5D=14&cHash=d02867c6008f9e9df9f3c1bed9d5573b",
         "mp3": "https://notenspur-leipzig.de/fileadmin/content_data/audio/Alle_Musikbeispiele/13m_rathaus.mp3",
         "route": "data/Notenspur_Karte.pdf"
       }
@@ -245,11 +245,11 @@
       "properties": {
         "nr": "14",
         "name": "Museum der bildenden Künste – Beethoven",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/7/d/csm_LNS_14_mdbk_Beethoven_Werner_Schneider_af02141f8e.jpg",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/7/d/csm_LNS_14_mdbk_Beethoven_Werner_Schneider_415dffff73.jpg",
         "alt": "14 - Museum der bildenden Künste – Beethoven",
         "title": "14 - Museum der bildenden Künste – Beethoven",
         "text": "Hier befindet sich eines der weltweit bedeutendsten musikbezogenen Werke der bildenden Kunst: Max Klingers Beethoven-Plastik, ein Hauptwerk des Symbolismus. (Museum am Standort)",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht/route/notenspur/station/museum-der-bildenden-kuenste-beethoven/",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=1&tx_notenspurkarte_stationsansicht%5Bstation%5D=15&cHash=ce6b53a5e691402ee543d6599389e4ee",
         "mp3": "https://notenspur-leipzig.de/fileadmin/content_data/audio/Alle_Musikbeispiele/14m_bildermuseum.mp3",
         "route": "data/Notenspur_Karte.pdf"
       }
@@ -263,11 +263,11 @@
       "properties": {
         "nr": "15",
         "name": "Zum Arabischen Coffe Baum",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/e/4/csm_LNS_15_Coffebaum_Foto_Thilo-Kuehne_927ee2f5a3.jpg",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/e/4/csm_LNS_15_Coffebaum_Foto_Thilo-Kuehne_bfaea68bac.jpg",
         "alt": "15 - Zum Arabischen Coffe Baum",
         "title": "15 - Zum Arabischen Coffe Baum",
         "text": "Ältestes Kaffeehaus Deutschlands; jahrhundertelang Treffpunkt von Dichtern, Gelehrten und Musikern. Hier trafen sich die „Davidsbündler“ um Robert Schumann, deren Sprachrohr die „Neue Zeitschrift für Musik“ war. (Museum am Standort)",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht/route/notenspur/station/zum-arabischen-coffe-baum/",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=1&tx_notenspurkarte_stationsansicht%5Bstation%5D=18&cHash=8bd49a825451e7547df1a495382b0486",
         "mp3": "https://notenspur-leipzig.de/fileadmin/content_data/audio/Alle_Musikbeispiele/15m_coffebaum.mp3",
         "route": "data/Notenspur_Karte.pdf"
       }
@@ -281,11 +281,11 @@
       "properties": {
         "nr": "16",
         "name": "Hôtel de Saxe",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/f/5/csm_LNS_16_hotel_de_saxe_md_fef28d0ba8.jpg",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/f/5/csm_LNS_16_hotel_de_saxe_md_5aa4f37d23.jpg",
         "alt": "16 - Hôtel de Saxe",
         "title": "16 - Hôtel de Saxe",
         "text": "Der Konzertsaal des ehemaligen Hotels war Auftrittsort für gastierende Virtuosen und Stätte für Leipziger Konzertreihen. 1796 nächtigte hier Mozarts Witwe Constanze.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht/route/notenspur/station/hotel-de-saxe/",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=1&tx_notenspurkarte_stationsansicht%5Bstation%5D=19&cHash=cc51ac636f8d52b768920ab539afc549",
         "mp3": "https://notenspur-leipzig.de/fileadmin/content_data/audio/Alle_Musikbeispiele/16m_hoteldesaxe.mp3",
         "route": "data/Notenspur_Karte.pdf"
       }
@@ -299,11 +299,11 @@
       "properties": {
         "nr": "17",
         "name": "Thomaskirche",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/3/7/csm_LNS_17_2_thomaskirche_cut_Werner_Schneider_60c8111e8b.jpg",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/3/7/csm_LNS_17_2_thomaskirche_cut_Werner_Schneider_2c003d941b.jpg",
         "alt": "17 - Thomaskirche",
         "title": "17 - Thomaskirche",
         "text": "Seit mehr als 800 Jahren Heimstatt des Thomanerchores. Uraufführungsort der Matthäus-Passion und vieler anderer Werke Johann Sebastian Bachs, Thomaskantor von 1723–1750.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht/route/notenspur/station/thomaskirche/",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=1&tx_notenspurkarte_stationsansicht%5Bstation%5D=20&cHash=9bbc41f159a905cc3f66fd767088299a",
         "mp3": "https://notenspur-leipzig.de/fileadmin/content_data/audio/Alle_Musikbeispiele/17m_thomaskirche.mp3",
         "route": "data/Notenspur_Karte.pdf"
       }
@@ -317,11 +317,11 @@
       "properties": {
         "nr": "18",
         "name": "Bach-Museum",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/b/e/csm_LNS_18_Foto_Sepp_Beck_893c6f5a09.jpg",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/b/e/csm_LNS_18_Foto_Sepp_Beck_bf62d678d3.jpg",
         "alt": "18 - Bach-Museum",
         "title": "18 - Bach-Museum",
         "text": "Das Bach-Museum widmet sich vorrangig dem Leben und Wirken des Thomaskantors Johann Sebastian Bach (1685-1750) in Leipzig. Es befindet sich im Haus der befreundeten Kaufmannsfamilie Bose. (Museum am Standort)",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht/route/notenspur/station/bach-museum/",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=1&tx_notenspurkarte_stationsansicht%5Bstation%5D=21&cHash=ead88600eb9e8d4debeff5e45c4f56f0",
         "mp3": "https://notenspur-leipzig.de/fileadmin/content_data/audio/Alle_Musikbeispiele/18m_bosehaus.mp3",
         "route": "data/Notenspur_Karte.pdf"
       }
@@ -335,11 +335,11 @@
       "properties": {
         "nr": "19",
         "name": "Standort Geburtshaus von Clara Wieck",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/1/d/csm_LNS_19_HoheLilie_d706b17a2c.jpg",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/1/d/csm_LNS_19_HoheLilie_0774dc76a0.jpg",
         "alt": "19 - Geburtshaus von Clara Wieck",
         "title": "19 - Geburtshaus von Clara Wieck",
         "text": "Im ehemaligen Haus „Hohe Lilie“ wurde 1819 Clara Wieck, berühmte Pianistin und spätere Ehefrau Robert Schumanns, geboren.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht/route/notenspur/station/standort-geburtshaus-von-clara-wieck/",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=1&tx_notenspurkarte_stationsansicht%5Bstation%5D=22&cHash=13054825b81117cd1f7793ee01f30357",
         "mp3": "https://notenspur-leipzig.de/fileadmin/content_data/audio/Alle_Musikbeispiele/19m_wieckhaus.mp3",
         "route": "data/Notenspur_Karte.pdf"
       }
@@ -353,11 +353,11 @@
       "properties": {
         "nr": "20",
         "name": "Standort Altes Konservatorium",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/b/9/csm_LNS_20_konservatorium_Foto_Herrmann-Walter_2c8b04eb59.jpg",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/b/9/csm_LNS_20_konservatorium_Foto_Herrmann-Walter_2a29be893f.jpg",
         "alt": "20 - Altes Konservatorium",
         "title": "20 - Altes Konservatorium",
         "text": "In diesem Hof wurde 1843 auf Initiative Mendelssohns die erste Musikhochschule auf dem Gebiet des heutigen Deutschlands eröffnet. (Innenhof des Städtischen Kaufhauses)",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht/route/notenspur/station/standort-altes-konservatorium/",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=1&tx_notenspurkarte_stationsansicht%5Bstation%5D=23&cHash=ced93bbdad50c888b0be01ad4a79849f",
         "mp3": "https://notenspur-leipzig.de/fileadmin/content_data/audio/Alle_Musikbeispiele/20m_konservatorium.mp3",
         "route": "data/Notenspur_Karte.pdf"
       }
@@ -371,11 +371,11 @@
       "properties": {
         "nr": "21",
         "name": "Standort Erstes Gewandhaus",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/9/4/csm_LNS_21_Erstes_Gwh_Holzschnitt_A.Neumann_7addc9c786.jpg",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/9/4/csm_LNS_21_Erstes_Gwh_Holzschnitt_A.Neumann_d7ca3aecbf.jpg",
         "alt": "21 - Erstes Gewandhaus",
         "title": "21 - Erstes Gewandhaus",
         "text": "Hier stand das Gewandhaus, Lager und Domizil der Tuchhändler. Das Gewandhausorchester – ältestes bürgerliches Konzertorchester der Welt – gab hier ab 1781 Konzerte.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht/route/notenspur/station/standort-erstes-gewandhaus/",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=1&tx_notenspurkarte_stationsansicht%5Bstation%5D=24&cHash=070c4129f03aecc52c7b5b0329bd71fe",
         "mp3": "https://notenspur-leipzig.de/fileadmin/content_data/audio/Alle_Musikbeispiele/21m_altesgewandhaus.mp3",
         "route": "data/Notenspur_Karte.pdf"
       }
@@ -389,11 +389,11 @@
       "properties": {
         "nr": "22",
         "name": "Paulinum – Aula und Universitätskirche St. Pauli",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/b/9/csm_LNS_22_paulinum_Universitaetsarchiv_c4c224eab4.jpg",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/b/9/csm_LNS_22_paulinum_Universitaetsarchiv_8edba849fd.jpg",
         "alt": "22 - Paulinum – Aula und Universitätskirche St. Pauli",
         "title": "22 - Paulinum – Aula und Universitätskirche St. Pauli",
         "text": "Seit jeher spielt die Musik an der „Alma Mater Lipsiensis“ eine große Rolle. Bedeutende Komponisten waren eng mit der Universität verbunden, u.a. Georg Philipp Telemann, Richard Wagner, Felix Mendelssohn Bartholdy, Robert Schumann, Max Reger. (Bei geschlossenem Innenhof geänderte Routenführung beachten.)",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht/route/notenspur/station/paulinum-aula-und-universitaetskirche-st-pauli/",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=1&tx_notenspurkarte_stationsansicht%5Bstation%5D=25&cHash=dee8badc2aff5c3fac362d48ba76298d",
         "mp3": "https://notenspur-leipzig.de/fileadmin/content_data/audio/Alle_Musikbeispiele/22m_paulinum.mp3",
         "route": "data/Notenspur_Karte.pdf"
       }
@@ -407,11 +407,11 @@
       "properties": {
         "nr": "23",
         "name": "MDR Würfel  – Orchester und Chöre des MDR",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/c/9/csm_LNS_23_mdr_Foto_Hopf-MDR_370c2f0841.jpg",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/c/9/csm_LNS_23_mdr_Foto_Hopf-MDR_484861438b.jpg",
         "alt": "23 - MDR Würfel  – Orchester und Chöre des MDR",
         "title": "23 - MDR Würfel  – Orchester und Chöre des MDR",
         "text": "Im 2001 erbauten Kubus finden Proben und Tonaufnahmen des MDR Rundfunk- und Kinderchors sowie des MDR Sinfonieorchesters statt.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht/route/notenspur/station/mdr-wuerfel-orchester-und-choere-des-mdr/",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/notenspur/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=1&tx_notenspurkarte_stationsansicht%5Bstation%5D=26&cHash=b618f4f593986678ad553aa0384c925c",
         "mp3": "https://notenspur-leipzig.de/fileadmin/content_data/audio/Alle_Musikbeispiele/23m_mdr.mp3",
         "route": "data/Notenspur_Karte.pdf"
       }

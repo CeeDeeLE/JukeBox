@@ -189,12 +189,12 @@
       },
       "properties": {
         "nr": "11",
-        "name": "Liviaplatz / Waldstraßenviertel",
-        "bild": "https://notenspur-leipzig.de/fileadmin/notenspur/content/bilder/stationen/LNW_10_livia_frege.jpg",
+        "name": "Zweites Gewandhaus, Mendelssohn-Ufer",
+        "bild": "",
         "alt": "11 - Liviaplatz / Waldstraßenviertel",
         "title": "11 - Liviaplatz / Waldstraßenviertel",
         "text": "Mit der Liviastraße im Waldstraßenviertel ehrte die Stadt Leipzig 1889 die begnadete Sängerin Livia Frege. Sie wurde als Königin des Leipziger romantischen Liedgesangs bezeichnet. Der besondere Reiz ihrer Stimme bezauberte die Zeitgenossen. Das Waldstraßenviertel ist eng mit der Fregeschen Familiengeschichte verknüpft.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/leipziger-notenweg/karte-stationen/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=2&tx_notenspurkarte_stationsansicht%5Bstation%5D=68&cHash=38583852a3bbd0ede47236bcac3b87b5",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/leipziger-notenbogen/karte-stationen/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=4&tx_notenspurkarte_stationsansicht%5Bstation%5D=28&cHash=a313902adce972ef0255ac783e23046d",
         "mp3": "audio/Notenweg/klanglogo_blaesersatz.mp3",
         "route": "data/Notenweg_Karte.pdf"
       }
@@ -247,6 +247,60 @@
         "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/6/9/csm_LNR_15_Klinger_Wagner_Foto_Werner_Schneider_93b718b81d.jpg",
         "alt": "14 - Max-Klinger-Treppe/ Wagner-Denkmal",
         "title": "14 - Max-Klinger-Treppe/ Wagner-Denkmal",
+        "text": "Das neue Richard-Wagner-Denkmal nahe dem ehemaligen Geburtshaus Richard Wagners am Brühl wurde an seinem 200. Geburtstag am 22. Mai 2013 eingeweiht. Errichtet wurde das Kunstwerk Stephan Balkenhols (geb. 1957) auf dem historischen Sockel des Leipziger Bildhauers Max Klinger.",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/leipziger-notenweg/karte-stationen/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=2&tx_notenspurkarte_stationsansicht%5Bstation%5D=61&cHash=c1c4f2f8424c446c1c6dd2e8411844dd",
+        "mp3": "audio/Notenweg/klanglogo_orchester.mp3",
+        "route": "data/Notenweg_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.370435, 51.34253]
+      },
+      "properties": {
+        "nr": "15",
+        "name": "Max-Klinger-Treppe/Wagner-Denkmal",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/6/9/csm_LNR_15_Klinger_Wagner_Foto_Werner_Schneider_93b718b81d.jpg",
+        "alt": "15 - Max-Klinger-Treppe/ Wagner-Denkmal",
+        "title": "15 - Max-Klinger-Treppe/ Wagner-Denkmal",
+        "text": "Das neue Richard-Wagner-Denkmal nahe dem ehemaligen Geburtshaus Richard Wagners am Brühl wurde an seinem 200. Geburtstag am 22. Mai 2013 eingeweiht. Errichtet wurde das Kunstwerk Stephan Balkenhols (geb. 1957) auf dem historischen Sockel des Leipziger Bildhauers Max Klinger.",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/leipziger-notenweg/karte-stationen/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=2&tx_notenspurkarte_stationsansicht%5Bstation%5D=61&cHash=c1c4f2f8424c446c1c6dd2e8411844dd",
+        "mp3": "audio/Notenweg/klanglogo_orchester.mp3",
+        "route": "data/Notenweg_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.370435, 51.34253]
+      },
+      "properties": {
+        "nr": "16",
+        "name": "Max-Klinger-Treppe/Wagner-Denkmal",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/6/9/csm_LNR_15_Klinger_Wagner_Foto_Werner_Schneider_93b718b81d.jpg",
+        "alt": "16 - Max-Klinger-Treppe/ Wagner-Denkmal",
+        "title": "16 - Max-Klinger-Treppe/ Wagner-Denkmal",
+        "text": "Das neue Richard-Wagner-Denkmal nahe dem ehemaligen Geburtshaus Richard Wagners am Brühl wurde an seinem 200. Geburtstag am 22. Mai 2013 eingeweiht. Errichtet wurde das Kunstwerk Stephan Balkenhols (geb. 1957) auf dem historischen Sockel des Leipziger Bildhauers Max Klinger.",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/leipziger-notenweg/karte-stationen/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=2&tx_notenspurkarte_stationsansicht%5Bstation%5D=61&cHash=c1c4f2f8424c446c1c6dd2e8411844dd",
+        "mp3": "audio/Notenweg/klanglogo_orchester.mp3",
+        "route": "data/Notenweg_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.370435, 51.34253]
+      },
+      "properties": {
+        "nr": "17",
+        "name": "Max-Klinger-Treppe/Wagner-Denkmal",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/6/9/csm_LNR_15_Klinger_Wagner_Foto_Werner_Schneider_93b718b81d.jpg",
+        "alt": "17 - Max-Klinger-Treppe/ Wagner-Denkmal",
+        "title": "17 - Max-Klinger-Treppe/ Wagner-Denkmal",
         "text": "Das neue Richard-Wagner-Denkmal nahe dem ehemaligen Geburtshaus Richard Wagners am Brühl wurde an seinem 200. Geburtstag am 22. Mai 2013 eingeweiht. Errichtet wurde das Kunstwerk Stephan Balkenhols (geb. 1957) auf dem historischen Sockel des Leipziger Bildhauers Max Klinger.",
         "mehr": "https://notenspur-leipzig.de/notenrouten/leipziger-notenweg/karte-stationen/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=2&tx_notenspurkarte_stationsansicht%5Bstation%5D=61&cHash=c1c4f2f8424c446c1c6dd2e8411844dd",
         "mp3": "audio/Notenweg/klanglogo_orchester.mp3",
