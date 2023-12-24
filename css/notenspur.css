@@ -47,10 +47,12 @@ h1 {
   grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 0.5vw;
   grid-row-gap: 0.5vw;
+
+  margin: 3vh 0;
 }
 
 #zur-jukebox {
-  width: 11vw;
+  width: 15vw;
   height: auto;
   cursor: pointer;
   float: left;
@@ -89,7 +91,7 @@ h1 {
   width: 90vw;
   min-width: 50%;
   max-width: 100%;
-  min-height: 70vh;
+  min-height: 85vh;
   max-height: 100%;
   border: 0.15vh 0.1vw solid black;
 }

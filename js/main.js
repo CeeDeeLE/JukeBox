@@ -115,7 +115,7 @@ let songAnzahl;
 
 // !!!!! bei Bedarf Cache leeren via Click auf linken Lautsprecher
 function clearCache() {
-  // // A: PlayPause auf pause + IndexDB leeren
+  // // A: PlayPause auf pause & IndexDB leeren
   clear();
   window.location.reload(true);
   // console.log("Seiten-Refresh ausgeführt");
@@ -144,12 +144,11 @@ async function seiteStart() {
     let songArray = await get(`Song${songIndex}`).then((wert) => wert);
 
     // IF -> JSON Song
-    // es wird überprüft ob es ein Array ist
+    // es wird überprüft, ob es ein Array ist
     if (songArray.constructor == Array) {
       // Informationen werden in Variablen gespeichert
       audioName = songArray[0];
     }
-
     // ELSE -> Drag&Drop Songs
     else {
       // aus DB laden
@@ -158,19 +157,31 @@ async function seiteStart() {
       audioName = songGeladen.name.split(".")[0];
     }
 
+    // Vorgang identisch mit function makeList(audioName) ?!
     // neues div archiv-song erzeugen mit div class="song-pl" und class="select-pl"
     let archivDiv = create("div");
     archivDiv.setAttribute("id", "archiv-song");
 
-    let audioDiv = create("div");
-    audioDiv.innerHTML = audioName;
+    // !!!!!!!!!!! prüfen, ob Künstlernme integriert werden kann !!!!!!!!!!!!!
+    let audioButton = create("div");
+    audioButton.innerHTML = audioName;
+    // erstellt subtract-Feld im archiv-songDiv
+    let playlistMinusButton = create("div");
+    playlistMinusButton.innerHTML = ` - `;
 
-    // Div in das div "list" einfügen
-    el("#list").appendChild(archivDiv);
-    archivDiv.appendChild(audioDiv);
+    // Div archiv-song & minus-Button in das div "playlist" einfügen
+    el("#playlist").appendChild(archivDiv);
+    archivDiv.appendChild(audioButton);
+    archivDiv.appendChild(playlistMinusButton);
 
     // den neuen Divs Klassen mitgeben
-    audioDiv.className = "song-pl";
+    audioButton.className = "song-pl";
+    playlistMinusButton.className = "pl-minus";
+
+    // den neuen Divs Eventhandler hinzufügen
+    playlistMinusButton.addEventListener("click", () => {
+      playlistMinusButtonClick(audioName);
+    });
   } // Ende Schleife
 
   // Werte der Einstellungen aus IndexedDB Lesen und eintragen
@@ -289,15 +300,26 @@ function makeList(audioName) {
   let plDiv = create("div");
   plDiv.setAttribute("id", "pl-song");
 
-  let audioDiv = create("div");
-  audioDiv.innerHTML = audioName;
+  let audioButton = create("div");
+  audioButton.innerHTML = audioName;
 
-  // Div der Liste hinzufügen
-  el("#list").appendChild(plDiv);
-  plDiv.appendChild(audioDiv);
+  // erstellt subtract-Feld im archiv-songDiv
+  let playlistMinusButton = create("div");
+  playlistMinusButton.innerHTML = ` - `;
+
+  // Div archiv-song & minus-Button in das div "playlist" einfügen
+  el("#playlist").appendChild(plDiv);
+  plDiv.appendChild(audioButton);
+  plDiv.appendChild(playlistMinusButton);
 
   // den neuen Divs Klassen mitgeben
-  audioDiv.className = "song-pl";
+  audioButton.className = "song-pl";
+  playlistMinusButton.className = "pl-minus";
+
+  // den neuen Divs Eventhandler hinzufügen
+  playlistMinusButton.addEventListener("click", () => {
+    playlistMinusButtonClick(audioName);
+  });
 } // Ende makeList Funktion
 
 // Funktion zum Speichern der Songs (JSON und DROP Songs)
@@ -314,6 +336,23 @@ function songSpeichern(songAnzahl, song) {
   else {
     set("Song0", song);
     set("songAnzahl", 0);
+  }
+} // songSpeichern Ende
+
+// Funktion zum Löschen von Songs aus Playliste
+// Song ist somit immer ein array (aus json liste)
+function songLoeschen(songAnzahl, song) {
+  // Wenn bereits Songs drin sind
+  if (songAnzahl >= 0) {
+    songAnzahl--;
+    alert("Funktioniert noch nicht");
+    // del(`Song${songAnzahl}`, song);
+    // del("songAnzahl", songAnzahl);
+  }
+  // Wenn nicht, dann erster Song
+  // SongAnzahl (aus indexedDB) ist dann nämlich nicht vorhanden, also undefined
+  else {
+    clear();
   }
 } // songSpeichern Ende
 
@@ -439,14 +478,25 @@ async function playlistPlusButtonClick(
   songSpeichern(songAnzahl, songArray);
 } // playlistPlusButtonClick Funktion Ende
 
-// ############################# !!! Anfang aus Funstepper !!! #############################
-// ############################# aus Funstepper #############################
+async function playlistMinusButtonClick(audioName) {
+  // Make List Funktion mit Namen als Übergabeparameter
+  makeList(audioName);
+
+  // Es wird ein Array erstellt mit den übergebenen Songinformationen
+  let songArray = [audioName];
+
+  // Song Anzahl getten
+  songAnzahl = await songAnzahlLesen();
+
+  // Song speichern
+  songLoeschen(songAnzahl, songArray);
+} // function playlistMinusButtonClick Ende
+
+// ++++++++++++++++++ aus Funstepper +++++++++++++++++++++++++++
 
 // Speicher-Variablen
 let key = "Play-Lists";
-
 let storageData = {};
-
 let storage = {
   update: function (playlist) {
     // ruft Methode read auf zum Auslesen des Speichers
@@ -627,6 +677,157 @@ function savePlayList() {
 
   storage.update(sample);
 } // Ende f Speichern der aktuellen Komposition
+
+// ######################## Chart JS Implemenetierung ##########################
+// ist lsogelöst vom gesamten Projekt
+// https://www.domainssaubillig.de/blog/blog-artikel/items/id-5-javascript-loesungen-zum-erstellen-von-interaktiven-charts.html
+
+// Schreibt ein neues Objekt mit der Anzahl der Genres und dem Namen der Genres
+function anzahlGenreFiltern(result, type) {
+  // Info zu Arbeitsschritt
+  // console.log("Anzahl je Genre wird abgerufen");
+  // zum Testen, was hier angekommen ist
+  // console.log("result-Obj: ", result, ", type-Obj: ", type);
+  let anzahlGenre = {
+    anzahl: [
+      result.filter(function (a) {
+        return a.Genre == "Schlager";
+      }).length,
+      result.filter(function (a) {
+        return a.Genre == "Techno";
+      }).length,
+      result.filter(function (a) {
+        return a.Genre == "Pop";
+      }).length,
+      result.filter(function (a) {
+        return a.Genre == "Rock";
+      }).length,
+      result.filter(function (a) {
+        return a.Genre == "Metal";
+      }).length,
+      result.filter(function (a) {
+        return a.Genre == "A capella";
+      }).length,
+      result.filter(function (a) {
+        return a.Genre == "Chanson";
+      }).length,
+      result.filter(function (a) {
+        return a.Genre == "Filmmusik";
+      }).length,
+      result.filter(function (a) {
+        return a.Genre == "Instrumental";
+      }).length,
+      result.filter(function (a) {
+        return a.Genre == "Weltmusik";
+      }).length,
+      result.filter(function (a) {
+        return a.Genre == "Swing";
+      }).length,
+    ],
+    label: [
+      "Schlager",
+      "Techno",
+      "Pop",
+      "Rock",
+      "Metal",
+      "A capella",
+      "Chanson",
+      "Filmmusik",
+      "Instrumental",
+      "Weltmusik",
+      "Swing",
+    ],
+  }; // Ojekt Ende
+  // Funktion zum erstellen des Charts aufrufen
+  chartErstellen(anzahlGenre, type);
+} // anzahlGenreFiltern Ende
+
+// Erstellt den Chart mit den Ergnissen der Filterfunktion
+// mittels verschiedenen type-Parametern kann die Art (z.b. pie) geändert werden
+function chartErstellen(data, type) {
+  // console.log("Chart erstellen, data; ", data, "type: ", type);
+  ctx2 = document.getElementById("canvas-chart").getContext("2d");
+
+  new Chart(ctx2, {
+    // type: "pie",
+    // type: "bar",
+    type: type,
+    data: {
+      labels: data.label,
+      datasets: [
+        {
+          label: "neu laden",
+          backgroundColor: "rgb(206, 206, 164)",
+          font: {
+            size: 25,
+            color: "rgb(206, 206, 164)",
+          },
+          data: data.anzahl,
+          backgroundColor: [
+            "magenta",
+            "blueviolet",
+            "royalblue",
+            "teal",
+            "green",
+            "greenyellow",
+            "rgba(206, 206, 164,1.0)",
+            "gold",
+            "orange",
+            "red",
+            "mediumvioletred",
+            "purple",
+          ],
+          borderWidth: "solid 1vw rgb(206, 206, 164)",
+        },
+      ],
+    },
+    // options: {
+    //   scales: {
+    //     yAxes: [
+    //       {
+    //         ticks: {
+    //           display: false,
+    //         },
+    //       },
+    //     ],
+    //   },
+    // },
+    options: {
+      responsive: true,
+      scaleFontColor: "#cecea4",
+      plugins: {
+        colors: {
+          enabled: false,
+        },
+        //   legend: {
+        //     position: "right",
+        //     labels: {
+        //       color: "rgb(206, 206, 164)",
+        //       font: {
+        //         family: "Trebuchet",
+        //         size: 15,
+        //       },
+        //   },
+        //   },
+        title: {
+          display: false,
+          text: "Musik-Mix im Speicher",
+          color: "#cecea4",
+          padding: {
+            top: 10,
+            bottom: 10,
+          },
+          font: {
+            size: 30,
+            style: "normal",
+            weight: "bold",
+            family: "Audiowide",
+          },
+        },
+      },
+    },
+  });
+} // Ende Chart erstellen Funktion
 
 // ############################# Ende Funstepper #############################
 
@@ -819,153 +1020,6 @@ if (el("#show-chart")) {
     }
   });
 }
-
-// Schreibt ein neues Objekt mit der Anzahl der Genres und dem Namen der Genres
-function anzahlGenreFiltern(result, type) {
-  // Info zu Arbeitsschritt
-  // console.log("Anzahl je Genre wird abgerufen");
-  // zum Testen, was hier angekommen ist
-  // console.log("result-Obj: ", result, ", type-Obj: ", type);
-  let anzahlGenre = {
-    anzahl: [
-      result.filter(function (a) {
-        return a.Genre == "Schlager";
-      }).length,
-      result.filter(function (a) {
-        return a.Genre == "Techno";
-      }).length,
-      result.filter(function (a) {
-        return a.Genre == "Pop";
-      }).length,
-      result.filter(function (a) {
-        return a.Genre == "Rock";
-      }).length,
-      result.filter(function (a) {
-        return a.Genre == "Metal";
-      }).length,
-      result.filter(function (a) {
-        return a.Genre == "A capella";
-      }).length,
-      result.filter(function (a) {
-        return a.Genre == "Chanson";
-      }).length,
-      result.filter(function (a) {
-        return a.Genre == "Filmmusik";
-      }).length,
-      result.filter(function (a) {
-        return a.Genre == "Instrumental";
-      }).length,
-      result.filter(function (a) {
-        return a.Genre == "Weltmusik";
-      }).length,
-      result.filter(function (a) {
-        return a.Genre == "Swing";
-      }).length,
-    ],
-    label: [
-      "Schlager",
-      "Techno",
-      "Pop",
-      "Rock",
-      "Metal",
-      "A capella",
-      "Chanson",
-      "Filmmusik",
-      "Instrumental",
-      "Weltmusik",
-      "Swing",
-    ],
-  }; // Ojekt Ende
-  // Funktion zum erstellen des Charts aufrufen
-  chartErstellen(anzahlGenre, type);
-} // anzahlGenreFiltern Ende
-
-// Erstellt den Chart mit den Ergnissen der Filterfunktion
-// mittels verschiedenen type-Parametern kann die Art (z.b. pie) geändert werden
-function chartErstellen(data, type) {
-  // console.log("Chart erstellen, data; ", data, "type: ", type);
-  ctx2 = document.getElementById("canvas-chart").getContext("2d");
-
-  new Chart(ctx2, {
-    // type: "pie",
-    // type: "bar",
-    type: type,
-    data: {
-      labels: data.label,
-      datasets: [
-        {
-          label: "neu laden",
-          backgroundColor: "rgb(206, 206, 164)",
-          font: {
-            size: 25,
-            color: "rgb(206, 206, 164)",
-          },
-          data: data.anzahl,
-          backgroundColor: [
-            "magenta",
-            "blueviolet",
-            "royalblue",
-            "teal",
-            "green",
-            "greenyellow",
-            "rgba(206, 206, 164,1.0)",
-            "gold",
-            "orange",
-            "red",
-            "mediumvioletred",
-            "purple",
-          ],
-          borderWidth: "solid 1vw rgb(206, 206, 164)",
-        },
-      ],
-    },
-    // options: {
-    //   scales: {
-    //     yAxes: [
-    //       {
-    //         ticks: {
-    //           display: false,
-    //         },
-    //       },
-    //     ],
-    //   },
-    // },
-    options: {
-      responsive: true,
-      scaleFontColor: "#cecea4",
-      plugins: {
-        colors: {
-          enabled: false,
-        },
-        //   legend: {
-        //     position: "right",
-        //     labels: {
-        //       color: "rgb(206, 206, 164)",
-        //       font: {
-        //         family: "Trebuchet",
-        //         size: 15,
-        //       },
-        //   },
-        //   },
-        title: {
-          display: false,
-          text: "Musik-Mix im Speicher",
-          color: "#cecea4",
-          padding: {
-            top: 10,
-            bottom: 10,
-          },
-          font: {
-            size: 30,
-            style: "normal",
-            weight: "bold",
-            family: "Audiowide",
-          },
-        },
-      },
-    },
-  });
-} // Ende Chart erstellen Funktion
 
 if (el("#show-chart")) {
   el("#show-chart").addEventListener("click", function () {

@@ -5,306 +5,306 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [12.372341, 51.338823]
+        "coordinates": [12.373, 51.3432]
       },
       "properties": {
         "nr": "1",
-        "name": "Museumsgarten am Bach-Museum / Thomaskirchhof",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/e/b/csm_LNW_01_Bosescher_Garten_Foto_Elke_Leinhoss_2965e5a2c6.jpg",
+        "name": "Standort Geburtshaus von Richard Wagner",
+        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/4/7/csm_LNB_01_Bronzetafel_Fritz_Zalisz_809d7de0e2.jpg",
         "alt": "01 - Museumsgarten am Bach-Museum / Thomaskirchhof",
         "title": "01 - Museumsgarten am Bach-Museum / Thomaskirchhof",
-        "text": "Der kleine Museumsgarten erinnert an den Lustgarten, den die Familie Bose, Bachs Nachbarn, Anfang des 18. Jahrhunderts an dieser Stelle anlegen ließ. Solch ein »Hausgarten« war damals äußerster Luxus. Die eng bebaute Innenstadt ließ eine derartige Verwendung kostbarer Flächen normalerweise nicht zu.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/leipziger-notenweg/karte-stationen/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=2&tx_notenspurkarte_stationsansicht%5Bstation%5D=62&cHash=3608d9d30e560bb28ffe03dbcc467c57",
-        "mp3": "audio/Notenweg/klanglogo_a-capella.mp3",
-        "route": "data/Notenweg_Karte.pdf"
+        "text": "Das Haus, in dem Richard Wagner 1813 zur Welt kam, steht nicht mehr. An seinem ursprünglichen Standort befindet sich eine Gedenktafel.",
+        "mehr": "https://notenspur-leipzig.de/notenrouten/leipziger-notenbogen/karte-stationen/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=4&tx_notenspurkarte_stationsansicht%5Bstation%5D=46&cHash=9c9f1f9c6906df43d9cbcf79f9249393",
+        "mp3": "",
+        "route": "data/Notenbogen_Karte.pdf"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [12.371451, 51.339493]
+        "coordinates": [12.3718, 51.3436]
       },
       "properties": {
         "nr": "2",
-        "name": "Mendelssohn-Denkmal an der Thomaskirche",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/4/4/csm_LNB_16_mendelssohn-denkmal_Foto_Werner_schneider_c4c8084c9f.jpg",
-        "alt": "02 - Mendelssohn-Denkmal an der Thomaskirche",
-        "title": "02 - Mendelssohn-Denkmal an der Thomaskirche",
-        "text": "Seit Oktober 2008 steht im Promenadenring ein Nachguss des 1892 von W. Stein geschaffenen und während der Zeit des Nationalsozialismus zerstörten Mendelssohn-Denkmals. Ursprünglich befand sich das Denkmal vor dem Zweiten Gewandhaus im Musikviertel.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/leipziger-notenweg/karte-stationen/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=2&tx_notenspurkarte_stationsansicht%5Bstation%5D=60&cHash=007ff467d8028b80ffefd05fc2194861",
-        "mp3": "audio/Notenweg/klanglogo_blaeser.mp3",
-        "route": "data/Notenweg_Karte.pdf"
+        "name": "",
+        "bild": "",
+        "alt": "02 - ",
+        "title": "02 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenbogen_Karte.pdf"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [12.363137, 51.335973]
+        "coordinates": [12.3682, 51.3441]
       },
       "properties": {
         "nr": "3",
-        "name": "Lutherkirche / Johannapark",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/0/7/csm_LNW_02_lutherkirche_foto_elke_leinhoss_c1127a265f.jpg",
-        "alt": "03 - Lutherkirche / Johannapark",
-        "title": "03 - Lutherkirche / Johannapark",
-        "text": "Gemeinsam mit der Thomaskirche gehört die Lutherkirche (geweiht 1886) zur Kirchgemeinde St. Thomas Leipzig. Zudem dient sie als geistliches Zentrum des Bildungscampus forum thomanum. Der Entwurf stammte von Julius Zeißig. Die Kirche steht am Rand des heutigen Johannaparks.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/leipziger-notenweg/karte-stationen/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=2&tx_notenspurkarte_stationsansicht%5Bstation%5D=63&cHash=05484373e6555e5420ed6acf8398624f",
-        "mp3": "audio/Notenweg/klanglogo_blaesersatz.mp3",
-        "route": "data/Notenweg_Karte.pdf"
+        "name": "",
+        "bild": "",
+        "alt": "03 - ",
+        "title": "03 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenbogen_Karte.pdf"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [12.359134, 51.332234]
+        "coordinates": [12.3652, 51.3448]
       },
       "properties": {
         "nr": "4",
-        "name": "Franz-Schubert-Stele / Clara-Zetkin-Park",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/6/f/csm_LNR_05_Schubertstele_Foto_W.Schneider_3a9c38378d.jpg",
-        "alt": "04 - Franz-Schubert-Stele / Clara-Zetkin-Park",
-        "title": "04 - Franz-Schubert-Stele / Clara-Zetkin-Park",
-        "text": "Vom 1891 gegründeten Leipziger Männerchor ging 1928 anlässlich des 100. Todestages von Franz Schubert die Initiative zur Errichtung eines Schubert-Denkmals aus. Der Entwurf für das 3,8 m hohe Denkmal stammt von der in Leipzig ansässigen Bildhauerin und Malerin Margarete Tschaplowitz-Seifert (1889–1977).",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/leipziger-notenweg/karte-stationen/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=2&tx_notenspurkarte_stationsansicht%5Bstation%5D=30&cHash=533dee9639bbc91cf4568ab6c33882e7",
-        "mp3": "audio/Notenweg/klanglogo_chor.mp3",
-        "route": "data/Notenweg_Karte.pdf"
+        "name": "",
+        "bild": "",
+        "alt": "04 - ",
+        "title": "04 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenbogen_Karte.pdf"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [12.358449, 51.331106]
+        "coordinates": [12.363, 51.3438]
       },
       "properties": {
         "nr": "5",
-        "name": "Musikpavillon und Richard-Strausz-Platz / Clara-Zetkin-Park",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/2/6/csm_LNW_04_musikpavillon_el_aaaa0b5639.jpg",
-        "alt": "05 - Musikpavillon und Richard-Strausz-Platz / Clara-Zetkin-Park",
-        "title": "05 - Musikpavillon und Richard-Strausz-Platz / Clara-Zetkin-Park",
-        "text": "Seit über hundert Jahren steht der Musikpavillon an dieser Stelle. Am südlichen Ende des Areal liegt - etwas versteckt - der Richard-Strauss-Platz.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/leipziger-notenweg/karte-stationen/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=2&tx_notenspurkarte_stationsansicht%5Bstation%5D=70&cHash=82b616e5f7adad5fee1e9d4749515db6",
-        "mp3": "audio/Notenweg/klanglogo_klavier.mp3",
-        "route": "data/Notenweg_Karte.pdf"
+        "name": "",
+        "bild": "",
+        "alt": "05 - ",
+        "title": "05 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenbogen_Karte.pdf"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [12.354242, 51.330476]
+        "coordinates": [12.3636, 51.3403]
       },
       "properties": {
         "nr": "6",
-        "name": "Sachsenbrücke / Clara-Zetkin-Park",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/a/c/csm_LNW_05_sachsenbruecke_Foto_Elke_Leinhoss_ff67f39da0.jpg",
-        "alt": "06 - Sachsenbrücke / Clara-Zetkin-Park",
-        "title": "06 - Sachsenbrücke / Clara-Zetkin-Park",
-        "text": "Hier trifft man sich zum Quatschen, Musikmachen und Musikhören. Sekt und Bier gehören dazu wie diverse Öko-Limonaden. In lauen Sommernächten DER Szenetreffpunkt!",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/leipziger-notenweg/karte-stationen/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=2&tx_notenspurkarte_stationsansicht%5Bstation%5D=64&cHash=2c6e01432ec555d6f6209075378521e8",
-        "mp3": "audio/Notenweg/klanglogo_orchester.mp3",
-        "route": "data/Notenweg_Karte.pdf"
+        "name": "",
+        "bild": "",
+        "alt": "06 - ",
+        "title": "06 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenbogen_Karte.pdf"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [12.352152, 51.331422]
+        "coordinates": [12.3613, 51.3396]
       },
       "properties": {
         "nr": "7",
-        "name": "Gerhardscher Pavillon / Clara-Zetkin-Park",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/4/3/csm_LNW_06_Gerhardscher_Pavillon_Foto_Elke_Leinhoss_dae777a9d4.jpg",
-        "alt": "07 - Gerhardscher Pavillon / Clara-Zetkin-Park",
-        "title": "07 - Gerhardscher Pavillon / Clara-Zetkin-Park",
-        "text": "Der Gerhardsche Pavillon wurde in der zweiten Hälfte des 18. Jahrhunderts im klassizistischen Stil errichtet und stand ursprünglich im Gerhardschen Garten.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/leipziger-notenweg/karte-stationen/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=2&tx_notenspurkarte_stationsansicht%5Bstation%5D=65&cHash=fab4b0aea6e95323d0e6ec0128bc13fc",
-        "mp3": "audio/Notenweg/klanglogo_streicher.mp3",
-        "route": "data/Notenweg_Karte.pdf"
+        "name": "",
+        "bild": "",
+        "alt": "07 - ",
+        "title": "07 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenbogen_Karte.pdf"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [12.345376, 51.336238]
+        "coordinates": [12.36, 51.337]
       },
       "properties": {
         "nr": "8",
-        "name": "Palmengarten",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/a/5/csm_LNW_07_Palmengarten_Foto_Elke_Leinhoss_1f9a515bc3.jpg",
-        "alt": "08 - Palmengarten",
-        "title": "08 - Palmengarten",
-        "text": "Palmen sucht man hier heute leider vergeblich, aber es gab sie hier vor über hundert Jahren. Der ehemalige Palmengarten beherbergt heute eine Vielzahl dendrologisch wertvoller und besonderer Gehölze. Diese stammen zu großen Teilen aus der in Liebertwolkwitz gelegenen Baumschule des Botanischen Gartens, die 1960 aufgelöst worden war.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/leipziger-notenweg/karte-stationen/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=2&tx_notenspurkarte_stationsansicht%5Bstation%5D=66&cHash=6df82f83fe2366521595e37065b9d4bb",
-        "mp3": "audio/Notenweg/klanglogo_streicherquartett.mp3",
-        "route": "data/Notenweg_Karte.pdf"
+        "name": "",
+        "bild": "",
+        "alt": "08 - ",
+        "title": "08 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenbogen_Karte.pdf"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [12.349283, 51.337875]
+        "coordinates": [12.3669, 51.3327]
       },
       "properties": {
         "nr": "9",
-        "name": "Richard-Wagner-Hain",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/c/9/csm_LNW_08_Richard-Wagner-Hain_Foto_Elke_Leinhoss_7bca839369.jpg",
-        "alt": "09 - Richard-Wagner-Hain",
-        "title": "09 - Richard-Wagner-Hain",
-        "text": "Ein durch den Elsterflutgraben zweigeteilter Denkmalshain ohne Denkmal. Das Gelände wurde angelegt, um den 1813 in Leipzig geborenen Richard Wagner zu ehren.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/leipziger-notenweg/karte-stationen/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=2&tx_notenspurkarte_stationsansicht%5Bstation%5D=35&cHash=e693b43df41013f052e43d4727dc5c7f",
-        "mp3": "audio/Notenweg/klanglogo_a-capella.mp3",
-        "route": "data/Notenweg_Karte.pdf"
+        "name": "",
+        "bild": "",
+        "alt": "09 - ",
+        "title": "09 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenbogen_Karte.pdf"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [12.356872, 51.339431]
+        "coordinates": [12.3683, 51.3323]
       },
       "properties": {
         "nr": "10",
-        "name": "Kleingärtnerverein Dr. Schreber / Deutsches Kleingärtnermuseum",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/b/7/csm_LNW_09_Schreber_Foto_Elke_Leinhoss_589c8203a5.jpg",
-        "alt": "10 - Kleingärtnerverein Dr. Schreber / Deutsches Kleingärtnermuseum",
-        "title": "10 - Kleingärtnerverein Dr. Schreber / Deutsches Kleingärtnermuseum",
-        "text": "Was hat Schreber mit dem Kleingarten zu tun? Leipzig ist zwar der Ursprung der Kleingärtnerbewegung. Dr. Moritz Schreber allerdings hatte ganz andere Intentionen, als in einer Kolonie mit anderen Hobby-Gärtnern Kartoffeln anzubauen ...",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/leipziger-notenweg/karte-stationen/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=2&tx_notenspurkarte_stationsansicht%5Bstation%5D=67&cHash=210aaa5f0e45a38681717bd29c59665c",
-        "mp3": "audio/Notenweg/klanglogo_blaeser.mp3",
-        "route": "data/Notenweg_Karte.pdf"
+        "name": "",
+        "bild": "",
+        "alt": "10 - ",
+        "title": "10 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenbogen_Karte.pdf"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [12.35986, 51.346689]
+        "coordinates": [12.3684, 51.332]
       },
       "properties": {
         "nr": "11",
-        "name": "Zweites Gewandhaus, Mendelssohn-Ufer",
+        "name": "",
         "bild": "",
-        "alt": "11 - Liviaplatz / Waldstraßenviertel",
-        "title": "11 - Liviaplatz / Waldstraßenviertel",
-        "text": "Mit der Liviastraße im Waldstraßenviertel ehrte die Stadt Leipzig 1889 die begnadete Sängerin Livia Frege. Sie wurde als Königin des Leipziger romantischen Liedgesangs bezeichnet. Der besondere Reiz ihrer Stimme bezauberte die Zeitgenossen. Das Waldstraßenviertel ist eng mit der Fregeschen Familiengeschichte verknüpft.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/leipziger-notenbogen/karte-stationen/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=4&tx_notenspurkarte_stationsansicht%5Bstation%5D=28&cHash=a313902adce972ef0255ac783e23046d",
-        "mp3": "audio/Notenweg/klanglogo_blaesersatz.mp3",
-        "route": "data/Notenweg_Karte.pdf"
+        "alt": "11 - ",
+        "title": "11 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenbogen_Karte.pdf"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [12.365556, 51.347654]
+        "coordinates": [12.3747, 51.3341]
       },
       "properties": {
         "nr": "12",
-        "name": "Zöllner-Denkmal",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/f/b/csm_LNR_13_Zoellner-Denkmal_Foto_Werner_Schneider_2fbadf1c9a.jpg",
-        "alt": "12 - Zöllner-Denkmal",
-        "title": "12 - Zöllner-Denkmal",
-        "text": "Carl Friedrich Zöllner (1800–1860) war der Initiator und die prägende Persönlichkeit des mitteldeutschen Männerchorwesens und ist der Komponist des Liedes „Das Wandern ist des Müllers Lust“.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/leipziger-notenweg/karte-stationen/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=2&tx_notenspurkarte_stationsansicht%5Bstation%5D=38&cHash=15de0e5cff068d6bba8cb4069213ed9b",
-        "mp3": "audio/Notenweg/klanglogo_chor.mp3",
-        "route": "data/Notenweg_Karte.pdf"
+        "name": "",
+        "bild": "",
+        "alt": "12 - ",
+        "title": "12 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenbogen_Karte.pdf"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [12.366974, 51.349197]
+        "coordinates": [12.3697, 51.3387]
       },
       "properties": {
         "nr": "13",
-        "name": "Hacienda (Schweizerhaus) / Rosental",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/f/b/csm_LNR_13_Zoellner-Denkmal_Foto_Werner_Schneider_2fbadf1c9a.jpg",
-        "alt": "13 - Hacienda (Schweizerhaus) / Rosental",
-        "title": "13 - Hacienda (Schweizerhaus) / Rosental",
-        "text": "1824 als Ausflugslokal im Rosental eröffnet, avancierte „Kintschys Schweizerhaus“ zu einem bevorzugten Treffpunkt von Komponisten, Dichtern und anderen Kulturschaffenden in Leipzig wie z. B. Heinrich Laube, Albert Lortzing, Friedrich Nietzsche und Richard Wagner. Bald entwickelte sich die Wirtschaft, in dem heute das Zoo-Restaurant „Hacienda“ beheimatet ist, zu einem zentralen Ort des Leipziger Musiklebens.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/leipziger-notenweg/karte-stationen/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=2&tx_notenspurkarte_stationsansicht%5Bstation%5D=38&cHash=15de0e5cff068d6bba8cb4069213ed9b",
-        "mp3": "audio/Notenweg/klanglogo_klavier.mp3",
-        "route": "data/Notenweg_Karte.pdf"
+        "name": "",
+        "bild": "",
+        "alt": "13 - ",
+        "title": "13 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenbogen_Karte.pdf"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [12.370435, 51.34253]
+        "coordinates": [12.368, 51.3399]
       },
       "properties": {
         "nr": "14",
-        "name": "Max-Klinger-Treppe/Wagner-Denkmal",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/6/9/csm_LNR_15_Klinger_Wagner_Foto_Werner_Schneider_93b718b81d.jpg",
-        "alt": "14 - Max-Klinger-Treppe/ Wagner-Denkmal",
-        "title": "14 - Max-Klinger-Treppe/ Wagner-Denkmal",
-        "text": "Das neue Richard-Wagner-Denkmal nahe dem ehemaligen Geburtshaus Richard Wagners am Brühl wurde an seinem 200. Geburtstag am 22. Mai 2013 eingeweiht. Errichtet wurde das Kunstwerk Stephan Balkenhols (geb. 1957) auf dem historischen Sockel des Leipziger Bildhauers Max Klinger.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/leipziger-notenweg/karte-stationen/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=2&tx_notenspurkarte_stationsansicht%5Bstation%5D=61&cHash=c1c4f2f8424c446c1c6dd2e8411844dd",
-        "mp3": "audio/Notenweg/klanglogo_orchester.mp3",
-        "route": "data/Notenweg_Karte.pdf"
+        "name": "",
+        "bild": "",
+        "alt": "14 - ",
+        "title": "14 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenbogen_Karte.pdf"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [12.370435, 51.34253]
+        "coordinates": [12.3698, 51.34]
       },
       "properties": {
         "nr": "15",
-        "name": "Max-Klinger-Treppe/Wagner-Denkmal",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/6/9/csm_LNR_15_Klinger_Wagner_Foto_Werner_Schneider_93b718b81d.jpg",
-        "alt": "15 - Max-Klinger-Treppe/ Wagner-Denkmal",
-        "title": "15 - Max-Klinger-Treppe/ Wagner-Denkmal",
-        "text": "Das neue Richard-Wagner-Denkmal nahe dem ehemaligen Geburtshaus Richard Wagners am Brühl wurde an seinem 200. Geburtstag am 22. Mai 2013 eingeweiht. Errichtet wurde das Kunstwerk Stephan Balkenhols (geb. 1957) auf dem historischen Sockel des Leipziger Bildhauers Max Klinger.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/leipziger-notenweg/karte-stationen/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=2&tx_notenspurkarte_stationsansicht%5Bstation%5D=61&cHash=c1c4f2f8424c446c1c6dd2e8411844dd",
-        "mp3": "audio/Notenweg/klanglogo_orchester.mp3",
-        "route": "data/Notenweg_Karte.pdf"
+        "name": "",
+        "bild": "",
+        "alt": "15 - ",
+        "title": "15 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenbogen_Karte.pdf"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [12.370435, 51.34253]
+        "coordinates": [12.3715, 51.3395]
       },
       "properties": {
         "nr": "16",
-        "name": "Max-Klinger-Treppe/Wagner-Denkmal",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/6/9/csm_LNR_15_Klinger_Wagner_Foto_Werner_Schneider_93b718b81d.jpg",
-        "alt": "16 - Max-Klinger-Treppe/ Wagner-Denkmal",
-        "title": "16 - Max-Klinger-Treppe/ Wagner-Denkmal",
-        "text": "Das neue Richard-Wagner-Denkmal nahe dem ehemaligen Geburtshaus Richard Wagners am Brühl wurde an seinem 200. Geburtstag am 22. Mai 2013 eingeweiht. Errichtet wurde das Kunstwerk Stephan Balkenhols (geb. 1957) auf dem historischen Sockel des Leipziger Bildhauers Max Klinger.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/leipziger-notenweg/karte-stationen/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=2&tx_notenspurkarte_stationsansicht%5Bstation%5D=61&cHash=c1c4f2f8424c446c1c6dd2e8411844dd",
-        "mp3": "audio/Notenweg/klanglogo_orchester.mp3",
-        "route": "data/Notenweg_Karte.pdf"
+        "name": "",
+        "bild": "",
+        "alt": "16 - ",
+        "title": "16 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenbogen_Karte.pdf"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [12.370435, 51.34253]
+        "coordinates": [12.3705, 51.3424]
       },
       "properties": {
         "nr": "17",
-        "name": "Max-Klinger-Treppe/Wagner-Denkmal",
-        "bild": "https://notenspur-leipzig.de/fileadmin/_processed_/6/9/csm_LNR_15_Klinger_Wagner_Foto_Werner_Schneider_93b718b81d.jpg",
-        "alt": "17 - Max-Klinger-Treppe/ Wagner-Denkmal",
-        "title": "17 - Max-Klinger-Treppe/ Wagner-Denkmal",
-        "text": "Das neue Richard-Wagner-Denkmal nahe dem ehemaligen Geburtshaus Richard Wagners am Brühl wurde an seinem 200. Geburtstag am 22. Mai 2013 eingeweiht. Errichtet wurde das Kunstwerk Stephan Balkenhols (geb. 1957) auf dem historischen Sockel des Leipziger Bildhauers Max Klinger.",
-        "mehr": "https://notenspur-leipzig.de/notenrouten/leipziger-notenweg/karte-stationen/stationsansicht?tx_notenspurkarte_stationsansicht%5Baction%5D=show&tx_notenspurkarte_stationsansicht%5Bcontroller%5D=Station&tx_notenspurkarte_stationsansicht%5Broute%5D=2&tx_notenspurkarte_stationsansicht%5Bstation%5D=61&cHash=c1c4f2f8424c446c1c6dd2e8411844dd",
-        "mp3": "audio/Notenweg/klanglogo_orchester.mp3",
-        "route": "data/Notenweg_Karte.pdf"
+        "name": "",
+        "bild": "",
+        "alt": "17 - ",
+        "title": "17 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenbogen_Karte.pdf"
       }
     }
   ]
