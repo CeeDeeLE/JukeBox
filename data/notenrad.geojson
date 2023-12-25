@@ -1,0 +1,442 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.380275251, 51.338162413]
+      },
+      "properties": {
+        "nr": "1",
+        "name": "",
+        "bild": "",
+        "copyright": "",
+        "alt": "01 - ",
+        "title": "01 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenrad_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.383571, 51.336187]
+      },
+      "properties": {
+        "nr": "2",
+        "name": "",
+        "bild": "",
+        "copyright": "",
+        "alt": "02 - ",
+        "title": "02 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenrad_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.386186, 51.335148]
+      },
+      "properties": {
+        "nr": "3",
+        "name": "",
+        "bild": "",
+        "copyright": "",
+        "alt": "03 - ",
+        "title": "03 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenrad_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.386308, 51.335586]
+      },
+      "properties": {
+        "nr": "4",
+        "name": "",
+        "bild": "",
+        "copyright": "",
+        "alt": "04 - ",
+        "title": "04 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenrad_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.387828, 51.337474]
+      },
+      "properties": {
+        "nr": "5",
+        "name": "",
+        "bild": "",
+        "copyright": "",
+        "alt": "05 - ",
+        "title": "05 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenrad_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.389781, 51.337789]
+      },
+      "properties": {
+        "nr": "6",
+        "name": "",
+        "bild": "",
+        "copyright": "",
+        "alt": "06 - ",
+        "title": "06 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenrad_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.391124, 51.340603]
+      },
+      "properties": {
+        "nr": "7",
+        "name": "",
+        "bild": "",
+        "copyright": "",
+        "alt": "07 - ",
+        "title": "07 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenrad_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.386811, 51.341153]
+      },
+      "properties": {
+        "nr": "8",
+        "name": "",
+        "bild": "",
+        "copyright": "",
+        "alt": "08 - ",
+        "title": "08 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenrad_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.382155, 51.341213]
+      },
+      "properties": {
+        "nr": "9",
+        "name": "",
+        "bild": "",
+        "copyright": "",
+        "alt": "09 - ",
+        "title": "09 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenrad_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.381297, 51.339913]
+      },
+      "properties": {
+        "nr": "10",
+        "name": "",
+        "bild": "",
+        "copyright": "",
+        "alt": "10 - ",
+        "title": "10 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenrad_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.378304, 51.340744]
+      },
+      "properties": {
+        "nr": "11",
+        "name": "",
+        "bild": "",
+        "copyright": "",
+        "alt": "11 - ",
+        "title": "11 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenrad_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.378165, 51.340375]
+      },
+      "properties": {
+        "nr": "12",
+        "name": "",
+        "bild": "",
+        "copyright": "",
+        "alt": "12 - ",
+        "title": "12 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenrad_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.375193, 51.340563]
+      },
+      "properties": {
+        "nr": "13",
+        "name": "",
+        "bild": "",
+        "copyright": "",
+        "alt": "13 - ",
+        "title": "13 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenrad_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.375766, 51.342336]
+      },
+      "properties": {
+        "nr": "14",
+        "name": "",
+        "bild": "",
+        "copyright": "",
+        "alt": "14 - ",
+        "title": "14 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenrad_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.372801, 51.341144]
+      },
+      "properties": {
+        "nr": "15",
+        "name": "",
+        "bild": "",
+        "copyright": "",
+        "alt": "15 - ",
+        "title": "15 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenrad_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.373078, 51.340783]
+      },
+      "properties": {
+        "nr": "16",
+        "name": "",
+        "bild": "",
+        "copyright": "",
+        "alt": "16 - ",
+        "title": "16 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenrad_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.372536, 51.339345]
+      },
+      "properties": {
+        "nr": "17",
+        "name": "",
+        "bild": "",
+        "copyright": "",
+        "alt": "17 - ",
+        "title": "17 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenrad_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.372397, 51.338832]
+      },
+      "properties": {
+        "nr": "18",
+        "name": "",
+        "bild": "",
+        "copyright": "",
+        "alt": "18 - ",
+        "title": "18 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenrad_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.376093, 51.338279]
+      },
+      "properties": {
+        "nr": "19",
+        "name": "",
+        "bild": "",
+        "copyright": "",
+        "alt": "19 - ",
+        "title": "19 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenrad_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.376495, 51.338634]
+      },
+      "properties": {
+        "nr": "20",
+        "name": "",
+        "bild": "",
+        "copyright": "",
+        "alt": "20 - ",
+        "title": "20 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenrad_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.37752, 51.338456]
+      },
+      "properties": {
+        "nr": "21",
+        "name": "",
+        "bild": "",
+        "copyright": "",
+        "alt": "21 - ",
+        "title": "21 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenrad_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.379489, 51.338634]
+      },
+      "properties": {
+        "nr": "22",
+        "name": "",
+        "bild": "",
+        "copyright": "",
+        "alt": "22 - ",
+        "title": "22 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenrad_Karte.pdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.379255, 51.338281]
+      },
+      "properties": {
+        "nr": "23",
+        "name": "",
+        "bild": "",
+        "copyright": "",
+        "alt": "23 - ",
+        "title": "23 - ",
+        "text": "",
+        "mehr": "",
+        "mp3": "",
+        "route": "data/Notenrad_Karte.pdf"
+      }
+    }
+  ]
+}
